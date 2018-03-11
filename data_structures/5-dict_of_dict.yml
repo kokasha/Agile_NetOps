@@ -1,0 +1,8 @@
+---
+node:
+  r1:
+   loopback: 10.1.1.1
+   vendor: cisco
+  r2:
+   loopback: 10.2.1.1
+   vendor: Juniper

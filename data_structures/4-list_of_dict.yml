@@ -1,0 +1,7 @@
+---
+- router: r1
+  loopback: 10.1.1.1
+  vendor: cisco
+- router: r2
+  loopback: 10.2.1.1
+  vendor: Juniper
