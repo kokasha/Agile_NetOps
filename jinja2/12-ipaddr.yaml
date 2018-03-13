@@ -1,0 +1,10 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars_files: 
+  - 12-ipadd_filter.yaml
+  tasks:
+      - template: src=12-ipadd_filter.j2 dest=./ipaddr_output.txt
+        name: Create config using IPADDR Filter

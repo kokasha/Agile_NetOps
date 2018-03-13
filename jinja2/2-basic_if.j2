@@ -1,0 +1,11 @@
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+{# This is a Comment in JINJA2 #}
+hostname {{hostname}}
+!
+{% if syslog %}
+logging host {{ syslog }}
+{% else %}
+! no syslog
+{%endif%}

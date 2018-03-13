@@ -1,0 +1,7 @@
+!
+interface F0/1
+ ip address 172.16.2.1 255.255.255.0
+!
+interface F0/0
+ ip address 172.16.1.1 255.255.255.0
+!

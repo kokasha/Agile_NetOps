@@ -1,0 +1,6 @@
+!
+{% for name,parm in interfaces.iteritems() %}
+interface {{name}}
+ ip address {{parm.prefix | ipv4('1')| ipaddr('address')}} {{parm.prefix| ipaddr('netmask')}}
+!
+{% endfor %}

@@ -1,0 +1,17 @@
+---
+
+Router: R1
+interfaces:
+ - name: xe-0/0/0
+   vlans:
+    - vlanid: 100
+      ip: {addr: 10.10.1.0/24 }
+    - vlanid: 200
+      ip: {addr: 10.10.2.0/24 }
+
+ - name: xe-0/1/0
+   vlans:
+    - vlanid: 300
+      ip: {addr: 10.10.3.0/24 }
+    - vlanid: 400
+      ip: {addr: 10.10.4.0/24 }
