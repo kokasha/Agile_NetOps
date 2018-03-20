@@ -1,0 +1,35 @@
+---
+
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: yes
+  tasks:
+  - name: show version on IOS
+    ios_command:
+        commands:
+         - show version
+    register: ios_output
+
+  - name: print output
+    debug: var=ios_output
+
+- name: Play to execute a command
+  hosts: junos
+  connection: local
+  gather_facts: yes
+  tasks:
+  - name: show version on JunOS
+    junos_command:
+        display: xml
+        commands:
+        - show version
+        provider:
+         port: 22
+         host: "{{ansible_host}}"
+         username: "{{ansible_user}}"
+         password: "{{ansible_ssh_pass}}"
+    register: junos_output
+
+  - name: Print Output
+    debug: var=junos_output
