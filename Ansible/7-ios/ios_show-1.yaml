@@ -1,0 +1,14 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: show version on IOS
+    ios_command:
+        commands:
+         - show version
+    register: ios_output
+
+  - name: print output
+    debug: var=ios_output.stdout

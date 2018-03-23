@@ -1,0 +1,13 @@
+---
+
+- name: Create configuration template
+  hosts: all
+  connection: local
+  gather_facts: no
+  vars:
+   ios: true
+  tasks:
+  - name: Run for IOS only
+    debug: 
+     msg: "All Run ok for {{inventory_hostname}}"
+    when: "hostvars[inventory_hostname].group_names eq junos"

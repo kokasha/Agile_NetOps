@@ -1,0 +1,28 @@
+---
+- name: Test Conditionals
+  hosts: all
+  connection: local
+  gather_facts: no
+  vars:
+   ios: true
+  tasks:
+  - name: get junos output
+    junos_command:
+     commands:
+      - show version
+     provider:
+         host: "{{ansible_host}}"
+         username: "{{ansible_user}}"
+         password: "{{ansible_ssh_pass}}"
+    register: cmd_output
+    when: "'junos' in hostvars[inventory_hostname].group_names"
+
+  - debug: var=cmd_output
+    when: 
+      - "'junos' in hostvars[inventory_hostname].group_names"
+      - "'vMX2' in cmd_output.stdout[0]"
+
+#  - name: check hostname
+#    debug:
+#     msg: "All Run ok for {{inventory_hostname}}"
+#    when: "'junos' in hostvars[inventory_hostname].group_names"

@@ -1,0 +1,16 @@
+!
+hostname {{hostname}}
+!
+{% for user in users %}
+username {{user.username}} privilege 15 password 0 {{user.password}}
+{% endfor %}
+!
+!
+line vty 0 4
+ login local
+ transport input ssh
+!
+{% for ntp_host in ntp_servers %}
+ntp server {{ntp_host}}
+{% endfor %}
+!

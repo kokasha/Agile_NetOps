@@ -1,0 +1,30 @@
+system {
+    host-name vMX3;
+    root-authentication {
+        encrypted-password "$1$VXXpDMDn$lzQCfiwL59/3UV21cVaBa."; ## SECRET-DATA
+    }
+    login {
+        user juniper {
+            class super-user;
+            authentication {
+                encrypted-password 09fccda1a96bae2c59d48dfd40ea2cff; ## SECRET-DATA
+            }
+        }
+        user lab {
+            class super-user;
+            authentication {
+                encrypted-password 081c49b8c66a69aad79f4bca8334e0ef; ## SECRET-DATA
+            }
+        }
+    }
+    services {
+        ssh;
+        netconf {
+            ssh;
+        }
+    }
+    ntp {
+        server 10.100.1.1;
+        server 10.200.1.1;
+    }
+}

@@ -1,0 +1,20 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  vars:
+    commands:
+     - show interfaces
+     - show ip route
+  tasks:
+  - name: show version on IOS
+    ios_command:
+        commands:
+        - "{{item}}"
+    register: ios_output
+    with_items: "{{commands}}"
+
+  - name: print output
+    debug: var=ios_output
+

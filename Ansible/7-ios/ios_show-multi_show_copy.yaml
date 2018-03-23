@@ -1,0 +1,27 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  vars:
+    commands:
+     - {name: show_route, cmd: show ip route}
+     - {name: show_arp, cmd: show arp}
+  tasks:
+  - name: show version on IOS
+    ios_command:
+        commands:
+        - "{{item.cmd}}"
+    register: ios_output
+    with_items: "{{commands}}"
+
+  - name: save the output
+    copy:
+     content: "{{item.0.stdout[0]}}"
+     dest: ./{{inventory_hostname}}_{{item.1.name}}.txt
+    with_together: 
+     - "{{ios_output.results}}" 
+     - "{{commands}}"
+  - name: print output
+    debug: var=ios_output
+

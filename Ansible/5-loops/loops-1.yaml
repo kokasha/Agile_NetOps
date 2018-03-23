@@ -1,0 +1,13 @@
+---
+- name: Test Loops
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+   interfaces:
+    - f0/0
+    - f0/1
+  tasks:
+  - debug:
+     msg: "interface is {{item}}"
+    with_items: "{{interfaces}}"

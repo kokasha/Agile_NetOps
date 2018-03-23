@@ -1,0 +1,7 @@
+---
+os: ios
+users:
+- username: cisco
+  password: cisco
+- username: lab
+  password: lab123

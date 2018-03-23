@@ -1,0 +1,7 @@
+---
+os: junos
+users:
+- username: juniper
+  password: juniper
+- username: lab
+  password: lab123
