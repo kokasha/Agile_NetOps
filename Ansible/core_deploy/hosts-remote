@@ -1,0 +1,20 @@
+
+[junos]
+vMX1      ansible_host=127.0.0.1	ansible_port=9021
+vMX2	  ansible_host=localhost	ansible_port=9022
+vMX3	  ansible_host=localhost	ansible_port=9023
+vMX4	  ansible_host=localhost	ansible_port=9024
+
+[iosxr]
+XR5	      ansible_host=localhost	ansible_port=9025
+
+[junos:vars]
+ansible_user=lab
+ansible_ssh_pass=lab123
+dev_os=junos
+
+[iosxr:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+dev_os=iosxr
+

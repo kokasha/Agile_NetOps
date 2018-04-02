@@ -1,0 +1,53 @@
+!
+hostname CSR6
+!
+username cisco privilege 15 password 0 cisco
+!
+!
+interface G1
+ ip address 192.10.0.106 255.255.255.0
+!
+!
+interface Loopback0
+ ip address 10.100.6.6 255.255.255.255
+!
+interface GigabitEthernet2
+ ip address 172.10.16.2 255.255.255.252
+ mpls ip
+ ip rsvp bandwidth
+ ip ospf network point-to-point
+ ip ospf cost 10
+ ip ospf 100 area 0
+ !
+!
+interface GigabitEthernet3
+ ip address 172.10.46.1 255.255.255.252
+ mpls ip
+ ip rsvp bandwidth
+ ip ospf network point-to-point
+ ip ospf cost 10
+ ip ospf 100 area 1
+ !
+!
+
+!
+router ospf 100
+ router-id 10.100.6.6
+ passive-interface Loopback0
+!
+!
+router bgp 100
+ bgp log-neighbor-changes
+ bgp router-id 10.100.6.6
+ neighbor 10.100.1.1 remote-as 100
+ neighbor 10.100.1.1 update-source Loopback0
+ !
+ address-family ipv4
+  neighbor 10.100.1.1 activate
+ exit-address-family
+ !
+ address-family vpnv4
+  neighbor 10.100.1.1 activate
+  neighbor 10.100.1.1 send-community both
+ exit-address-family
+!

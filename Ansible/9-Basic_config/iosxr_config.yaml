@@ -1,0 +1,12 @@
+---
+- name: Push configuration to IOS-XR
+  hosts: iosxr
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: PUSH configuration from template
+    iosxr_config:
+        src: ../core_deploy/core-config/XR5-core.txt
+        #backup: yes
+    register: cmd_output
+  - debug: var=cmd_output

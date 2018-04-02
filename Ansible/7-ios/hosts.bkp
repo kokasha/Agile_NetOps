@@ -1,0 +1,14 @@
+[ios]
+R4	ansible_host=192.10.0.104
+
+[junos]
+vMX2	ansible_host=192.10.0.102
+vMX3	ansible_host=192.10.0.103
+
+[ios:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+
+[junos:vars]
+ansible_user=lab
+ansible_ssh_pass=lab123

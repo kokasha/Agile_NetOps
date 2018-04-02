@@ -1,0 +1,10 @@
+interface,status,mac_address
+Loopback0,up,N/A
+Null0,up,N/A
+MgmtEth0/0/CPU0/0,up,5000.0005.0000
+GigabitEthernet0/0/0/0,up,5000.0005.0001
+GigabitEthernet0/0/0/1,up,5000.0005.0002
+GigabitEthernet0/0/0/1.50,up,N/A
+GigabitEthernet0/0/0/2,administratively down,5000.0005.0003
+GigabitEthernet0/0/0/3,administratively down,5000.0005.0004
+GigabitEthernet0/0/0/4,administratively down,5000.0005.0005

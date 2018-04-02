@@ -1,0 +1,20 @@
+
+[junos]
+vMX1      ansible_host=192.10.1.101
+vMX2	  ansible_host=192.10.1.102
+vMX3	  ansible_host=192.10.1.103
+vMX4	  ansible_host=192.10.1.103
+
+[iosxr]
+XR5	ansible_host=192.10.1.105
+
+[junos:vars]
+ansible_user=lab
+ansible_ssh_pass=lab123
+dev_os=junos
+
+[iosxr:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+dev_os=iosxr
+

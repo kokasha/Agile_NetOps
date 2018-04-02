@@ -1,0 +1,11 @@
+- name: Generate Configuration for all routers
+  gather_facts: no
+  connection: local
+  hosts: all
+  tasks:
+    - file: path=core-config  state=directory
+    - file: path=log.txt  state=absent
+    - file: path=log.txt  state=touch
+      run_once: true
+
+

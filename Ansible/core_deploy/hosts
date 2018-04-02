@@ -1,0 +1,18 @@
+[ios]
+R4      ansible_host=localhost	ansible_port=8004   dev_os=ios  mgmt_intf=FastEthernet0/0
+CSR6    ansible_host=localhost	ansible_port=8006   dev_os=ios mgmt_intf=GigabitEthernet1
+
+[junos]
+vMX1	ansible_host=localhost	ansible_port=8001   dev_os=junos
+vMX2	ansible_host=localhost	ansible_port=8002   dev_os=junos
+
+[iosxr]
+XR5	    ansible_host=localhost	ansible_port=8005   dev_os=iosxr
+
+[ios:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+
+[junos:vars]
+ansible_user=lab
+ansible_ssh_pass=lab123

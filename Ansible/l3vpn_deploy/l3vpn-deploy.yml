@@ -1,0 +1,50 @@
+---
+- hosts: localhost
+  name: Create node data model
+  gather_facts: no
+  tags: [ model ]
+  vars_files:
+  - "{{model|default('l3vpn-model.yml')}}"
+  tasks:
+  - name: Create per-node data model from fabric data model
+    template: src=l3vpn-service.j2 dest=./l3vpn-node.yml
+
+
+- name: Generate Configuration for all routers
+  gather_facts: no
+  connection: local
+  hosts: all
+  tags: [ template ]
+  tasks:
+    - include_vars: "./l3vpn-node.yml"
+    - file: path=l3vpn-{{common.vrf_name}}-config  state=directory
+      run_once: true
+    - name: Generate Configuration
+      template: src=conf-template/jnpr-l3vpn.j2 dest=l3vpn-{{common.vrf_name}}-config/{{inventory_hostname}}-l3vpn.txt
+      when: "inventory_hostname in nodes.keys()"
+
+## Third Play
+# commit variable is used to control the play
+# if commit=0 then we will not commit the changes we will only generate diff
+# if commit=1 then we will  commit the changes and generate diff
+- name: push the configuration to the devices
+  gather_facts: no
+  connection: local
+  hosts: all
+  tags: [ deploy ]
+  tasks:
+    - include_vars: "./l3vpn-node.yml"
+    - file: path=l3vpn-conf-diff state=directory
+      run_once: true
+    - name: load the configuration to the devices
+      napalm_install_config:
+        hostname: "{{ ansible_host }}"
+        username: "{{ ansible_user }}"
+        dev_os: "{{dev_os}}"
+        password: "{{ ansible_ssh_pass }}"
+        optional_args:
+          port: "{{ ansible_port }}"
+        config_file: l3vpn-{{common.vrf_name}}-config/{{inventory_hostname}}-l3vpn.txt
+        commit_changes: "{{commit}}"
+        diff_file: l3vpn-conf-diff/{{inventory_hostname}}-diff.txt
+      when: "inventory_hostname in nodes.keys()"

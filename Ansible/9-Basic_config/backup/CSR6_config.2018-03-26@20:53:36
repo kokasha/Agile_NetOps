@@ -1,0 +1,255 @@
+Building configuration...
+
+Current configuration : 5188 bytes
+!
+! Last configuration change at 18:12:32 UTC Mon Mar 26 2018 by cisco
+!
+version 16.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname CSR6
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1263447164
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1263447164
+ revocation-check none
+ rsakeypair TP-self-signed-1263447164
+!
+!
+crypto pki certificate chain TP-self-signed-1263447164
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31323633 34343731 3634301E 170D3138 30333234 31363033 
+  31355A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 32363334 
+  34373136 34308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100C166 08E2FB57 9351CB2D 2405FBAF 7A8F829C D206A280 E13A7FEC 
+  8C107AE0 CC0203AD B78720D9 760B9EEC 29A1C28D E7E7FDD6 FBC54F54 5D267AE5 
+  DCF4A012 97F14E85 B9DBB8D8 1299BE1C 17B9B11D 58317B5D 719BAB6C 818256E4 
+  8564C633 8762C202 D94B3685 394D75E9 2E850814 35A7972A 80A7F12F 7EABD596 
+  BCC6B8DA B353F2D3 D50877BF 892A4CE0 31B18322 D79BD3D4 3BEBADAE 43F25C65 
+  C4BDFA93 66929711 AEB3EEC6 5726D99E FBC331FD D3FEE71A 827B82B1 D1F0CE43 
+  ED2F105F 1BE4D116 41CF3CB4 E50EADA1 5E4DB41C B5008B5D D02BCFCC 065BF0AB 
+  C7A048C4 94109C1F C13718E4 C6EEDF12 162768D9 6C533CC8 941C29C1 89792E1C 
+  065FD901 70710203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14B1291E 8AE3F9CD 602F697D 3D26DE0C 9CD50959 
+  98301D06 03551D0E 04160414 B1291E8A E3F9CD60 2F697D3D 26DE0C9C D5095998 
+  300D0609 2A864886 F70D0101 05050003 82010100 606C6E87 270A69F1 87576D08 
+  5E675904 A0AD952E ACCACF77 C5EB4293 CAAC278B EDD82399 0DE09781 53A4760B 
+  C6560E26 F2D149AD 99301B30 83AFD28A 3874088A 0F7D7F1E 39875223 62164991 
+  739CDB06 41651EAA 1AFA3A77 5182A6F9 B7EB2A2B 687658E6 252FBB85 FA6A7361 
+  6817C0CB C137E65D 12354C2D 4C27659F 4A734564 3C2D1957 B3285B62 26AAB5E3 
+  8A37DCE8 A25E0DDE 411F363F 523B117D DDBD8E4E 1DF1DC03 D5F52AD1 D9783285 
+  5D5D582E 79F6017F E74D4B34 28AD382B 0E1FD74A 1DCE3387 7DECB1D9 99F26DCC 
+  0AFB7859 3E240FCB 3FE07804 A40CDA6C AEB9FAF5 39EE6CD3 2B58706E AA7E1E80 
+  EC5896EE 769A8B70 F615C9FE 7CA62F0A E6FEE72B
+  	quit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 93BA4N33ZT3
+diagnostic bootup level minimal
+spanning-tree extend system-id
+!
+netconf-yang cisco-odm actions OSPF
+netconf-yang cisco-odm actions IPRoute
+netconf-yang cisco-odm actions Diffserv
+netconf-yang cisco-odm actions BFDNeighbors
+netconf-yang cisco-odm actions BridgeDomain
+netconf-yang cisco-odm actions VirtualService
+netconf-yang cisco-odm actions EthernetCFMStats
+netconf-yang cisco-odm actions MPLSLDPNeighbors
+netconf-yang cisco-odm actions MPLSStaticBinding
+netconf-yang cisco-odm actions MPLSForwardingTable
+netconf-yang
+!
+restconf
+!
+username cisco privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+!
+!
+!
+lldp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface Loopback0
+ ip address 10.100.6.6 255.255.255.255
+ ip ospf 100 area 0
+!
+interface GigabitEthernet1
+ description OOB network
+ ip address 192.10.0.106 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet2
+ ip address 172.10.16.2 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf 100 area 0
+ ip ospf cost 10
+ negotiation auto
+ mpls ip
+ no lldp transmit
+ no lldp receive
+ no mop enabled
+ no mop sysid
+ ip rsvp bandwidth
+!
+interface GigabitEthernet3
+ description R4
+ ip address 172.10.46.1 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf 100 area 1
+ ip ospf cost 10
+ shutdown
+ negotiation auto
+ mpls ip
+ no mop enabled
+ no mop sysid
+ ip rsvp bandwidth
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+router ospf 100
+ router-id 10.100.6.6
+ passive-interface Loopback0
+!
+router bgp 100
+ bgp router-id 10.100.6.6
+ bgp log-neighbor-changes
+ neighbor 10.100.1.1 remote-as 100
+ neighbor 10.100.1.1 update-source Loopback0
+ !
+ address-family ipv4
+  neighbor 10.100.1.1 activate
+ exit-address-family
+ !
+ address-family vpnv4
+  neighbor 10.100.1.1 activate
+  neighbor 10.100.1.1 send-community both
+ exit-address-family
+!
+!
+virtual-service csr_mgmt
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+!
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ login local
+!
+netconf ssh
+!
+!
+!
+!
+!
+end

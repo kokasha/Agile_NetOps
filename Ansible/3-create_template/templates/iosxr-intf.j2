@@ -1,0 +1,15 @@
+{% set node = routers[inventory_hostname] %}
+!
+{% for intf,intf_attr in node.interfaces.items() %}
+interface {{intf}}
+ description {{intf_attr.description}}
+ mtu {{mtu}}
+ ipv4 address {{intf_attr.ip|ipaddr('address')}} {{intf_attr.ip|ipaddr('netmask')}}
+!
+{% endfor %}
+!
+mpls ldp
+{% for intf, intf_attr in node.interfaces.items()|sort %}
+ interface {{intf}}
+{% endfor %}
+!

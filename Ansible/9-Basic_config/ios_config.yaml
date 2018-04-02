@@ -1,0 +1,42 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: PUSH configuration from template
+    ios_config:
+        src: ./{{inventory_hostname}}.cfg
+        backup: yes
+        save_when: modified
+    register: cmd_output
+
+  # - name: log commands executed
+  #   lineinfile:
+  #     dest: commands_log.txt
+  #     line: "{{item}}"
+  #   with_items: "{{cmd_output.updates}}"
+  #   when: inventory_hostname == 'R4'
+
+  # - name: PUSH configuration JunOS 
+  #   junos_command:
+  #       commands:
+  #        - show version
+  #   register: show_output
+  #   when: dev_os == 'junos'
+
+  # - name: PUSH configuration IOS-XR 
+  #   iosxr_command:
+  #       commands:
+  #        - show version
+  #   register: show
+  #   when: dev_os == 'iosxr'
+
+  # - name: check version
+  #   fail: msg="wrong Software number "
+  #   when: "show_output.stdout[0] contains '14.1'" 
+
+  # # - name: print output
+  # #   debug: var=show_output
+  # #   #when: dev_os == 'junos'
+  # #   #debug: var=hostvars[inventory_hostname].output

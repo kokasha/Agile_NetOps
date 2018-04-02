@@ -1,0 +1,26 @@
+---
+- name: Play to execute a command
+  hosts: all
+  connection: local
+  gather_facts: no          
+  tasks:
+  # - name: configure interface
+  #   junos_vlan:
+  #       name: VPNA VLAN
+  #       interfaces: 
+  #         - ge-0/0/3
+  #       description: Access Interface -- R4 E2/0
+  #       state: present
+  #   register: cmd_output
+  #   when: inventory_hostname == 'vMX2'
+
+  - name: configure VRF
+    junos_vrf:
+        name: vpnb
+        description: VRF for VPNB
+        interfaces: 
+          - ge-0/0/3.20
+        rd: "100:2"
+        target: "target:100:2"
+    register: cmd_output
+    when: inventory_hostname == 'vMX2'

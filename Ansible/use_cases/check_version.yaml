@@ -1,0 +1,25 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  vars:
+    version: "15.5"
+  tasks:
+  - name: show version on IOS
+    ios_command:
+        commands:
+         - show version
+    register: ios_output
+
+  - name: check version
+    fail: msg="Router {{inventory_hostname}} has wrong IOS"
+    when: "not ('{{version}}' in ios_output.stdout[0])"
+    ignore_errors: true
+
+  - name: log routers with wrong IOS
+    lineinfile: 
+      path: ./log_output.txt
+      regexp: "{{inventory_hostname}}"
+      line: "{{inventory_hostname}}, has wrong IOS"
+    when: "not ('{{version}}' in ios_output.stdout[0])"

@@ -1,0 +1,54 @@
+---
+- name: Play to execute a command
+  hosts: all
+  connection: local
+  gather_facts: no          
+  tasks:
+  # - name: configure interface
+  #   ios_interface:
+  #       name: GigabitEthernet6
+  #       description: Access Interface -- R4
+  #       mtu: 1500
+  #       state: up
+  #   register: cmd_output
+  #   when: inventory_hostname == 'CSR6'
+
+  - name: configure VRF
+    ios_vrf:
+        name: vpnb
+        description: VRF for VPNb
+        # interfaces: 
+        #   - BDI10
+        rd: "100:2"
+    register: cmd_output
+    when: inventory_hostname == 'CSR6'
+
+  # - name: log commands executed
+  #   lineinfile:
+  #     dest: commands_log.txt
+  #     line: "{{item}}"
+  #   with_items: "{{cmd_output.updates}}"
+  #   when: inventory_hostname == 'R4'
+
+  # - name: PUSH configuration JunOS 
+  #   junos_command:
+  #       commands:
+  #        - show version
+  #   register: show_output
+  #   when: dev_os == 'junos'
+
+  # - name: PUSH configuration IOS-XR 
+  #   iosxr_command:
+  #       commands:
+  #        - show version
+  #   register: show
+  #   when: dev_os == 'iosxr'
+
+  # - name: check version
+  #   fail: msg="wrong Software number "
+  #   when: "show_output.stdout[0] contains '14.1'" 
+
+  # # - name: print output
+  # #   debug: var=show_output
+  # #   #when: dev_os == 'junos'
+  # #   #debug: var=hostvars[inventory_hostname].output

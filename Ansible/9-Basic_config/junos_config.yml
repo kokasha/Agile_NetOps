@@ -1,0 +1,12 @@
+---
+- name: Push configuration to IOS-XR
+  hosts: junos
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: PUSH configuration from template
+    junos_config:
+        src: mx.cfg
+        #backup: yes
+    register: cmd_output
+  - debug: var=cmd_output

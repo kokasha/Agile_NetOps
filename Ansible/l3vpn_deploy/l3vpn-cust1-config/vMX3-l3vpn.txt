@@ -1,0 +1,62 @@
+
+interfaces {
+    ge-0/0/2 {
+        description "link to ce2"
+        vlan-tagging;
+        encapsulation flexible-ethernet-services;
+        unit 10 {
+            vlan-id 10;
+            family inet {
+                address 192.100.2.1/30
+            }
+        }
+    }   
+}
+
+routing-instances {
+    cust1 {
+        instance-type vrf;
+        interface ge-0/0/2.10;
+        route-distinguisher 65000:1;
+        vrf-target target:65000:1;
+        vrf-table-label;
+        protocols {
+            bgp {
+                group ce2 {
+                    import __ANSIBLE_cust1_ce2_import;
+                    export __ANSIBLE_cust1_ce2_export;
+                    neighbor 192.100.2.2;
+                    peer-as 65002;
+                }
+            }
+        }
+    }
+}
+
+
+policy-options {
+    policy-statement __ANSIBLE_cust1_ce2_import {
+        term ce2_routes {
+            from {
+                protocol bgp;
+                route-filter 10.100.2.0/24 exact;
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+    policy-statement __ANSIBLE_cust1_ce2_export {
+        term ebgp_export {
+            from {
+                protocol bgp;
+                external;
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+}

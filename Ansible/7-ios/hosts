@@ -1,9 +1,9 @@
 [ios]
-R4	ansible_host=192.10.0.104
-
+R4	ansible_host=localhost	ansible_port=8004
+CSR6	ansible_host=localhost	ansible_port=8006
 [junos]
-vMX2	ansible_host=192.10.0.102
-vMX3	ansible_host=192.10.0.103
+vMX2	ansible_host=localhost	ansible_port=8002
+vMX3	ansible_host=localhost	ansible_port=8003
 
 [ios:vars]
 ansible_user=cisco

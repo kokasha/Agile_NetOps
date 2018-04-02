@@ -1,0 +1,16 @@
+interface f0/0
+ip address 192.10.0.104 255.255.255.0
+interface F1/0
+no shutdown
+ip address 172.10.46.2 255.255.255.252
+mpls ip
+ip rsvp bandwidth
+ip ospf network point-to-point
+ip ospf cost 10
+ip ospf 100 area 1
+router bgp 100
+neighbor 10.100.1.1 activate
+neighbor 10.100.1.1 update-source Loopback0
+address-family vpnv4
+neighbor 10.100.1.1 send-community both
+exit-address-family

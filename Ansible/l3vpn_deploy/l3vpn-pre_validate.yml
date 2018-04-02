@@ -1,0 +1,65 @@
+---
+- name: Gather Network Resources
+  gather_facts: no
+  connection: local
+  hosts: all
+  tags: [ gather ]
+  vars_files:
+  - "./l3vpn-node.yml"
+  tasks:
+    - name: GET BGP and LLDP output
+      napalm_get_facts:
+        hostname: "{{ ansible_host }}"
+        username: "{{ ansible_user }}"
+        dev_os: "{{ dev_os }}"
+        password: "{{ ansible_ssh_pass }}"
+        optional_args:
+          port: "{{ ansible_port }}"
+        filter: 
+          #- lldp_neighbors
+          #- bgp_neighbors
+          - interfaces_ip
+          - interfaces
+      when: inventory_hostname in nodes
+    - set_fact: node={{nodes[inventory_hostname]}}
+      when: inventory_hostname in nodes
+    #- debug: var=hostvars[inventory_hostname].napalm_interfaces_ip
+    #- debug: var=hostvars[inventory_hostname].napalm_interfaces
+    #- debug: var=hostvars[inventory_hostname].node
+    - set_fact: node_interfaces={{node|map(attribute='links')|list}}
+      when: inventory_hostname in nodes
+    - set_fact: node_vlans=''
+      when: inventory_hostname in nodes
+    - set_fact: node_vlans="{{ node_vlans|list + item.keys()}}"
+      with_list: "{{node_interfaces}}"
+      when: inventory_hostname in nodes
+
+    - name: Validate Interfaces are available on the router
+      assert:
+        that: item.split('.')[0] in hostvars[inventory_hostname].napalm_interfaces.keys()
+        msg:  |
+          Interface {{item.split('.')[0]}} Is not available on  {{inventory_hostname}}
+      with_list: "{{node_vlans}}"
+      when: inventory_hostname in nodes
+      ignore_errors: true
+
+    - name: Validate all VPN Interface is operational
+      assert:
+        that: hostvars[inventory_hostname].napalm_interfaces[item.split('.')[0]].is_up == true
+        msg:  |
+          Interface {{item.split('.')[0]}} Is DOWN on {{inventory_hostname}}
+      with_list: "{{node_vlans}}"
+      when: inventory_hostname in nodes
+      ignore_errors: true
+
+    - name: Validate VLANs are not already used on the interfaces
+      assert:
+        that: item not in hostvars[inventory_hostname].napalm_interfaces_ip.keys()
+        msg:  |
+          Interface {{item}} Is already used in {{inventory_hostname}}
+      with_list: "{{node_vlans}}"
+      when: inventory_hostname in nodes
+      ignore_errors: true
+
+
+  

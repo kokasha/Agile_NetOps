@@ -1,0 +1,88 @@
+{% set node = nodes[inventory_hostname] %}
+
+{#
+**************************************************
+###         Interfaces configuration        ######
+**************************************************
+    #}
+interfaces {
+{% for site in node %}
+{%  for intf,intf_attr in site.links.items() %}
+    {{ intf.split('.')[0] }} {
+        description "link to {{site.name}}"
+        vlan-tagging;
+        encapsulation flexible-ethernet-services;
+        unit {{intf_attr.vlan}} {
+            vlan-id {{intf_attr.vlan}};
+            family inet {
+                address {{intf_attr.ip}}/{{intf_attr.mask|default('30')}}
+            }
+        }
+{%  endfor %}
+    }   
+{% endfor %}
+}
+
+{#
+**************************************************
+###         Routing Instances                  ###
+**************************************************
+#}
+routing-instances {
+{%  for site in node %}
+    {{common.vrf_name}} {
+        instance-type vrf;
+        interface {{site.links.keys()[0]}};
+        route-distinguisher {{common.rd}};
+        vrf-target target:{{common.rd}};
+        vrf-table-label;
+        protocols {
+            bgp {
+                group {{site.name}} {
+                    import __ANSIBLE_{{common.vrf_name}}_{{site.name}}_import;
+                    export __ANSIBLE_{{common.vrf_name}}_{{site.name}}_export;
+                    neighbor {{site.bgp.ip}};
+                    peer-as {{site.bgp.as}};
+                }
+            }
+        }
+    }
+{%  endfor %}
+}
+
+{#
+**************************************************
+###         Policy options                  ######
+**************************************************
+#}
+
+policy-options {
+{%  for site in node %}
+    policy-statement __ANSIBLE_{{common.vrf_name}}_{{site.name}}_import {
+        term {{site.name}}_routes {
+            from {
+                protocol bgp;
+{%              for prefix in  site.bgp.prefix if site.bgp.prefix is sequence %}
+                route-filter {{prefix}} exact;
+{%              endfor %}
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+    policy-statement __ANSIBLE_{{common.vrf_name}}_{{site.name}}_export {
+        term ebgp_export {
+            from {
+                protocol bgp;
+                external;
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+{%  endfor %}
+}

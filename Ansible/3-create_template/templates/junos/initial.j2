@@ -1,15 +1,9 @@
 system {
     host-name {{hostname}};
-    root-authentication {
-        encrypted-password "$1$VXXpDMDn$lzQCfiwL59/3UV21cVaBa."; ## SECRET-DATA
-    }
     login {
 {% for user in users %}
         user {{user.username}} {
             class super-user;
-            authentication {
-                encrypted-password {{user.password|hash('md5')}}; ## SECRET-DATA
-            }
         }
 {% endfor %}
     }
@@ -25,3 +19,4 @@ system {
 {% endfor %}
     }
 }
+

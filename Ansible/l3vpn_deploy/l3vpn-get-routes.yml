@@ -1,0 +1,29 @@
+---
+- name: Gather VPN Routes
+  gather_facts: no
+  connection: local
+  hosts: all
+  tags: [ gather ]
+  vars:
+    vrfs:
+    - cust1
+    - cust2
+
+  tasks:
+    - name: Get vpn route table
+      junos_command:
+        commands:
+          - show route table {{item}} active-path detail
+        display: xml
+      register: junos_output
+      with_list: "{{vrfs}}" 
+    #- debug: var=junos_output.results     
+    # - debug: msg={{item.output}}
+    #   with_list: "{{junos_output.results}}"
+
+    - name: send output in YAML
+      copy:
+        content: "{{ junos_output.results|map(attribute='output')|list|to_nice_yaml (indent=4) }}"
+        dest: "./{{inventory_hostname}}_vpn_output.yaml"
+      #with_list: "{{ junos_output.results}}"
+

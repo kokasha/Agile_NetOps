@@ -29,12 +29,6 @@
         commands:
         - show version
         - show arp
-        display: text
-        provider:
-         port: 22
-         host: "{{ansible_host}}"
-         username: "{{ansible_user}}"
-         password: "{{ansible_ssh_pass}}"
     register: junos_output
 
   - name: Print Output

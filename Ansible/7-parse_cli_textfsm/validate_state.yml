@@ -1,0 +1,27 @@
+---
+- name: Play to execute a command
+  hosts: iosxr
+  connection: local
+  gather_facts: no
+  vars:
+    interfaces:
+      - GigabitEthernet0/0/0/0
+      - GigabitEthernet0/0/0/1
+      - GigabitEthernet0/0/0/2
+      - GigabitEthernet0/0/0/3
+  tasks:
+  - name: get all interfaces
+    iosxr_command:
+        commands:
+         - show interfaces
+    register: iosxr_output
+
+  - name: parse output
+    set_fact: iosxr_intf={{iosxr_output.stdout[0]|parse_cli_textfsm('../ntc_templ/cisco_xr_show_interfaces.template')}}
+
+  - name: Validate all Interfaces are UP
+    assert:
+      that: "iosxr_intf|selectattr('INTERFACE','equalto','{{item}}')|map(attribute='LINK_STATUS')|list|first == 'up'"
+      msg: "inteface {{item}} is down"
+    with_items: "{{interfaces}}"
+

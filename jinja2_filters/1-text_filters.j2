@@ -1,0 +1,10 @@
+!
+{# This is a Comment in JINJA2 #}
+{% set id = hostname.split('-')[1]| int%}
+hostname {{hostname}}
+ip domain-name {{domain}}
+!
+interface loopback0
+ip address 10.100.{{id}}.{{id}} 255.255.255.255
+!
+router bgp {{65000 + id}}

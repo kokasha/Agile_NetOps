@@ -1,0 +1,38 @@
+---
+- name: Play to execute a command
+  hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+  # - name: debug
+  #   debug: var=vars
+
+  - name: show version IOS
+    ios_command:
+        commands:
+         - show version
+    register: output
+    when: dev_os == 'ios'
+
+  - name: show version JunOS 
+    junos_command:
+        commands:
+         - show version
+    register: show_output
+    when: dev_os == 'junos'
+
+  - name: show version IOS-XR 
+    iosxr_command:
+        commands:
+         - show version
+    register: show
+    when: dev_os == 'iosxr'
+
+  - name: check version
+    fail: msg="wrong Software number "
+    when: "'14.1' in show_output.stdout[0]" 
+
+  # - name: print output
+  #   debug: var=show_output
+  #   #when: dev_os == 'junos'
+  #   #debug: var=hostvars[inventory_hostname].output

@@ -1,0 +1,85 @@
+{% set node = nodes[inventory_hostname] %}
+
+{#
+**************************************************
+###         Interfaces configuration        ######
+**************************************************
+    #}
+interfaces {
+{% for intf,intf_attr in node.links.items() %}
+    {{ intf.split('.')[0] }} {
+        description "{{intf_attr.remote}}"
+{%      if intf_attr.vlan  is defined %}
+        vlan-tagging;
+        encapsulation flexible-ethernet-services;
+        unit {{intf_attr.vlan}} {
+            vlan-id {{intf_attr.vlan}};
+            family inet {
+                address {{intf_attr.ip}}/{{intf_attr.mask|default('30')}}
+            }
+        }
+{%      endif %}
+    }   
+{% endfor %}
+}
+protocols {
+{#
+**************************************************
+###         BGP  Variables                  ######
+**************************************************
+#}
+    bgp {
+{%      for peer, peer_attr in node.bgp.ebgp.peers.items() %}
+        group {{peer}} {
+            type external;
+            import __ANSIBLE_{{peer}}_import;
+            export __ANSIBLE_{{peer}}_export;
+{#            local-address {{ node.rid}};#}
+            family inet {               
+                unicast;
+            }
+            neighbor {{ peer_attr.ip }};
+            peer-as {{peer_attr.as}};
+            import __ANSIBLE_{{peer}}_import;
+        }
+{%      endfor %}
+    }
+}
+
+policy-options {
+{%  for peer, peer_attr in node.bgp.ebgp.peers.items() %}
+    policy-statement __ANSIBLE_{{peer}}_import {
+        term {{peer}}_routes {
+            from {
+                protocol bgp;
+{%              for prefix in  peer_attr.prefix if peer_attr.prefix is sequence %}
+                route-filter {{prefix}} exact;
+{%              endfor %}
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+    policy-statement __ANSIBLE_{{peer}}_export {
+        term ebgp_export {
+            from {
+                protocol bgp;
+                external;
+            }
+            then accept;
+        }
+        term default_route {
+            from {
+                protocol static;
+                route-filter 0.0.0.0/0 exact;
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+{%  endfor %}
+}

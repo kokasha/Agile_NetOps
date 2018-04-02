@@ -1,0 +1,18 @@
+---
+
+- name: Create configuration template
+  hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+  - include_vars: intf-design.yml
+  - name: create folder for configuration
+    file:
+     path=intf-configs state=directory
+    run_once: true
+    
+  - name: create  configuration template
+    template:
+     src: templates/{{ansible_dev_os}}-intf.j2
+     dest: intf-configs/{{inventory_hostname}}.txt
+

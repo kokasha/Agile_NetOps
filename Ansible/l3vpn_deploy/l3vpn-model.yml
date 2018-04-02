@@ -1,0 +1,21 @@
+---
+common:
+  customer_name: cust2
+  rt: '65000:2'
+  rd: '65000:2'
+
+
+links:
+- {pe: vMX2, left_port: ge-0/0/2, left_ip: 192.101.1.1,
+    ce: ce1, right_port: ge-0/0/0, right_ip: 192.101.1.2, vlan: 20 }
+- {pe: vMX3, left_port: ge-0/0/2, left_ip: 192.101.2.1,
+    ce: ce2, right_port: ge-0/0/1, right_ip: 192.101.2.2, vlan: 20 }
+
+sites:
+- name: ce1
+  routing:
+   {ip: 192.100.1.2, as: 65001, local: vMX2, prefix: [10.101.1.0/24]}
+- name: ce2
+  routing:
+   {ip: 192.100.2.2, as: 65002, local: vMX3, prefix: [10.101.2.0/24]}
+
