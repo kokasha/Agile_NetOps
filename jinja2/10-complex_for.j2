@@ -2,12 +2,10 @@
 {% for name,parm in interfaces.iteritems() %}
 interface {{name}}
  ip address {{parm.ip}} {{parm.mask}}
-!
 {% endfor %}
 !
 router ospf 1
 {% for intf in ospf_intf %}
 network {{interfaces[intf].ip}} 0.0.0.0 area 0
 {% endfor %}
-!
 

@@ -9,5 +9,5 @@
     f0/1: {vlan: 20, ip: 192.10.2.1/24}
   tasks:
   - debug:   
-     msg: "set interface {{item.key}} unit {{item.value.vlan}} address {{item.value.ip}} "
+     msg: "set interface {{item.key}} unit {{item.value.vlan}} address {{item.value.ip}}"
     with_dict: "{{interfaces}}"

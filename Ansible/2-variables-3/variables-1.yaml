@@ -1,5 +1,4 @@
 ---
-
 - name: Play to execute a command
   hosts: all
   connection: local

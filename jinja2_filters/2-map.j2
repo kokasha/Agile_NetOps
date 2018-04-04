@@ -1,4 +1,7 @@
+
 {% set mpls_intfs = core_intfs|map(attribute='name')|list%}
 {% for intf in mpls_intfs %}
 set protocols mpls interface {{intf}}.0
 {% endfor %}
+
+

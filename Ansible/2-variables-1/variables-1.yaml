@@ -8,3 +8,4 @@
   - name: Dump all Variables
     debug: var=hostvars
     run_once: yes
+    
