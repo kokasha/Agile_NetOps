@@ -1,7 +1,5 @@
 ---
-
-- name: Create configuration template
-  hosts: ios
+- hosts: ios
   connection: local
   gather_facts: no
   tasks:
@@ -9,15 +7,12 @@
     file:
      path=configs state=directory
     run_once: true
-#  - debug: var=vars
-
   - name: create IOS configuration template
     template:
      src: templates/ios/initial.j2
      dest: configs/{{inventory_hostname}}.txt
 
-- name: Create configuration template
-  hosts: junos
+- hosts: junos
   connection: local
   gather_facts: no
   tasks:
@@ -25,3 +20,5 @@
     template:
      src: templates/junos/initial.j2
      dest: configs/{{inventory_hostname}}.txt
+
+

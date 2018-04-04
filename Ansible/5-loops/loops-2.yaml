@@ -12,7 +12,7 @@
     - 20
   tasks:
   - debug:
-     msg: "interface is {{item[0]}} has {{item[1]}}"
+     msg: "interface is {{item[0]}} has vlan {{item[1]}}"
     with_nested:
     - "{{interfaces}}"
     - "{{vlans}}"

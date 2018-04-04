@@ -1,0 +1,17 @@
+---
+
+- name: Play to execute a command
+  hosts: all
+  connection: local
+  gather_facts: no
+  vars_files:
+    - ./info.yml
+  vars:
+    company: STC
+    country: KSA
+  tasks:
+  - name: Dump all Variables
+    debug: var=vars
+    run_once: yes
+    vars:
+      domain: lab.stc.com

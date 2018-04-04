@@ -1,0 +1,20 @@
+<-- R4 show ip route -->
+show_route
+<-- R4 show ip route -->
+show_route
+<-- R4 show ip route -->
+<-- R4 show arp -->
+show_arp
+<-- R4 show arp -->
+show_arp
+<-- R4 show arp -->
+<-- CSR6 show ip route -->
+show_route
+<-- CSR6 show ip route -->
+show_route
+<-- CSR6 show ip route -->
+<-- CSR6 show arp -->
+show_arp
+<-- CSR6 show arp -->
+show_arp
+<-- CSR6 show arp -->

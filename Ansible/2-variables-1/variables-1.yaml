@@ -1,0 +1,10 @@
+---
+
+- name: Play to execute a command
+  hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Dump all Variables
+    debug: var=hostvars
+    run_once: yes

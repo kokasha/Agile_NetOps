@@ -1,18 +1,16 @@
 ---
-
 - name: Create configuration template
   hosts: all
   connection: local
   gather_facts: no
   tasks:
-  - name: create folder for configuration
-    file:
-     path=configs state=directory
-    run_once: true
-#  - debug: var=vars
-
   - name: create  configuration template
     template:
      src: templates/{{os}}/initial.j2
      dest: configs/{{inventory_hostname}}.txt
+
+  - name: create folder for configuration
+    file:
+     path=configs state=directory
+    run_once: true
 

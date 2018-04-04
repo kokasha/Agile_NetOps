@@ -1,13 +1,8 @@
 ---
-
-- name: Create configuration template
+- name: Test When
   hosts: all
-  connection: local
-  gather_facts: no
-  vars:
-   ios: true
   tasks:
-  - name: Run for IOS only
+  - name: Run for JunOS only
     debug: 
      msg: "All Run ok for {{inventory_hostname}}"
     when: "'junos' in hostvars[inventory_hostname].group_names"

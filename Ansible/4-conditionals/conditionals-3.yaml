@@ -5,6 +5,8 @@
   - name: Run for JunOS only
     debug: 
      msg: "All Run ok for {{inventory_hostname}}"
-    when: hostvars[inventory_hostname].group_names[0] == 'junos'  and company == 'STC'
+    when: 
+    - hostvars[inventory_hostname].group_names[0] == 'junos'
+    - company == 'Mobily'
 
 

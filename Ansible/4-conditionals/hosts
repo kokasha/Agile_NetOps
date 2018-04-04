@@ -1,14 +1,7 @@
 [ios]
-ios_r1	ansible_host=192.10.0.101
+ios_r1	ansible_host=192.10.0.101   company=STC
 
 [junos]
-vMX2	ansible_host=192.10.0.102
-vMX3	ansible_host=192.10.0.103
+vMX2	ansible_host=192.10.0.102   company=STC
+vMX3	ansible_host=192.10.0.103   company=Mobily
 
-[ios:vars]
-ansible_user=cisco
-ansible_ssh_pass=cisco
-
-[junos:vars]
-ansible_user=lab
-ansible_ssh_pass=lab123

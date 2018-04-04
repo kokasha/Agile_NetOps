@@ -8,6 +8,10 @@
     f0/0: {vlan: 10, ip: 192.10.1.1/24}
     f0/1: {vlan: 20, ip: 192.10.2.1/24}
   tasks:
-  - debug:   
-     msg: "set interface {{item.key}} unit {{item.value.vlan}} address {{item.value.ip}} "
+  - lineinfile:   
+     dest: conf.txt
+     line: "set interface {{item.key}} unit {{item.value.vlan}} address {{item.value.ip}} "
+     regexp: 'set inteface {{item.key}}'
+     create: yes
+     state: present
     with_dict: "{{interfaces}}"
