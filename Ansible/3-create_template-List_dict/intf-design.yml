@@ -1,0 +1,23 @@
+---
+mtu: 1514
+routers:
+  XR5:
+    interfaces:
+      f3/0:
+        description: "link to vMX1"
+        ip: 172.20.1.1/30
+      f4/0:
+        description: "link to vMX2"
+        ip: 172.20.2.1/30
+  vMX1:
+    interfaces:
+      ge-0/1/0:
+        description: "link to XR5"
+        ip: 172.20.1.2/30
+  vMX2:
+    interfaces:
+      ge-0/2/0:
+        description: "link to XR5"
+        ip: 172.20.2.2/30
+
+        

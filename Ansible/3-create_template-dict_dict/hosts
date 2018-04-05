@@ -1,0 +1,13 @@
+[iosxr]
+XR5	    ansible_host=192.10.0.101
+
+[junos]
+vMX1	ansible_host=192.10.0.101
+vMX2	ansible_host=192.10.0.102
+vMX3	ansible_host=192.10.0.103
+
+[iosxr:vars]
+ansible_dev_os=iosxr
+
+[junos:vars]
+ansible_dev_os=junos

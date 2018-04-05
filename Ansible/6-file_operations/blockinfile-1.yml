@@ -5,35 +5,15 @@
   gather_facts: no
   serial: 1
   vars:
-    commands:
-     - {name: show_route, cmd: show ip route}
-     - {name: show_arp, cmd: show arp}
+    domain: stc.lab.com
   tasks:
-  - name: show version on IOS
-    ios_command:
-        commands:
-        - "{{item.cmd}}"
-    register: ios_output
-    with_items: "{{commands}}"
-
   - name: save the output
     blockinfile:
-     path: results.txt
+     path: results-{{inventory_hostname}}.txt
      block: |
-       {{item.name}}
-     marker: "<-- {{inventory_hostname}} {{item.cmd}} -->"
+      !
+      hostname {{inventory_hostname}}
+      ip domain name {{domain}}
+      !  
      create: yes
-    with_items: "{{commands}}"
-
-  # - name: save the output
-  #   blockinfile:
-  #    path: results.txt
-  #    block: |
-  #      {{item.stdout[0]}}
-  #    marker: "<-- {{inventory_hostname}} {{item.item.cmd}} -->"
-  #    create: yes
-  #   with_items: "{{ios_output.results}}"
-  
-  # - name: print output
-  #   debug: var=ios_output
-
+     backup: yes

@@ -1,0 +1,8 @@
+interfaces:
+{% for line in csvfile.split('\n') %}
+{% if loop.index != 1 %}
+{% set items = line.split(',')%}
+     {{items[0]}}: {vlan:{{items[1]}}, prefix:{{items[2]}}}
+{% endif %}
+{% endfor %}
+

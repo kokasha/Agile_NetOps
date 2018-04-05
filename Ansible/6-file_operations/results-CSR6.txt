@@ -1,0 +1,6 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+!
+hostname CSR6
+ip domain name stc.lab.com
+!  
+# END ANSIBLE MANAGED BLOCK

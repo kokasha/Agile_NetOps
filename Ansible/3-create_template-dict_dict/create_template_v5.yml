@@ -1,0 +1,20 @@
+---
+
+- name: Read Input CSV File
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    csvfile: "{{ lookup('file', 'input_data-2.csv') }}"
+  tasks:
+  - debug: var=csvfile
+  # - name: create folder for configuration
+  #   file:
+  #    path=intf-configs state=directory
+  #   run_once: true
+    
+  - name: Parse CSV to YAML
+    template:
+     src: csv2yml.j2
+     dest: ./csv_output.yml
+

@@ -1,0 +1,12 @@
+[ios]
+R4	    ansible_host=192.10.0.104
+
+[junos]
+vMX1	ansible_host=192.10.0.101
+vMX2	ansible_host=192.10.0.102
+
+[ios:vars]
+ansible_dev_os=ios
+
+[junos:vars]
+ansible_dev_os=junos

@@ -1,0 +1,14 @@
+---
+- name: Read Input CSV File
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    csvfile: "{{ lookup('file', 'input_data.csv') }}"
+  tasks:
+  #- debug: var=csvfile
+  - name: Parse CSV to YAML
+    template:
+     src: csv2yml.j2
+     dest: ./csv_output.yml
+

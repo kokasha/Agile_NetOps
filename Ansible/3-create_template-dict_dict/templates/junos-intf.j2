@@ -1,0 +1,23 @@
+{% set node = routers[inventory_hostname] %}
+
+interfaces {
+{% for intf,intf_attr in node.interfaces.items()|sort %}
+    {{ intf }} {
+        description "{{intf_attr.description}}";
+        mtu {{mtu}};
+        unit 0 {
+            family inet {
+                address {{intf_attr.ip|ipaddr('address')}}/{{intf_attr.ip|ipaddr('prefix')}};
+            }
+            family mpls;
+        }
+    }
+{% endfor %}
+}
+protocols {
+    ldp {
+{%      for intf, intf_attr in node.interfaces.items()|sort %}
+        interface {{intf}}.0;
+{%      endfor %}
+    }
+}

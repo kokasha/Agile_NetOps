@@ -4,10 +4,10 @@
   #connection: local
   #gather_facts: no
   tasks:
-  - name: show version on IOS
-    ios_command:
-        commands:
-         - show version
+  # - name: show version on IOS
+  #   ios_command:
+  #       commands:
+  #        - show version
          
   - name: debug output
     debug: var=vars
