@@ -6,6 +6,6 @@
   gather_facts: no
   tasks:
   - name: Dump all Variables
-    debug: var=hostvars
+    debug: var=vars
     run_once: yes
     

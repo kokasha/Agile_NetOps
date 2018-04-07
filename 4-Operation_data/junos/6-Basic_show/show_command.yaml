@@ -1,0 +1,14 @@
+---
+- name: Play to execute a command
+  hosts: vMX2
+  tasks:
+
+  - name: show version JunOS 
+    junos_command:
+        commands:
+         - show ospf neighbor
+    register: junos_output
+
+  - debug: var=junos_output
+
+

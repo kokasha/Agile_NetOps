@@ -1,9 +1,0 @@
-!
-hostname R4
-!
-username cisco password cisco
-username lab password lab123
-!
-ntp server 10.100.1.1
-ntp server 10.200.1.1
-!

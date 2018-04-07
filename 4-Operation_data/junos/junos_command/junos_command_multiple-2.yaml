@@ -1,0 +1,24 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  vars:
+    commands:
+      - {cmd: show_ospf, cli: show ospf neighbor}
+      - {cmd: show_bgp, cli: show bgp summary}
+  tasks:
+  - name: Get OSPF neigbors
+    junos_command:
+        commands: "{{item.cli}}"
+    register: routing_output
+    with_items: "{{commands}}"
+
+  - debug: var=routing_output
+
+  - blockinfile:
+      block: "{{item.stdout[0]}}"
+      marker: "### {mark} {{item.item.cli}} ######"
+      dest: "./{{inventory_hostname}}-output_show.txt"
+      create: yes
+    with_items: "{{ routing_output.results }}"
+
+

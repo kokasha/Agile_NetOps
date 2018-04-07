@@ -1,0 +1,11 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  tasks:
+  - file: path=facts  state=directory
+  - name: Get JunOS Facts 
+    junos_facts:
+  - copy:
+      content: "{{vars|to_nice_yaml(indent=4)}}"
+      dest: "facts/{{inventory_hostname}}.yml"
+    run_once: true

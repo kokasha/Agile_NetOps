@@ -6,7 +6,7 @@
   vars:
     csvfile: "{{ lookup('file', 'input_data.csv') }}"
   tasks:
-  #- debug: var=csvfile
+  - debug: var=csvfile
   - name: Parse CSV to YAML
     template:
      src: csv2yml.j2

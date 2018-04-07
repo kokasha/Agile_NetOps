@@ -1,0 +1,8 @@
+[junos]
+#vMX1	ansible_host=localhost	ansible_port=8001   dev_os=junos
+#vMX2	ansible_host=localhost	ansible_port=8002   dev_os=junos
+vMX3	ansible_host=localhost	ansible_port=8003   dev_os=junos
+
+[junos:vars]
+ansible_user=lab
+ansible_ssh_pass=lab123

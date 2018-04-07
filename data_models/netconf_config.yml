@@ -1,0 +1,44 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  tasks:
+  - file: path=facts  state=directory
+  - netconf_config:
+      host: "{{ ansible_host }}"
+      port: "{{ ansible_port }}"
+      username: "{{ ansible_user }}"
+      password: "{{ ansible_ssh_pass }}"
+      xml: |
+        <rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+          <edit-config>
+            <target>
+              <candidate/>
+            </target>
+            <config>
+              <bgp xmlns="http://openconfig.net/yang/bgp">
+                <neighbors>
+                  <neighbor>
+                    <neighbor-address>10.100.1.1</neighbor-address>
+                    <config>
+                      <peer-group>OC</peer-group>
+                      <enabled>true</enabled>
+                      <peer-as>100</peer-as>
+                    </config>
+                  </neighbor>
+                </neighbors>
+                <peer-groups>
+                  <peer-group>
+                    <peer-group-name xc:operation="create">OC</peer-group-name>
+                    <config>
+                      <peer-as>100</peer-as>
+                    </config>
+                  </peer-group>
+                </peer-groups>
+              </bgp>
+            </config>
+          </edit-config>
+          <commit/>
+        </rpc>
+    register: netconf_output
+    
+  - debug: var=netconf_output

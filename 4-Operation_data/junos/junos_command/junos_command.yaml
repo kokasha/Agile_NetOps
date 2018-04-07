@@ -1,0 +1,15 @@
+---
+- name: Play to execute a command
+  hosts: vMX1
+  tasks:
+
+  - name: Get OSPF neigbors
+    junos_command:
+        commands:
+         - show ospf neighbor
+        display: xml
+    register: ospf_output
+
+  - debug: var=ospf_output
+
+

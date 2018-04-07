@@ -1,0 +1,17 @@
+!
+interface f3/0
+ description link to vMX1
+ mtu 1514
+ ipv4 address 172.20.1.1 255.255.255.252
+!
+interface f4/0
+ description link to vMX2
+ mtu 1514
+ ipv4 address 172.20.2.1 255.255.255.252
+!
+!
+mpls ldp
+ interface f3/0
+ interface f4/0
+!
+rsvp

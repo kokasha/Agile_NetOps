@@ -1,0 +1,21 @@
+---
+- name: Play to execute a command
+  hosts: all
+  connection: local
+  gather_facts: no
+  vars_files:
+    - ./info.yml
+  vars:
+    company: STC
+    country: KSA
+  tasks:
+  - name: Dump all Variables
+    debug: var=vars
+    run_once: yes
+    vars:
+      domain: lab.stc.com
+  # - name: output to file
+  #   blockinfile:
+  #     block: "{{vars|to_nice_yaml(indent=4)}}"
+  #     path: output.txt
+  #     create: yes

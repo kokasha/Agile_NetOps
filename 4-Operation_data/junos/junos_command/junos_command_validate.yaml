@@ -1,0 +1,41 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  vars:
+    ospf_nodes:
+        vMX1:
+            ospf_intfs:
+            - ge-0/0/0
+            - ge-0/0/3
+        vMX2:
+            ospf_intfs:
+            - ge-0/0/0
+  tasks:
+  - name: Get OSPF neigbors
+    junos_command:
+        commands:
+         - show ospf neighbor
+        display: xml
+    register: ospf_output
+
+  - set_fact: 
+     ospf_peers: "{{ospf_output.output[0]['rpc-reply']['ospf-neighbor-information']['ospf-neighbor']}}"
+  - debug: var=vars
+
+  - name: OSPF Validation on multiple neigbors
+    assert:
+        that: ospf_peers|selectattr('interface-name','equalto','{{item}}.0')|map(attribute='ospf-neighbor-state')|list|first == 'Full'
+        msg: "{{inventory_hostname}} on interface {{item}} has problem in OSPF"
+    with_items: "{{ospf_nodes[inventory_hostname].ospf_intfs}}"
+    when: ospf_peers is not mapping
+    ignore_errors: yes
+
+  - name: OSPF Validation for single Neigbors
+    assert:
+        that: ospf_peers['ospf-neighbor-state'] == 'Full'
+        msg: "{{inventory_hostname}} on interface {{item}} has problem in OSPF"
+    with_items: "{{ospf_nodes[inventory_hostname].ospf_intfs}}"
+    when: ospf_peers is  mapping
+    ignore_errors: yes
+
+

@@ -1,0 +1,69 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+ansible_check_mode: false
+ansible_play_batch: &id003
+- vsrx1
+- vsrx2
+ansible_play_hosts:
+- vsrx1
+- vsrx2
+ansible_play_hosts_all:
+- vsrx1
+- vsrx2
+ansible_playbook_python: /usr/bin/python
+ansible_version: &id001
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+company: STC.KSA
+country: KSA
+department: CTN
+environment: []
+group_names:
+- junos
+groups: &id002
+    all:
+    - vsrx1
+    - vsrx2
+    junos:
+    - vsrx1
+    - vsrx2
+    ungrouped: []
+hostvars:
+    vsrx1:
+        ansible_check_mode: false
+        ansible_playbook_python: /usr/bin/python
+        ansible_version: *id001
+        group_names:
+        - junos
+        groups: *id002
+        inventory_dir: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml
+        inventory_file: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml/hosts
+        inventory_hostname: vsrx1
+        inventory_hostname_short: vsrx1
+        omit: __omit_place_holder__9acddbf99f1b2dd1701861043320cb150ba8e367
+        playbook_dir: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml
+    vsrx2:
+        ansible_check_mode: false
+        ansible_playbook_python: /usr/bin/python
+        ansible_version: *id001
+        group_names:
+        - junos
+        groups: *id002
+        inventory_dir: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml
+        inventory_file: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml/hosts
+        inventory_hostname: vsrx2
+        inventory_hostname_short: vsrx2
+        omit: __omit_place_holder__9acddbf99f1b2dd1701861043320cb150ba8e367
+        playbook_dir: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml
+inventory_dir: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml
+inventory_file: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml/hosts
+inventory_hostname: vsrx1
+inventory_hostname_short: vsrx1
+location: Riyadh
+omit: __omit_place_holder__9acddbf99f1b2dd1701861043320cb150ba8e367
+play_hosts: *id003
+playbook_dir: /vagrant/Agile_NetOps/Ansible/2-variables-to_yaml
+role_names: []
+# END ANSIBLE MANAGED BLOCK

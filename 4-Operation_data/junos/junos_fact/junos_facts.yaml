@@ -1,0 +1,13 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  tasks:
+
+  - name: show version JunOS 
+    junos_facts:
+      gather_subset: interfaces
+
+  - debug: var=vars
+    run_once: true
+
+

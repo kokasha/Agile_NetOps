@@ -1,0 +1,19 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  tasks:
+
+  - name: Get OSPF neigbors
+    junos_command:
+        commands:
+         - show ospf neighbor
+        display: xml
+    register: ospf_output
+
+  - debug: var=ospf_output
+  - blockinfile:
+      block: "{{ospf_output.output|to_nice_yaml(indent=4)}}"
+      create: yes
+      dest: ospf-{{inventory_hostname}}.txt
+
+

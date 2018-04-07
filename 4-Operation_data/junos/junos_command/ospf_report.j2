@@ -1,0 +1,8 @@
+{%set node = hostvars[inventory_hostname]%}
+{% if node.ospf_peers is not mapping %}
+{% for peer in node.ospf_peers %}
+{{inventory_hostname}},{{peer['interface-name']}},{{peer['neighbor-address']}},{{peer['neighbor-id']}},{{peer['ospf-neighbor-state']}}
+{% endfor%}
+{%else%}
+{{inventory_hostname}},{{node.ospf_peers['interface-name']}},{{node.ospf_peers['neighbor-address']}},{{node.ospf_peers['neighbor-id']}},{{node.ospf_peers['ospf-neighbor-state']}}
+{%endif%}

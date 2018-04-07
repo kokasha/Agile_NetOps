@@ -1,0 +1,3 @@
+{% for host, host_attr in hostvars.iteritems() %}
+{{host_attr.ansible_net_hostname}}, {{host_attr.ansible_net_serialnum}}, {{host_attr.ansible_net_version}}
+{% endfor%}
