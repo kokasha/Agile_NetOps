@@ -1,0 +1,4 @@
+hostname,interface,intf_addr, peer_id, peer_state
+R4,FastEthernet1/0,172.10.46.1,10.100.6.6,FULL/  -
+CSR6,GigabitEthernet2,172.10.16.1,10.100.1.1,FULL/  -
+CSR6,GigabitEthernet3,172.10.46.2,10.100.4.4,FULL/  -

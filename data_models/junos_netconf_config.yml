@@ -1,0 +1,23 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  roles:
+    - Juniper.junos
+  tasks:
+  - juniper_junos_config:
+      host: "{{ ansible_host }}"
+      port: "{{ ansible_port }}"
+      user: "{{ ansible_user }}"
+      password: "{{ ansible_ssh_pass }}"
+      load: 'None'
+      commit: yes
+      diff: yes
+      src: ./oc_bgp.xml
+    register: results
+
+  # - junos_config:
+  #     src: ./oc_bgp.xml
+  #     src_format: xml
+  #   register: netconf_output
+    
+  - debug: var=results

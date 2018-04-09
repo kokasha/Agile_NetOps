@@ -1,0 +1,9 @@
+########### BEGIN R4 ########
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.100.6.6        0   FULL/  -        00:00:34    172.10.46.1     FastEthernet1/0
+########### END R4 ########
+########### BEGIN CSR6 ########
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.100.1.1        0   FULL/  -        00:00:33    172.10.16.1     GigabitEthernet2
+10.100.4.4        0   FULL/  -        00:00:35    172.10.46.2     GigabitEthernet3
+########### END CSR6 ########

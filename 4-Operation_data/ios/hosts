@@ -1,0 +1,7 @@
+[ios]
+R4	ansible_host=localhost	ansible_port=8004   version=15.04
+CSR6	ansible_host=localhost	ansible_port=8006   version=16.06
+
+[ios:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco

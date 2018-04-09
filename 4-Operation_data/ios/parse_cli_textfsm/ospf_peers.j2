@@ -1,0 +1,6 @@
+hostname,interface,intf_addr, peer_id, peer_state
+{% for node, node_vars in hostvars.iteritems()%}
+{% for peer in node_vars.ospf_neigbors%}
+{{node}},{{peer.INTERFACE}},{{peer.ADDRESS}},{{peer.NEIGHBOR_ID}},{{peer.STATE}}
+{% endfor%}
+{% endfor%}

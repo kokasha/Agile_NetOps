@@ -1,0 +1,24 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: get OSPF Neighbors
+    ios_command:
+        commands:
+         - show ip ospf neighbor
+    register: ospf_output
+
+  - name: parse output
+    set_fact: ospf_neigbors={{ospf_output.stdout[0]|parse_cli_textfsm('cisco_ios_show_ip_ospf_neighbor.template')}}
+
+  - debug: var=ospf_neigbors
+  
+  - name: All OSPF Neighors are UP
+    assert:
+        that: item.STATE == 'FULL/  -' 
+        msg: "{{inventory_hostname}} on interface {{item.INTERFACE}} has problem in OSPF"
+    with_items: "{{ospf_neigbors}}"
+    ignore_errors: yes
+

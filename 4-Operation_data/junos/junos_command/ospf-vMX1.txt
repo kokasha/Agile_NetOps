@@ -2,16 +2,22 @@
 -   rpc-reply:
         ospf-neighbor-information:
             ospf-neighbor:
-            -   activity-timer: '38'
+            -   activity-timer: '39'
                 interface-name: ge-0/0/0.0
                 neighbor-address: 172.10.12.2
                 neighbor-id: 10.100.2.2
                 neighbor-priority: '128'
                 ospf-neighbor-state: Full
             -   activity-timer: '34'
-                interface-name: ge-0/0/3.0
-                neighbor-address: 172.10.15.2
-                neighbor-id: 10.100.5.5
+                interface-name: ge-0/0/1.0
+                neighbor-address: 172.10.13.2
+                neighbor-id: 10.100.3.3
+                neighbor-priority: '128'
+                ospf-neighbor-state: Full
+            -   activity-timer: '37'
+                interface-name: ge-0/0/2.0
+                neighbor-address: 172.10.16.2
+                neighbor-id: 10.100.6.6
                 neighbor-priority: '1'
                 ospf-neighbor-state: Full
 # END ANSIBLE MANAGED BLOCK

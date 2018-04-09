@@ -1,5 +1,5 @@
 [ios]
-R4      ansible_host=localhost	ansible_port=8004   dev_os=ios  
+R4      ansible_host=localhost	ansible_port=8004   dev_os=ios 
 CSR6    ansible_host=localhost	ansible_port=8006   dev_os=ios 
 
 [junos]

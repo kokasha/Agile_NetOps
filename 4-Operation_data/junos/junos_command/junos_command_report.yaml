@@ -12,6 +12,7 @@
 
   - set_fact: 
      ospf_peers: "{{ospf_output.output[0]['rpc-reply']['ospf-neighbor-information']['ospf-neighbor']}}"
+
   - debug: var=vars
   - file: path=ospf_output state=directory
 

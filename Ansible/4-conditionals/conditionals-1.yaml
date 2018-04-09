@@ -2,6 +2,7 @@
 - name: Test When
   hosts: all
   tasks:
+  - debug: var=vars
   - name: Run for JunOS only
     debug: 
      msg: "All Run ok for {{inventory_hostname}}"

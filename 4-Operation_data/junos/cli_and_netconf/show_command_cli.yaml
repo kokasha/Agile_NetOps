@@ -1,0 +1,15 @@
+---
+- name: Play to execute a command
+  hosts: vMX3
+  tasks:
+  - name: show OSPF neigbor 
+    junos_command:
+        commands: show ospf neighbor
+        provider:
+          port: 8002
+        transport: cli
+    register: junos_output
+
+  - debug: var=junos_output
+
+

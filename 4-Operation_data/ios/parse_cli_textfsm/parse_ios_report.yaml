@@ -1,0 +1,28 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: get OSPF Neighbors
+    ios_command:
+        commands:
+         - show ip ospf neighbor
+    register: ospf_output
+
+  - name: parse output
+    set_fact: ospf_neigbors={{ospf_output.stdout[0]|parse_cli_textfsm('cisco_ios_show_ip_ospf_neighbor.template')}}
+
+  - debug: var=hostvars
+    run_once: yes
+  
+  - file: path=ospf_peers.txt state=absent
+    run_once: yes
+  - file: path=ospf_peers.txt state=touch
+    run_once: yes
+
+  - name: Create Report
+    template:
+      src: ospf_peers.j2
+      dest: ./ospf_peers_report.txt
+

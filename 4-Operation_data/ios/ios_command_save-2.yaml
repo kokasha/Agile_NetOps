@@ -1,0 +1,26 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  tasks:
+  - name: Get Interfaces
+    ios_command:
+        commands:
+         - show ip int brief
+    register: interface_output
+
+- name: Save Output to files
+  hosts: ios
+  serial: 1
+  tasks:
+  - name: save the output in seperate file
+    copy:
+     content: "{{interface_output.stdout[0]}}"
+     dest: ./intf-output_{{inventory_hostname}}.txt
+
+  - name: create collective file
+    blockinfile:
+      block: "{{interface_output.stdout[0]}}"
+      marker: "########### {mark} {{inventory_hostname}} ########"
+      create: yes
+      dest: intf_ios_all.txt
+

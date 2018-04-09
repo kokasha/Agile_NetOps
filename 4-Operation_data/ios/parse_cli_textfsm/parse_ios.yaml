@@ -1,0 +1,24 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: get OSPF Neighbors
+    ios_command:
+        commands:
+         - show ip ospf neighbor
+    register: ospf_output
+
+  - name: parse output
+    set_fact: ospf_neigbors={{ospf_output.stdout[0]|parse_cli_textfsm('cisco_ios_show_ip_ospf_neighbor.template')}}
+
+  - debug: var=ospf_neigbors
+  
+  # - file: path=intf_output.txt state=absent
+  # - file: path=intf_output.txt state=touch
+  # - name: save all output to file
+  #   template:
+  #     src: intf_template.j2
+  #     dest: ./intf_output.txt
+

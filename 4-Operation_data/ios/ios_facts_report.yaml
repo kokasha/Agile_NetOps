@@ -1,0 +1,22 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Get IOS Facts
+    ios_facts:
+  - name: Creat File header
+    lineinfile:
+      dest: ./ios_facts.txt
+      line: "hostname, OS Version, Serial Number"
+      create: yes
+    run_once: yes
+
+  - lineinfile:   
+     dest: ./ios_facts.txt
+     line: "{{item.value.ansible_net_hostname}}, {{item.value.ansible_net_version}}, {{item.value.ansible_net_serialnum}}"
+     #regexp: 'set interface {{item.key}}'
+    with_dict: "{{hostvars}}"
+  - name: debug IOS facts
+    debug: var=ios_facts

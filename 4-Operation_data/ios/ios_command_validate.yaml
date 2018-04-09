@@ -1,0 +1,20 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  vars:
+
+  tasks:
+  - name: Get IOS Version
+    ios_command:
+        commands:
+         - show version
+    register: ios_version
+  
+  - name: Check Version
+    fail:
+      msg: "IOS Version is not correct"
+    when: "not ('{{version}}' in ios_version.stdout[0])"
+
+

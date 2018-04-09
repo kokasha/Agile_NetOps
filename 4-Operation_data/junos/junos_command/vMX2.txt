@@ -1,6 +1,6 @@
 ### BEGIN show ospf neighbor ######
 Address          Interface              State     ID               Pri  Dead
-172.10.12.1      ge-0/0/0.0             Full      10.100.1.1       128    35
+172.10.12.1      ge-0/0/0.0             Full      10.100.1.1       128    34
 ### END show ospf neighbor ######
 ### BEGIN show bgp summary ######
 Groups: 1 Peers: 1 Down peers: 0
@@ -10,7 +10,7 @@ inet.0
 bgp.l3vpn.0          
                        0          0          0          0          0          0
 Peer                     AS      InPkt     OutPkt    OutQ   Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
-10.100.1.1              100         93         95       0       2       40:25 Establ
+10.100.1.1              100       2237       2249       0       1    16:50:37 Establ
   inet.0: 0/0/0/0
   bgp.l3vpn.0: 0/0/0/0
 ### END show bgp summary ######

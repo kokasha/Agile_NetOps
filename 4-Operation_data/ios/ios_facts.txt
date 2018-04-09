@@ -1,0 +1,3 @@
+hostname, OS Version, Serial Number
+R4, 15.2(4)M2, 4279256517
+CSR6, 16.06.01, 9TX831J05E3

@@ -1,0 +1,26 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  tasks:
+  - name: Get OSPF Neigbors
+    ios_command:
+        commands:
+         - show ip ospf  neighbor
+    register: ospf_output
+
+- name: Save Output to files
+  hosts: ios
+  serial: 1
+  tasks:
+  - name: save the output in seperate file
+    copy:
+     content: "{{ospf_output.stdout[0]}}"
+     dest: ./ospf-output_{{inventory_hostname}}.txt
+
+  - name: create collective file
+    blockinfile:
+      block: "{{ospf_output.stdout[0]}}"
+      marker: "########### {mark} {{inventory_hostname}} ########"
+      create: yes
+      dest: ospf_output_all.txt
+

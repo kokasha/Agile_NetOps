@@ -1,0 +1,9 @@
+
+    <system>
+      <services>
+        <ssh>
+           <protocol-version>v2</protocol-version>
+        </ssh>
+      </services>
+    </system>
+

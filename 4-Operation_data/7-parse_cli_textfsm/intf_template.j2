@@ -1,8 +1,0 @@
-interface,status,mac_address
-{% for intf in iosxr_intf%}
-{% if intf.BIA == ''%}
-{{intf.INTERFACE}},{{intf.LINK_STATUS}},N/A
-{%else%}
-{{intf.INTERFACE}},{{intf.LINK_STATUS}},{{intf.BIA}}
-{%endif%}
-{% endfor%}

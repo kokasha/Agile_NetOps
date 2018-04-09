@@ -3,9 +3,9 @@
   hosts: junos
   tasks:
 
-  - name: show version JunOS 
+  - name: JunOS Get Facts 
     junos_facts:
-      gather_subset: interfaces
+      gather_subset: hardware
 
   - debug: var=vars
     run_once: true

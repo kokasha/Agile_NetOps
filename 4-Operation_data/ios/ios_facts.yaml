@@ -1,0 +1,12 @@
+---
+- name: Play to execute a command
+  hosts: ios
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: show version on IOS
+    ios_facts:
+
+  - name: debug IOS facts
+    debug: var=hostvars
+    run_once: true
