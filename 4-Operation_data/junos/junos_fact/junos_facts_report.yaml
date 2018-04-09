@@ -2,7 +2,6 @@
 - name: Play to execute a command
   hosts: junos
   tasks:
-
   - name: show version JunOS 
     junos_facts:
 
@@ -10,4 +9,5 @@
       src: facts_report.j2
       dest: ./facts_report.csv
 
+  
 

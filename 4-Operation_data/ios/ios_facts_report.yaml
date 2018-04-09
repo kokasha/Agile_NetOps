@@ -6,6 +6,7 @@
   tasks:
   - name: Get IOS Facts
     ios_facts:
+    
   - name: Creat File header
     lineinfile:
       dest: ./ios_facts.txt
@@ -16,7 +17,7 @@
   - lineinfile:   
      dest: ./ios_facts.txt
      line: "{{item.value.ansible_net_hostname}}, {{item.value.ansible_net_version}}, {{item.value.ansible_net_serialnum}}"
-     #regexp: 'set interface {{item.key}}'
     with_dict: "{{hostvars}}"
+
   - name: debug IOS facts
     debug: var=ios_facts

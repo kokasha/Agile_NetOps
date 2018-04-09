@@ -12,9 +12,6 @@
 
   - name: parse output
     set_fact: ospf_neigbors={{ospf_output.stdout[0]|parse_cli_textfsm('cisco_ios_show_ip_ospf_neighbor.template')}}
-
-  - debug: var=hostvars
-    run_once: yes
   
   - file: path=ospf_peers.txt state=absent
     run_once: yes
