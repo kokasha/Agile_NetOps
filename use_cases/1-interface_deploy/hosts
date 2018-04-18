@@ -1,0 +1,20 @@
+[ios]
+CSR6    ansible_host=192.10.0.106	ansible_port=22   dev_os=ios 
+
+[junos]
+vMX3	ansible_host=192.10.0.103	ansible_port=22   dev_os=junos
+
+[iosxr]
+XR5	    ansible_host=192.10.0.105	ansible_port=22   dev_os=iosxr
+
+[ios:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+
+[junos:vars]
+ansible_user=lab
+ansible_ssh_pass=lab123
+
+[iosxr:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco

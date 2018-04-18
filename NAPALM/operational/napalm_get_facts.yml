@@ -1,0 +1,23 @@
+---
+
+- name: GET NAPALM Facts
+  hosts: all
+  tasks:
+  - name: GET BGP Peers
+    napalm_get_facts:
+      hostname: "{{ ansible_host }}"
+      username: "{{ ansible_user }}"
+      dev_os: "{{dev_os}}"
+      password: "{{ ansible_ssh_pass }}"
+      optional_args:
+        port: "{{ ansible_port }}"
+      filter: 
+        - bgp_neighbors
+    #run_once: yes
+
+  - debug: var=hostvars[inventory_hostname]
+
+  # - name: validate that the route is not present
+  #   assert:
+  #     that: test_prefix not in hostvars[inventory_hostname].napalm_route_to.keys()
+  #     msg:  route {{test_prefix}} is present on {{inventory_hostname}}

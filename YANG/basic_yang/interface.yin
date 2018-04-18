@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="interface"
+        xmlns="urn:ietf:params:xml:ns:yang:yin:1"
+        xmlns:interface="http://test.local/interface">
+  <prefix value="interface"/>
+  <namespace uri="http://test.local/interface"/>
+  <container name="interface">
+    <leaf name="name">
+      <description>
+        <text>interface name</text>
+      </description>
+      <type name="string"/>
+    </leaf>
+    <leaf name="mtu">
+      <description>
+        <text> Interface MTU</text>
+      </description>
+      <type name="uint16"/>
+    </leaf>
+  </container>
+</module>

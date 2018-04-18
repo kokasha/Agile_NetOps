@@ -1,0 +1,11 @@
+interfaces {
+    ge-0/0/4 {
+        description TEST-INT;
+        unit 0 {
+            family inet {
+                address 193.10.12.1/30;
+            }
+            family mpls;
+        }
+    }
+}

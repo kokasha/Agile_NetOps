@@ -1,0 +1,24 @@
+---
+
+- name: GET NAPALM Facts
+  hosts: all
+  tasks:
+  - name: GET BGP Peers
+    napalm_get_facts:
+      hostname: "{{ ansible_host }}"
+      username: "{{ ansible_user }}"
+      dev_os: "{{dev_os}}"
+      password: "{{ ansible_ssh_pass }}"
+      optional_args:
+        port: "{{ ansible_port }}"
+      filter: 
+        - bgp_neighbors
+    #register: bgp_peers
+  
+  #- debug: var=hostvars[inventory_hostname]
+
+  - blockinfile:
+      block: "{{hostvars[inventory_hostname]|to_nice_yaml(indent=4)}}"
+      create: yes
+      dest: napalm_bgp.txt
+    run_once: yes

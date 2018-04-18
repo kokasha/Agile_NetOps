@@ -1,6 +1,6 @@
 ---
 - name: Play to execute a command
-  hosts: all
+  hosts: junos
   connection: local
   gather_facts: no          
   tasks:

@@ -1,0 +1,33 @@
+{% set node = nodes[inventory_hostname] %}
+!
+{% for intf,intf_attr in node.links.items()|sort %}
+interface {{intf.split('.')[0]}}
+{%  if intf_attr.vlan  is undefined or intf_attr.vlan == 0 %}
+ ip address {{intf_attr.ip|ipaddr('address')}} {{intf_attr.ip|ipaddr('netmask')|default('24')}}
+ mpls ip
+ ip rsvp bandwidth
+ ip ospf network point-to-point
+ ip ospf cost {{intf_attr.cost}}
+ ip ospf {{node.ospf.process}} area {{intf_attr.area}}
+ lldp transmit
+ lldp receive
+ !
+{%  endif %}
+{%  if intf_attr.vlan  is defined and intf_attr.vlan != 0 %}
+interface {{intf}}
+ ip address {{intf_attr.ip|ipaddr('address')}} {{intf_attr.ip|ipaddr('netmask')|default('24')}}
+ encapsulation dot1q {{intf_attr.vlan}}
+ mpls ip
+ ip rsvp bandwidth
+ ip ospf {{node.ospf.process}} area {{intf_attr.area}}
+ ip ospf network point-to-point
+ ip ospf cost {{intf_attr.cost}}
+{%  endif %}
+!
+{% endfor %}
+!
+router ospf {{node.ospf.process}}
+{% for intf,intf_attr in node.links.items()|sort %}
+ network {{intf_attr.ip|ipaddr('address')}} 0.0.0.0 area {{intf_attr.area}}
+{% endfor %}
+!

@@ -1,0 +1,21 @@
+---
+- name: push the configuration to the devices
+  hosts: all
+  vars:
+    mdt_nodes: [vMX1, vMX2,XR5]
+  tasks:
+    - file: path=diff state=directory
+      run_once: true
+    - name: load the configuration to the devices
+      napalm_install_config:
+        hostname: "{{ ansible_host }}"
+        username: "{{ ansible_user }}"
+        dev_os: "{{dev_os}}"
+        password: "{{ ansible_ssh_pass }}"
+        optional_args:
+          port: "{{ ansible_port }}"
+        config_file: ./{{inventory_hostname}}-config.txt
+        commit_changes: "{{commit| default('no')}}"
+        diff_file: diff/{{inventory_hostname}}-diff.txt
+      when: "inventory_hostname in mdt_nodes"
+

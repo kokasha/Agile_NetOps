@@ -1,0 +1,17 @@
+[edit interfaces]
++   ge-0/0/1 {
++       description XR5;
++       unit 0 {
++           family inet {
++               address 172.10.35.1/30;
++           }
++       }
++   }
++   ge-0/0/2 {
++       description CSR6;
++       unit 0 {
++           family inet {
++               address 172.10.36.1/30;
++           }
++       }
++   }

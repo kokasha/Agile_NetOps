@@ -1,0 +1,109 @@
+#
+# Nodes in the network
+#
+
+
+
+---
+
+common:
+    bgp_asn: 100
+
+nodes:
+
+  vMX1:
+    hostname: vMX1
+    mgmt: 192.10.0.101
+    rid:  10.100.1.1
+    links:
+      ge-0/0/0.0: { ip: 172.10.12.1/30, remote: vMX2 , cost: 10 , vlan: 0,area: 0}
+      ge-0/0/3.0: { ip: 172.10.15.1/30, remote: XR5 , cost: 10 , vlan: 0,area: 0}
+      ge-0/0/2.0: { ip: 172.10.16.1/30, remote: CSR6 , cost: 10 , vlan: 0,area: 0}
+    bgp:
+       ibgp:
+         rr: true
+         peers:
+            - 10.100.2.2
+            - 10.100.6.6
+            - 10.100.4.4
+            - 10.100.5.5
+         af:
+            - inet
+            - inet-vpn
+    ospf:
+        process: 100
+        area: 0
+        network: p2p
+
+  vMX2:
+    hostname: vMX2
+    mgmt: 192.10.0.102
+    rid:  10.100.2.2
+    links:
+      ge-0/0/0.0: { ip: 172.10.12.2/30, remote: vMX1 , cost: 10 , vlan: 0,area: 0}
+    bgp:
+       ibgp:
+         peers:
+            - 10.100.1.1
+         af:
+            - inet
+            - inet-vpn
+    ospf:
+        process: 100
+        area: 0
+        network: p2p
+
+  R4:
+    hostname: R4
+    mgmt: 192.10.0.104
+    rid:  10.100.4.4
+    links:
+      FastEthernet1/0.0: { ip: 172.10.46.2/30, remote: CSR6 , cost: 10 , vlan: 0,area: 1}
+    bgp:
+       ibgp:
+         peers:
+            - 10.100.1.1
+         af:
+            - inet
+            - inet-vpn
+    ospf:
+        process: 100
+        area: 1
+        network: p2p
+
+  XR5:
+    hostname: XR5
+    mgmt: 192.10.0.105
+    rid:  10.100.5.5
+    links:
+      GigabitEthernet0/0/0/0.0: { ip: 172.10.15.2/30, remote: vMX1 , cost: 10 , vlan: 0,area: 0}
+    bgp:
+       ibgp:
+         peers:
+            - 10.100.1.1
+         af:
+            - inet
+            - inet-vpn
+    ospf:
+        process: 100
+        area: 0
+        network: p2p
+
+  CSR6:
+    hostname: CSR6
+    mgmt: 192.10.0.106
+    rid:  10.100.6.6
+    links:
+      GigabitEthernet2.0: { ip: 172.10.16.2/30, remote: vMX1 , cost: 10 , vlan: 0,area: 0}
+      GigabitEthernet3.0: { ip: 172.10.46.1/30, remote: R4 , cost: 10 , vlan: 0,area: 1}
+    bgp:
+       ibgp:
+         peers:
+            - 10.100.1.1
+         af:
+            - inet
+            - inet-vpn
+    ospf:
+        process: 100
+        area: 0
+        network: p2p

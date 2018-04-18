@@ -1,0 +1,48 @@
+interfaces {
+    ge-0/0/1 {
+        description "XR5"
+        unit 0 {
+            family inet {
+                address 172.10.35.1/30;
+            }
+        }
+    }
+    ge-0/0/2 {
+        description "CSR6"
+        unit 0 {
+            family inet {
+                address 172.10.36.1/30;
+            }
+        }
+    }
+}
+protocols {
+    ospf {
+        area 0 {
+            interface ge-0/0/1.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface ge-0/0/2.0 {
+                interface-type p2p;
+                metric 10;
+            }
+        }
+    }
+    ldp {
+        interface ge-0/0/1.0;
+        interface ge-0/0/2.0;
+    }
+    rsvp {
+        interface ge-0/0/1.0;
+        interface ge-0/0/2.0;
+    }
+    mpls {
+        interface ge-0/0/1.0;
+        interface ge-0/0/2.0;
+    }
+    lldp {
+        interface ge-0/0/1;
+        interface ge-0/0/2;
+    }
+}

@@ -1,0 +1,63 @@
+---
+
+## Validate network State
+- name: Validate LLDP and Interfaces
+  gather_facts: no
+  connection: local
+  hosts: all
+  tags: [ validate ]
+  tasks:
+  - include_vars: "./intf_NMP.yml"
+  - name: GET LLDP and Interfaces output
+    napalm_get_facts:
+      hostname: "{{ ansible_host }}"
+      username: "{{ ansible_user }}"
+      dev_os: "{{dev_os}}"
+      password: "{{ ansible_ssh_pass }}"
+      filter: 
+        - lldp_neighbors
+        - interfaces_ip
+        - interfaces
+
+  - set_fact: node={{nodes[inventory_hostname]}}
+
+  - name: Validate that all LLDP Neigbours are correct
+    assert:
+      that: node.links[item].remote == napalm_lldp_neighbors[item.split('.')[0]][0].hostname
+      msg:  |
+        Interface {{item}} on {{inventory_hostname}} doesn't have the correct LLDP neigbour
+    with_list: "{{node.links.keys()}}"
+    when: "dev_os != 'iosxr'"
+    ignore_errors: true
+      
+  - name: Validate that all core interfaces are operational
+    assert:
+      that: napalm_interfaces[item.split('.')[0]].is_up == true
+      msg:  |
+        Interface {{item}} on {{inventory_hostname}} is not operational
+    with_list: "{{node.links.keys()}}"
+    ignore_errors: true
+
+  - name: JunOS -- Validate all Interfaces are configured with correct IP and subnet mask
+    assert:
+      that: 
+      - napalm_interfaces_ip[item].ipv4.keys()[0] == node.links[item].ip|ipaddr('address')
+      - napalm_interfaces_ip[item].ipv4.values()[0]['prefix_length'] == 30
+      msg:  |
+        Interface {{item}} on {{inventory_hostname}} has incorrect IP address
+    with_list: "{{node.links.keys()}}"
+    when: "dev_os == 'junos'"
+    ignore_errors: true
+
+  - name: IOS and IOS-XR -- Validate all Interfaces are configured with correct IP and subnet mask
+    assert:
+      that: 
+      - napalm_interfaces_ip[item.split('.')[0]].ipv4.keys()[0] == node.links[item].ip|ipaddr('address')
+      - napalm_interfaces_ip[item.split('.')[0]].ipv4.values()[0]['prefix_length'] == 30
+      msg:  |
+        Interface {{item}} on {{inventory_hostname}} has incorrect IP address
+    with_list: "{{node.links.keys()}}"
+    when: "dev_os != 'junos'"
+    ignore_errors: true
+
+

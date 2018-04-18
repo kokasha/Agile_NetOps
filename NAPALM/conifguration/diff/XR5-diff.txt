@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -32,6 +32,7 @@
+  shutdown
+ !
+ interface GigabitEthernet0/0/0/3
++ ipv4 address 172.10.15.2 255.255.255.252
+  shutdown
+ !
+ interface GigabitEthernet0/0/0/4

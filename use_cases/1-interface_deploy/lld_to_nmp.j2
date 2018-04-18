@@ -1,0 +1,28 @@
+#
+# Nodes in the network
+#
+{% macro internal_link(name,prefix,cost,vlan,remote,area) %}
+{{ name }}.{{vlan}}: { ip: {{prefix}}, remote: {{remote}} {% if cost %}, cost: {{cost}}{% endif %} {% if vlan %}, vlan: {{vlan}}{% endif %},area: {{area}}}{% endmacro %}
+
+---
+nodes:
+{% for node in nodes %}
+  {{ node.name }}:
+    hostname: {{ node.name }}
+    mgmt: {{ node.mgmt }}
+    rid:  {{ node.rid }}
+    links:
+{%   for link in links %}
+{%     if link.left == node.name %}
+      {{ internal_link(link.left_port,link.subnet|ipaddr(1),link.cost|default(''),link.vlan|default('0'),link.right,link.area) }}
+{%     elif link.right == node.name %}
+      {{ internal_link(link.right_port,link.subnet|ipaddr(2), link.cost|default(''),link.vlan|default('0'),link.left,link.area) }}
+{%     endif %}
+{%   endfor %}
+{%   if ospf is defined %}
+    ospf:
+        process: {{ospf.process}}
+        area: {{node.ospf_area}}
+        network: {{ospf.network}}
+{%   endif %}
+{% endfor %}

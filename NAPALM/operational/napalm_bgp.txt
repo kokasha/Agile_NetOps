@@ -1,0 +1,109 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+ansible_check_mode: false
+ansible_host: localhost
+ansible_playbook_python: /usr/bin/python
+ansible_port: 8001
+ansible_ssh_pass: lab123
+ansible_user: lab
+ansible_version:
+    full: 2.4.3.0
+    major: 2
+    minor: 4
+    revision: 3
+    string: 2.4.3.0
+dev_os: junos
+group_names:
+- junos
+groups:
+    all:
+    - vMX1
+    - vMX2
+    - R4
+    - XR5
+    ios:
+    - R4
+    iosxr:
+    - XR5
+    junos:
+    - vMX1
+    - vMX2
+    ungrouped: []
+inventory_dir: /vagrant/Agile_NetOps/NAPALM/operational
+inventory_file: /vagrant/Agile_NetOps/NAPALM/operational/hosts
+inventory_hostname: vMX1
+inventory_hostname_short: vMX1
+napalm_bgp_neighbors:
+    global:
+        peers:
+            10.100.2.2:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 0
+                        received_prefixes: 0
+                        sent_prefixes: 1
+                    ipv6:
+                        accepted_prefixes: -1
+                        received_prefixes: -1
+                        sent_prefixes: -1
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 100
+                remote_as: 100
+                remote_id: 10.100.2.2
+                uptime: 738
+            10.100.4.4:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: -1
+                        received_prefixes: -1
+                        sent_prefixes: -1
+                    ipv6:
+                        accepted_prefixes: -1
+                        received_prefixes: -1
+                        sent_prefixes: -1
+                description: ''
+                is_enabled: true
+                is_up: false
+                local_as: 100
+                remote_as: 100
+                remote_id: ''
+                uptime: 11425
+            10.100.5.5:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: 4
+                        received_prefixes: 4
+                        sent_prefixes: 0
+                    ipv6:
+                        accepted_prefixes: -1
+                        received_prefixes: -1
+                        sent_prefixes: -1
+                description: ''
+                is_enabled: true
+                is_up: true
+                local_as: 100
+                remote_as: 100
+                remote_id: 10.100.5.5
+                uptime: 1515
+            10.100.6.6:
+                address_family:
+                    ipv4:
+                        accepted_prefixes: -1
+                        received_prefixes: -1
+                        sent_prefixes: -1
+                    ipv6:
+                        accepted_prefixes: -1
+                        received_prefixes: -1
+                        sent_prefixes: -1
+                description: ''
+                is_enabled: true
+                is_up: false
+                local_as: 100
+                remote_as: 100
+                remote_id: ''
+                uptime: 11425
+        router_id: 10.100.1.1
+omit: __omit_place_holder__eb3d548550bd5f68de144562345b15a79e513924
+playbook_dir: /vagrant/Agile_NetOps/NAPALM/operational
+# END ANSIBLE MANAGED BLOCK

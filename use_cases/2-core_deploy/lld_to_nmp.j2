@@ -1,0 +1,67 @@
+#
+# Nodes in the network
+#
+{% macro internal_link(name,prefix,cost,vlan,remote,area) %}
+{{ name }}.{{vlan}}: { ip: {{prefix}}, remote: {{remote}} {% if cost %}, cost: {{cost}}{% endif %} {% if vlan %}, vlan: {{vlan}}{% endif %},area: {{area}}}{% endmacro %}
+
+{% macro ebgp_peer(name,ip,as) %}
+{{ name }}: { ip: {{ip}}, as: {{as}} }{% endmacro %}
+
+{% if bgp.ebgp is defined %}
+{% set ebgp_nodes = bgp.ebgp|map(attribute='local')|list  %}
+{% endif %}
+
+---
+
+common:
+    bgp_asn: {{ common.bgp_asn }}
+
+nodes:
+{% for node in nodes %}
+
+  {{ node.name }}:
+    hostname: {{ node.name }}
+    mgmt: {{ node.mgmt }}
+    rid:  {{ node.rid }}
+    links:
+{%   for link in links %}
+{%     if link.left == node.name %}
+      {{ internal_link(link.left_port,link.subnet|ipaddr(1),link.cost|default(''),link.vlan|default('0'),link.right,link.area) }}
+{%     elif link.right == node.name %}
+      {{ internal_link(link.right_port,link.subnet|ipaddr(2), link.cost|default(''),link.vlan|default('0'),link.left,link.area) }}
+{%     endif %}
+{%   endfor %}
+{%  if bgp is defined %}
+    bgp:
+       ibgp:
+{%       if node.rid in bgp.rr  %}
+         rr: true
+         peers:
+{%          for peer in bgp.clients %}
+            - {{ peer }}
+{%          endfor %}
+{%       else %}
+         peers:
+{%          for peer in bgp.rr %}
+            - {{ peer }}
+{%          endfor %}
+{%       endif %}
+         af:
+{%          for af in bgp.af %}
+            - {{ af }}
+{%          endfor %}
+{%    if bgp.ebgp is defined and node.name in ebgp_nodes %}
+      ebgp:
+        peers:
+{%          for peer in bgp.ebgp if node.name in peer.local  %}
+            {{ ebgp_peer(peer.name,peer.ip,peer.as)}}
+{%          endfor %}            
+{%    endif %}
+{%  endif %}
+{%   if ospf is defined %}
+    ospf:
+        process: {{ospf.process}}
+        area: {{node.ospf_area}}
+        network: {{ospf.network}}
+{%   endif %}
+{% endfor %}

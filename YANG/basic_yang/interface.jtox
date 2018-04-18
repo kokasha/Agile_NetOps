@@ -1,0 +1,1 @@
+{"tree": {"interface:Interface": ["container", {"name": ["leaf", "string"], "mtu": ["leaf", "uint16"]}]}, "modules": {"interface": ["intf", "http://local.test/interface"]}, "annotations": {}}

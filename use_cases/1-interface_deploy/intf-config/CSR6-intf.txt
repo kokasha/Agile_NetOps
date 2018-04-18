@@ -1,0 +1,16 @@
+!
+interface GigabitEthernet5
+ ip address 172.10.36.2 255.255.255.252
+ mpls ip
+ ip rsvp bandwidth
+ ip ospf network point-to-point
+ ip ospf cost 10
+ ip ospf 100 area 0
+ lldp transmit
+ lldp receive
+ !
+!
+!
+router ospf 100
+ network 172.10.36.2 0.0.0.0 area 0
+!

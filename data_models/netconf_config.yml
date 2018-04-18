@@ -1,20 +1,20 @@
 ---
 - name: Play to execute a command
-  hosts: vMX3
+  hosts: CSR6
   tasks:
-  # - netconf_config:
-  #     host: "{{ ansible_host }}"
-  #     port: "{{ ansible_port }}"
-  #     username: "{{ ansible_user }}"
-  #     password: "{{ ansible_ssh_pass }}"
-  #     allow_agent: false
-  #     hostkey_verify: false
-  #     src: ./test.xml
-  #   register: netconf_output
-
-  - junos_config:
-      src: ./oc_bgp.xml
-      src_format: xml
+  - netconf_config:
+      host: "{{ ansible_host }}"
+      port: "{{ ansible_port }}"
+      username: "{{ ansible_user }}"
+      password: "{{ ansible_ssh_pass }}"
+      allow_agent: false
+      hostkey_verify: false
+      src: ./oc-intf.xml
     register: netconf_output
+
+  # - junos_config:
+  #     src: ./oc_bgp.xml
+  #     src_format: xml
+  #   register: netconf_output
     
-  - debug: var=netconf_output
+  # - debug: var=netconf_output

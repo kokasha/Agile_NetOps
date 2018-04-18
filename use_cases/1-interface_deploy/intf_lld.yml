@@ -1,0 +1,27 @@
+---
+nodes:
+  - name: vMX3
+    mgmt: 192.10.0.103
+    rid: 10.100.3.3
+    ospf_area: 0
+
+  - name: XR5
+    mgmt: 192.10.0.105
+    rid: 10.100.5.5
+    ospf_area: 0
+
+  - name: CSR6
+    mgmt: 192.10.0.106
+    rid: 10.100.6.6
+    ospf_area: 0
+
+links:
+  - {left: vMX3, left_port: ge-0/0/1, subnet: 172.10.35.0/30,
+      right: XR5, right_port: GigabitEthernet0/0/0/2, area: 0, cost: 10 }
+      
+  - {left: vMX3, left_port: ge-0/0/2, subnet: 172.10.36.0/30,
+      right: CSR6, right_port: GigabitEthernet5, area: 0, cost: 10 }
+
+ospf:
+  process: 100
+  network: p2p

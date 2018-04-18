@@ -1,0 +1,48 @@
+{% set node = nodes[inventory_hostname] %}
+!
+{% for intf,intf_attr in node.links.items() %}
+interface {{intf.split('.')[0]}}
+{%  if intf_attr.vlan  is undefined or intf_attr.vlan == 0 %}
+ ipv4 address {{intf_attr.ip|ipaddr('address')}} {{intf_attr.ip|ipaddr('netmask')}}
+ lldp
+{%  endif %}
+!
+{%  if intf_attr.vlan  is defined and intf_attr.vlan != 0 %}
+interface {{intf}}
+ ipv4 address {{intf_attr.ip|ipaddr('address')}} {{intf_attr.ip|ipaddr('netmask')}}
+ encapsulation dot1q {{intf_attr.vlan}}
+{%  endif %}
+!
+{% endfor %}
+!
+router ospf {{node.ospf.process}}
+ address-family ipv4 unicast
+ area {{node.ospf.area}}
+  !
+{% for intf, intf_attr in node.links.items()|sort %}
+  interface {{intf.split('.')[0]}}
+   cost {{intf_attr.cost}}
+   network point-to-point
+  !
+{% endfor %}
+ !
+!
+rsvp
+{% for intf, intf_attr in node.links.items()|sort %}
+ interface {{intf.split('.')[0]}}
+{% endfor %}
+ !
+!
+mpls traffic-eng
+{% for intf, intf_attr in node.links.items()|sort %}
+ interface {{intf.split('.')[0]}}
+{% endfor %}
+!
+mpls ldp
+{% for intf, intf_attr in node.links.items()|sort %}
+ interface {{intf.split('.')[0]}}
+{% endfor %}
+!
+lldp
+ subinterfaces enable
+!

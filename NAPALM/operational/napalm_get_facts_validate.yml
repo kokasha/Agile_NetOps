@@ -1,0 +1,33 @@
+---
+
+- name: GET NAPALM Facts
+  hosts: all
+  vars:
+    BGP_setup:
+      vMX1:
+        peers: [10.100.2.2, 10.100.4.4, 10.100.5.5]
+      vMX2:
+        peers: [10.100.1.1]
+      R4:
+        peers: [10.100.1.1]
+      XR5:
+        peers: [10.100.1.1]
+  tasks:
+  - name: GET BGP Peers
+    napalm_get_facts:
+      hostname: "{{ ansible_host }}"
+      username: "{{ ansible_user }}"
+      dev_os: "{{dev_os}}"
+      password: "{{ ansible_ssh_pass }}"
+      optional_args:
+        port: "{{ ansible_port }}"
+      filter: 
+        - bgp_neighbors
+  
+  - name: BGP Validation
+    assert:
+        that: hostvars[inventory_hostname].napalm_bgp_neighbors.global.peers[item].is_up == true
+        msg: "{{inventory_hostname}} BGP Peer {{item}} is down"
+    with_items: "{{BGP_setup[inventory_hostname].peers}}"
+    ignore_errors: yes
+

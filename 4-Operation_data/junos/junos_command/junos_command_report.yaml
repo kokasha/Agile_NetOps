@@ -15,6 +15,7 @@
 
   - debug: var=vars
   - file: path=ospf_output state=directory
+    run_once: yes
 
   - template:
       src: ./ospf_report.j2

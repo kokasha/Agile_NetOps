@@ -1,0 +1,27 @@
+---
+
+- name: GET OSPF Neighbors
+  hosts: all
+  tasks:
+  - name: GET BGP and LLDP output
+    napalm_get_facts:
+      hostname: "{{ ansible_host }}"
+      username: "{{ ansible_user }}"
+      dev_os: "{{dev_os}}"
+      password: "{{ ansible_ssh_pass }}"
+      filter: 
+        - bgp_neighbors
+        - interfaces_ip
+      args:
+        route_to:
+          destination: "{{test_prefix}}"
+    #when: dev_os == "junos"
+    register: output
+  
+  - debug: var=hostvars[inventory_hostname]
+#  - debug: var=hostvars[inventory_hostname].napalm_route_to.keys()
+
+  - name: validate that the route is not present
+    assert:
+      that: test_prefix not in hostvars[inventory_hostname].napalm_route_to.keys()
+      msg:  route {{test_prefix}} is present on {{inventory_hostname}}

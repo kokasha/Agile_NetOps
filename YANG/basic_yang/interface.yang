@@ -1,0 +1,16 @@
+module interface {
+    prefix "intf";
+    namespace "http://local.test/interface";
+    
+    container Interface {
+        leaf name {
+            description "interface name";
+            type string;
+        }
+        leaf mtu {
+            description " Interface MTU";
+            type uint16;
+        }
+    }
+}
+
