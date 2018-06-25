@@ -1,0 +1,11 @@
+nodes_rt_table:
+{% for node, node_data in hostvars.iteritems() %}
+{%  if node_data.route_table is defined %}
+    {{node}}:
+{%      for route in node_data.route_table %}
+        {{route['rt-destination']}}:
+            metric: {{route['rt-entry']['metric']|default('-1')}}
+            protocol: {{route['rt-entry']['protocol-name']}}
+{%      endfor%}
+{%  endif %}
+{% endfor%}

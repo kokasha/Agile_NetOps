@@ -1,0 +1,20 @@
+---
+- name: PLAY -- Remove configuration
+  hosts: junos
+  tags: delete
+  vars:
+    vlans:
+    - { int: ge-0/0/4 , id: 100 }
+    - { int: ge-0/0/4 , id: 200 }
+    - { int: ge-0/0/5 , id: 100 }
+    - { int: ge-0/0/5 , id: 200 }
+  tasks:  
+  - name: Remove All VLANs configured
+    junos_config:
+        lines: 
+          - delete interfaces {{item.int}} unit {{item.id}}
+    with_items: "{{vlans}}"
+    register: push_config
+
+  - debug: var=push_config.results
+

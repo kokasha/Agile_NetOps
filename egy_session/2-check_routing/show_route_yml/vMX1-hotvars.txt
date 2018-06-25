@@ -1,0 +1,4065 @@
+### BEGIN ######
+R4:
+    ansible_check_mode: false
+    ansible_diff_mode: false
+    ansible_facts: {}
+    ansible_forks: 5
+    ansible_host: 192.10.0.104
+    ansible_inventory_sources:
+    - /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    ansible_playbook_python: /usr/bin/python
+    ansible_run_tags:
+    - all
+    ansible_skip_tags: []
+    ansible_ssh_pass: cisco
+    ansible_user: cisco
+    ansible_version: &id001
+        full: 2.5.3
+        major: 2
+        minor: 5
+        revision: 3
+        string: 2.5.3
+    dev_os: ios
+    group_names:
+    - ios
+    groups: &id002
+        all:
+        - vMX1
+        - vMX2
+        - vMX3
+        - R4
+        ios:
+        - R4
+        junos:
+        - vMX1
+        - vMX2
+        - vMX3
+        ungrouped: []
+    inventory_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+    inventory_file: /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    inventory_hostname: R4
+    inventory_hostname_short: R4
+    mgmt_intf: FastEthernet0/0
+    omit: __omit_place_holder__61d3332d38a015b2899b4a709a2a3517381f098a
+    playbook_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+vMX1:
+    ansible_check_mode: false
+    ansible_diff_mode: false
+    ansible_facts: {}
+    ansible_forks: 5
+    ansible_host: 192.10.0.101
+    ansible_inventory_sources:
+    - /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    ansible_playbook_python: /usr/bin/python
+    ansible_run_tags:
+    - all
+    ansible_skip_tags: []
+    ansible_ssh_pass: lab123
+    ansible_user: lab
+    ansible_version: *id001
+    dev_os: junos
+    group_names:
+    - junos
+    groups: *id002
+    inventory_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+    inventory_file: /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    inventory_hostname: vMX1
+    inventory_hostname_short: vMX1
+    nodes:
+    - R4
+    - vMX2
+    - vMX1
+    - vMX3
+    omit: __omit_place_holder__61d3332d38a015b2899b4a709a2a3517381f098a
+    playbook_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+    route_table:
+    -   rt-destination: 10.100.1.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:53:15
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: lo0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 10.100.2.2/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:45:10
+            current-active: ''
+            last-active: ''
+            metric: '10'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.12.2
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 10.100.3.3/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:51
+            current-active: ''
+            last-active: ''
+            metric: '10'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.13.2
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.12.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:10
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.12.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:12
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/0.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.13.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:10
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/1.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.13.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:12
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/1.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.14.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:58
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/2.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.14.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:58
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/2.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.15.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:10
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/3.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.15.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:12
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/3.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.16.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:10
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/2.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.16.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:52:12
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/2.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.23.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:33:18
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+            -   to: 172.10.12.2
+                via: ge-0/0/0.0
+            -   selected-next-hop: ''
+                to: 172.10.13.2
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.24.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:33:18
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.12.2
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 192.10.0.0/24
+        rt-entry:
+            active-tag: '*'
+            age: 09:53:15
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: em0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 192.10.0.101/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:53:15
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: em0.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 193.20.12.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:33:18
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.12.2
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 224.0.0.5/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:53:18
+            current-active: ''
+            last-active: ''
+            metric: '1'
+            nh-type: MultiRecv
+            preference: '10'
+            protocol-name: OSPF
+    route_table_dump:
+        changed: false
+        failed: false
+        output:
+        -   rpc-reply:
+                route-information:
+                    route-table:
+                        active-route-count: '19'
+                        destination-count: '19'
+                        hidden-route-count: '0'
+                        holddown-route-count: '0'
+                        rt:
+                        -   rt-destination: 10.100.1.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:53:15
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: lo0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 10.100.2.2/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:45:10
+                                current-active: ''
+                                last-active: ''
+                                metric: '10'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.12.2
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 10.100.3.3/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:51
+                                current-active: ''
+                                last-active: ''
+                                metric: '10'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.13.2
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.12.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:10
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.12.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:12
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/0.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.13.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:10
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/1.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.13.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:12
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/1.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.14.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:58
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/2.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.14.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:58
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/2.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.15.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:10
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/3.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.15.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:12
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/3.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.16.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:10
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/2.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.16.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:52:12
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/2.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.23.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:33:18
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                -   to: 172.10.12.2
+                                    via: ge-0/0/0.0
+                                -   selected-next-hop: ''
+                                    to: 172.10.13.2
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.24.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:33:18
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.12.2
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 192.10.0.0/24
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:53:15
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: em0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 192.10.0.101/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:53:15
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: em0.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 193.20.12.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:33:18
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.12.2
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 224.0.0.5/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:53:18
+                                current-active: ''
+                                last-active: ''
+                                metric: '1'
+                                nh-type: MultiRecv
+                                preference: '10'
+                                protocol-name: OSPF
+                        table-name: inet.0
+                        total-route-count: '19'
+        stdout:
+        - '<rpc-reply message-id="urn:uuid:82e16613-18fa-4e6a-a38e-2eb931f93010">
+
+            <route-information>
+
+            <!-- keepalive -->
+
+            <route-table>
+
+            <table-name>inet.0</table-name>
+
+            <destination-count>19</destination-count>
+
+            <total-route-count>19</total-route-count>
+
+            <active-route-count>19</active-route-count>
+
+            <holddown-route-count>0</holddown-route-count>
+
+            <hidden-route-count>0</hidden-route-count>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.1.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35595">09:53:15</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>lo0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.2.2/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="35110">09:45:10</age>
+
+            <metric>10</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.2</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.3.3/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30891">08:34:51</age>
+
+            <metric>10</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.13.2</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.12.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35530">09:52:10</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.12.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35532">09:52:12</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/0.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.13.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35530">09:52:10</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.13.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35532">09:52:12</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.14.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30898">08:34:58</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/2.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.14.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30898">08:34:58</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/2.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.15.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35530">09:52:10</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/3.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.15.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35532">09:52:12</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/3.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.16.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35530">09:52:10</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/2.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.16.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35532">09:52:12</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/2.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.23.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30798">08:33:18</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <to>172.10.12.2</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.13.2</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.24.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30798">08:33:18</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.2</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>192.10.0.0/24</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35595">09:53:15</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>em0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>192.10.0.101/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35595">09:53:15</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>em0.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>193.20.12.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30798">08:33:18</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.2</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>224.0.0.5/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="35598">09:53:18</age>
+
+            <metric>1</metric>
+
+            <nh-type>MultiRecv</nh-type>
+
+            </rt-entry>
+
+            </rt>
+
+            </route-table>
+
+            </route-information>
+
+            </rpc-reply>'
+        stdout_lines:
+        -   - <rpc-reply message-id="urn:uuid:82e16613-18fa-4e6a-a38e-2eb931f93010">
+            - <route-information>
+            - <!-- keepalive -->
+            - <route-table>
+            - <table-name>inet.0</table-name>
+            - <destination-count>19</destination-count>
+            - <total-route-count>19</total-route-count>
+            - <active-route-count>19</active-route-count>
+            - <holddown-route-count>0</holddown-route-count>
+            - <hidden-route-count>0</hidden-route-count>
+            - <rt style="brief">
+            - <rt-destination>10.100.1.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35595">09:53:15</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>lo0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>10.100.2.2/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="35110">09:45:10</age>
+            - <metric>10</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.2</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>10.100.3.3/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30891">08:34:51</age>
+            - <metric>10</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.13.2</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.12.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35530">09:52:10</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.12.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35532">09:52:12</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/0.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.13.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35530">09:52:10</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.13.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35532">09:52:12</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.14.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30898">08:34:58</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/2.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.14.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30898">08:34:58</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/2.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.15.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35530">09:52:10</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/3.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.15.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35532">09:52:12</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/3.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.16.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35530">09:52:10</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/2.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.16.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35532">09:52:12</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/2.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.23.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30798">08:33:18</age>
+            - <metric>20</metric>
+            - <nh>
+            - <to>172.10.12.2</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.13.2</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.24.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30798">08:33:18</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.2</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>192.10.0.0/24</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35595">09:53:15</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>em0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>192.10.0.101/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35595">09:53:15</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>em0.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>193.20.12.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30798">08:33:18</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.2</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>224.0.0.5/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="35598">09:53:18</age>
+            - <metric>1</metric>
+            - <nh-type>MultiRecv</nh-type>
+            - </rt-entry>
+            - </rt>
+            - </route-table>
+            - </route-information>
+            - </rpc-reply>
+vMX2:
+    ansible_check_mode: false
+    ansible_diff_mode: false
+    ansible_facts: {}
+    ansible_forks: 5
+    ansible_host: 192.10.0.102
+    ansible_inventory_sources:
+    - /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    ansible_playbook_python: /usr/bin/python
+    ansible_run_tags:
+    - all
+    ansible_skip_tags: []
+    ansible_ssh_pass: lab123
+    ansible_user: lab
+    ansible_version: *id001
+    dev_os: junos
+    group_names:
+    - junos
+    groups: *id002
+    inventory_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+    inventory_file: /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    inventory_hostname: vMX2
+    inventory_hostname_short: vMX2
+    nodes:
+    - R4
+    - vMX2
+    - vMX1
+    - vMX3
+    omit: __omit_place_holder__61d3332d38a015b2899b4a709a2a3517381f098a
+    playbook_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+    route_table:
+    -   rt-destination: 10.100.1.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:44:43
+            current-active: ''
+            last-active: ''
+            metric: '10'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.12.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 10.100.2.2/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:46:02
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: lo0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 10.100.3.3/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:32:50
+            current-active: ''
+            last-active: ''
+            metric: '10'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.23.2
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.12.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:44:52
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.12.2/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:44:53
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/0.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.13.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:32:50
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+            -   selected-next-hop: ''
+                to: 172.10.12.1
+                via: ge-0/0/0.0
+            -   to: 172.10.23.2
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.14.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:32
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.12.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.15.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:44:43
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.12.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.16.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:44:43
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.12.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.23.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:32:53
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/1.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.23.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:32:53
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/1.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.24.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:32:53
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/3.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.24.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:32:53
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/3.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 192.10.0.0/24
+        rt-entry:
+            active-tag: '*'
+            age: 09:46:02
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: em0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 192.10.0.102/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:46:02
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: em0.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 193.20.12.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 09:44:52
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/1.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 193.20.12.2/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:44:53
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/1.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 224.0.0.5/32
+        rt-entry:
+            active-tag: '*'
+            age: 09:46:04
+            current-active: ''
+            last-active: ''
+            metric: '1'
+            nh-type: MultiRecv
+            preference: '10'
+            protocol-name: OSPF
+    route_table_dump:
+        changed: false
+        failed: false
+        output:
+        -   rpc-reply:
+                route-information:
+                    route-table:
+                        active-route-count: '18'
+                        destination-count: '18'
+                        hidden-route-count: '0'
+                        holddown-route-count: '0'
+                        rt:
+                        -   rt-destination: 10.100.1.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:44:43
+                                current-active: ''
+                                last-active: ''
+                                metric: '10'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.12.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 10.100.2.2/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:46:02
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: lo0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 10.100.3.3/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:32:50
+                                current-active: ''
+                                last-active: ''
+                                metric: '10'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.23.2
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.12.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:44:52
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.12.2/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:44:53
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/0.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.13.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:32:50
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                -   selected-next-hop: ''
+                                    to: 172.10.12.1
+                                    via: ge-0/0/0.0
+                                -   to: 172.10.23.2
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.14.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:32
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.12.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.15.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:44:43
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.12.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.16.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:44:43
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.12.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.23.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:32:53
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/1.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.23.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:32:53
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/1.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.24.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:32:53
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/3.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.24.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:32:53
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/3.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 192.10.0.0/24
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:46:02
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: em0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 192.10.0.102/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:46:02
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: em0.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 193.20.12.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:44:52
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/1.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 193.20.12.2/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:44:53
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/1.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 224.0.0.5/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 09:46:04
+                                current-active: ''
+                                last-active: ''
+                                metric: '1'
+                                nh-type: MultiRecv
+                                preference: '10'
+                                protocol-name: OSPF
+                        table-name: inet.0
+                        total-route-count: '18'
+        stdout:
+        - '<rpc-reply message-id="urn:uuid:bb85caf5-7699-4684-a58e-9cb518a53e8a">
+
+            <route-information>
+
+            <!-- keepalive -->
+
+            <route-table>
+
+            <table-name>inet.0</table-name>
+
+            <destination-count>18</destination-count>
+
+            <total-route-count>18</total-route-count>
+
+            <active-route-count>18</active-route-count>
+
+            <holddown-route-count>0</holddown-route-count>
+
+            <hidden-route-count>0</hidden-route-count>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.1.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="35083">09:44:43</age>
+
+            <metric>10</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.2.2/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35162">09:46:02</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>lo0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.3.3/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30770">08:32:50</age>
+
+            <metric>10</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.23.2</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.12.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35092">09:44:52</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.12.2/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35093">09:44:53</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/0.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.13.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30770">08:32:50</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            <nh>
+
+            <to>172.10.23.2</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.14.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30872">08:34:32</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.15.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="35083">09:44:43</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.16.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="35083">09:44:43</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.12.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.23.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30773">08:32:53</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.23.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30773">08:32:53</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.24.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30773">08:32:53</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/3.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.24.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30773">08:32:53</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/3.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>192.10.0.0/24</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35162">09:46:02</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>em0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>192.10.0.102/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35162">09:46:02</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>em0.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>193.20.12.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35092">09:44:52</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>193.20.12.2/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="35093">09:44:53</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>224.0.0.5/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="35164">09:46:04</age>
+
+            <metric>1</metric>
+
+            <nh-type>MultiRecv</nh-type>
+
+            </rt-entry>
+
+            </rt>
+
+            </route-table>
+
+            </route-information>
+
+            </rpc-reply>'
+        stdout_lines:
+        -   - <rpc-reply message-id="urn:uuid:bb85caf5-7699-4684-a58e-9cb518a53e8a">
+            - <route-information>
+            - <!-- keepalive -->
+            - <route-table>
+            - <table-name>inet.0</table-name>
+            - <destination-count>18</destination-count>
+            - <total-route-count>18</total-route-count>
+            - <active-route-count>18</active-route-count>
+            - <holddown-route-count>0</holddown-route-count>
+            - <hidden-route-count>0</hidden-route-count>
+            - <rt style="brief">
+            - <rt-destination>10.100.1.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="35083">09:44:43</age>
+            - <metric>10</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>10.100.2.2/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35162">09:46:02</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>lo0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>10.100.3.3/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30770">08:32:50</age>
+            - <metric>10</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.23.2</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.12.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35092">09:44:52</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.12.2/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35093">09:44:53</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/0.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.13.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30770">08:32:50</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - <nh>
+            - <to>172.10.23.2</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.14.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30872">08:34:32</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.15.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="35083">09:44:43</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.16.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="35083">09:44:43</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.12.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.23.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30773">08:32:53</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.23.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30773">08:32:53</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.24.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30773">08:32:53</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/3.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.24.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30773">08:32:53</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/3.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>192.10.0.0/24</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35162">09:46:02</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>em0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>192.10.0.102/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35162">09:46:02</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>em0.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>193.20.12.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35092">09:44:52</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>193.20.12.2/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="35093">09:44:53</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>224.0.0.5/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="35164">09:46:04</age>
+            - <metric>1</metric>
+            - <nh-type>MultiRecv</nh-type>
+            - </rt-entry>
+            - </rt>
+            - </route-table>
+            - </route-information>
+            - </rpc-reply>
+vMX3:
+    ansible_check_mode: false
+    ansible_diff_mode: false
+    ansible_facts: {}
+    ansible_forks: 5
+    ansible_host: 192.10.0.103
+    ansible_inventory_sources:
+    - /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    ansible_playbook_python: /usr/bin/python
+    ansible_run_tags:
+    - all
+    ansible_skip_tags: []
+    ansible_ssh_pass: lab123
+    ansible_user: lab
+    ansible_version: *id001
+    dev_os: junos
+    group_names:
+    - junos
+    groups: *id002
+    inventory_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+    inventory_file: /vagrant/Agile_NetOps/egy_session/2-check_routing/hosts
+    inventory_hostname: vMX3
+    inventory_hostname_short: vMX3
+    nodes:
+    - R4
+    - vMX2
+    - vMX1
+    - vMX3
+    omit: __omit_place_holder__61d3332d38a015b2899b4a709a2a3517381f098a
+    playbook_dir: /vagrant/Agile_NetOps/egy_session/2-check_routing
+    route_table:
+    -   rt-destination: 10.100.1.1/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:57
+            current-active: ''
+            last-active: ''
+            metric: '10'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.13.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 10.100.2.2/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:33:21
+            current-active: ''
+            last-active: ''
+            metric: '10'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.23.1
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 10.100.3.3/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:35:07
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: lo0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.12.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:33:21
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+            -   to: 172.10.13.1
+                via: ge-0/0/0.0
+            -   selected-next-hop: ''
+                to: 172.10.23.1
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.13.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:35:07
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.13.2/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:35:07
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/0.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.14.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:57
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.13.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.15.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:57
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.13.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.16.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:34:57
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.13.1
+                via: ge-0/0/0.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 172.10.23.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:35:07
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: ge-0/0/1.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 172.10.23.2/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:35:07
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: ge-0/0/1.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 172.10.24.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:33:21
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.23.1
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 192.10.0.0/24
+        rt-entry:
+            active-tag: '*'
+            age: 08:37:39
+            current-active: ''
+            last-active: ''
+            nh:
+                selected-next-hop: ''
+                via: em0.0
+            preference: '0'
+            protocol-name: Direct
+    -   rt-destination: 192.10.0.103/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:37:39
+            current-active: ''
+            last-active: ''
+            nh:
+                nh-local-interface: em0.0
+            nh-type: Local
+            preference: '0'
+            protocol-name: Local
+    -   rt-destination: 193.20.12.0/30
+        rt-entry:
+            active-tag: '*'
+            age: 08:33:21
+            current-active: ''
+            last-active: ''
+            metric: '20'
+            nh:
+                selected-next-hop: ''
+                to: 172.10.23.1
+                via: ge-0/0/1.0
+            preference: '10'
+            protocol-name: OSPF
+    -   rt-destination: 224.0.0.5/32
+        rt-entry:
+            active-tag: '*'
+            age: 08:35:07
+            current-active: ''
+            last-active: ''
+            metric: '1'
+            nh-type: MultiRecv
+            preference: '10'
+            protocol-name: OSPF
+    route_table_dump:
+        changed: false
+        failed: false
+        output:
+        -   rpc-reply:
+                route-information:
+                    route-table:
+                        active-route-count: '16'
+                        destination-count: '16'
+                        hidden-route-count: '0'
+                        holddown-route-count: '0'
+                        rt:
+                        -   rt-destination: 10.100.1.1/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:57
+                                current-active: ''
+                                last-active: ''
+                                metric: '10'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.13.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 10.100.2.2/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:33:21
+                                current-active: ''
+                                last-active: ''
+                                metric: '10'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.23.1
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 10.100.3.3/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:35:07
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: lo0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.12.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:33:21
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                -   to: 172.10.13.1
+                                    via: ge-0/0/0.0
+                                -   selected-next-hop: ''
+                                    to: 172.10.23.1
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.13.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:35:07
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.13.2/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:35:07
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/0.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.14.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:57
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.13.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.15.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:57
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.13.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.16.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:34:57
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.13.1
+                                    via: ge-0/0/0.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 172.10.23.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:35:07
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: ge-0/0/1.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 172.10.23.2/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:35:07
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: ge-0/0/1.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 172.10.24.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:33:21
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.23.1
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 192.10.0.0/24
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:37:39
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    selected-next-hop: ''
+                                    via: em0.0
+                                preference: '0'
+                                protocol-name: Direct
+                        -   rt-destination: 192.10.0.103/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:37:39
+                                current-active: ''
+                                last-active: ''
+                                nh:
+                                    nh-local-interface: em0.0
+                                nh-type: Local
+                                preference: '0'
+                                protocol-name: Local
+                        -   rt-destination: 193.20.12.0/30
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:33:21
+                                current-active: ''
+                                last-active: ''
+                                metric: '20'
+                                nh:
+                                    selected-next-hop: ''
+                                    to: 172.10.23.1
+                                    via: ge-0/0/1.0
+                                preference: '10'
+                                protocol-name: OSPF
+                        -   rt-destination: 224.0.0.5/32
+                            rt-entry:
+                                active-tag: '*'
+                                age: 08:35:07
+                                current-active: ''
+                                last-active: ''
+                                metric: '1'
+                                nh-type: MultiRecv
+                                preference: '10'
+                                protocol-name: OSPF
+                        table-name: inet.0
+                        total-route-count: '16'
+        stdout:
+        - '<rpc-reply message-id="urn:uuid:33196680-82f3-435f-916f-05471f3ce4fd">
+
+            <route-information>
+
+            <!-- keepalive -->
+
+            <route-table>
+
+            <table-name>inet.0</table-name>
+
+            <destination-count>16</destination-count>
+
+            <total-route-count>16</total-route-count>
+
+            <active-route-count>16</active-route-count>
+
+            <holddown-route-count>0</holddown-route-count>
+
+            <hidden-route-count>0</hidden-route-count>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.1.1/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30897">08:34:57</age>
+
+            <metric>10</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.13.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.2.2/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30801">08:33:21</age>
+
+            <metric>10</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.23.1</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>10.100.3.3/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30907">08:35:07</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>lo0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.12.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30801">08:33:21</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <to>172.10.13.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.23.1</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.13.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30907">08:35:07</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.13.2/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30907">08:35:07</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/0.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.14.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30897">08:34:57</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.13.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.15.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30897">08:34:57</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.13.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.16.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30897">08:34:57</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.13.1</to>
+
+            <via>ge-0/0/0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.23.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30907">08:35:07</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.23.2/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="30907">08:35:07</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>172.10.24.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30801">08:33:21</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.23.1</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>192.10.0.0/24</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Direct</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="31059">08:37:39</age>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <via>em0.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>192.10.0.103/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>Local</protocol-name>
+
+            <preference>0</preference>
+
+            <age seconds="31059">08:37:39</age>
+
+            <nh-type>Local</nh-type>
+
+            <nh>
+
+            <nh-local-interface>em0.0</nh-local-interface>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>193.20.12.0/30</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30801">08:33:21</age>
+
+            <metric>20</metric>
+
+            <nh>
+
+            <selected-next-hop/>
+
+            <to>172.10.23.1</to>
+
+            <via>ge-0/0/1.0</via>
+
+            </nh>
+
+            </rt-entry>
+
+            </rt>
+
+            <rt style="brief">
+
+            <rt-destination>224.0.0.5/32</rt-destination>
+
+            <rt-entry>
+
+            <active-tag>*</active-tag>
+
+            <current-active/>
+
+            <last-active/>
+
+            <protocol-name>OSPF</protocol-name>
+
+            <preference>10</preference>
+
+            <age seconds="30907">08:35:07</age>
+
+            <metric>1</metric>
+
+            <nh-type>MultiRecv</nh-type>
+
+            </rt-entry>
+
+            </rt>
+
+            </route-table>
+
+            </route-information>
+
+            </rpc-reply>'
+        stdout_lines:
+        -   - <rpc-reply message-id="urn:uuid:33196680-82f3-435f-916f-05471f3ce4fd">
+            - <route-information>
+            - <!-- keepalive -->
+            - <route-table>
+            - <table-name>inet.0</table-name>
+            - <destination-count>16</destination-count>
+            - <total-route-count>16</total-route-count>
+            - <active-route-count>16</active-route-count>
+            - <holddown-route-count>0</holddown-route-count>
+            - <hidden-route-count>0</hidden-route-count>
+            - <rt style="brief">
+            - <rt-destination>10.100.1.1/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30897">08:34:57</age>
+            - <metric>10</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.13.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>10.100.2.2/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30801">08:33:21</age>
+            - <metric>10</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.23.1</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>10.100.3.3/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30907">08:35:07</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>lo0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.12.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30801">08:33:21</age>
+            - <metric>20</metric>
+            - <nh>
+            - <to>172.10.13.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.23.1</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.13.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30907">08:35:07</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.13.2/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30907">08:35:07</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/0.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.14.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30897">08:34:57</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.13.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.15.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30897">08:34:57</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.13.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.16.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30897">08:34:57</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.13.1</to>
+            - <via>ge-0/0/0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.23.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30907">08:35:07</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.23.2/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="30907">08:35:07</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>ge-0/0/1.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>172.10.24.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30801">08:33:21</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.23.1</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>192.10.0.0/24</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Direct</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="31059">08:37:39</age>
+            - <nh>
+            - <selected-next-hop/>
+            - <via>em0.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>192.10.0.103/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>Local</protocol-name>
+            - <preference>0</preference>
+            - <age seconds="31059">08:37:39</age>
+            - <nh-type>Local</nh-type>
+            - <nh>
+            - <nh-local-interface>em0.0</nh-local-interface>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>193.20.12.0/30</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30801">08:33:21</age>
+            - <metric>20</metric>
+            - <nh>
+            - <selected-next-hop/>
+            - <to>172.10.23.1</to>
+            - <via>ge-0/0/1.0</via>
+            - </nh>
+            - </rt-entry>
+            - </rt>
+            - <rt style="brief">
+            - <rt-destination>224.0.0.5/32</rt-destination>
+            - <rt-entry>
+            - <active-tag>*</active-tag>
+            - <current-active/>
+            - <last-active/>
+            - <protocol-name>OSPF</protocol-name>
+            - <preference>10</preference>
+            - <age seconds="30907">08:35:07</age>
+            - <metric>1</metric>
+            - <nh-type>MultiRecv</nh-type>
+            - </rt-entry>
+            - </rt>
+            - </route-table>
+            - </route-information>
+            - </rpc-reply>
+### END ######

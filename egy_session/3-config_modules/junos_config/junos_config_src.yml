@@ -1,0 +1,20 @@
+---
+- name: PLAY -- Push configuration with set syntax
+  hosts: junos
+  tags: config_set
+  tasks:  
+  - name: push configuration with set
+    junos_config:
+        src: mx_set.cfg
+    register: push_config
+
+- name: PLAY -- Push configuration with text syntax
+  hosts: junos
+  tags: [config_text]
+  tasks:  
+  - name: push configuration with text
+    junos_config:
+        src: mx_text.cfg
+    register: push_config_text
+  
+  - debug: var=vars

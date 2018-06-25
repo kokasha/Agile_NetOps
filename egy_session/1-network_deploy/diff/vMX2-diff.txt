@@ -1,0 +1,40 @@
+[edit interfaces ge-0/0/1]
+-   description TEST-INTF;
++   description vMX3;
+[edit interfaces ge-0/0/1 unit 0 family inet]
+        address 193.20.12.2/30 { ... }
++       address 172.10.23.1/30;
+[edit interfaces]
++   ge-0/0/3 {
++       description R4;
++       unit 0 {
++           family inet {
++               address 172.10.24.1/30;
++           }
++       }
++   }
+[edit protocols rsvp]
+     interface ge-0/0/0.0 { ... }
++    interface ge-0/0/1.0;
++    interface ge-0/0/3.0;
+[edit protocols mpls]
+     interface ge-0/0/0.0 { ... }
++    interface ge-0/0/1.0;
++    interface ge-0/0/3.0;
+[edit protocols ospf area 0.0.0.0]
+      interface lo0.0 { ... }
++     interface ge-0/0/1.0 {
++         interface-type p2p;
++         metric 10;
++     }
++     interface ge-0/0/3.0 {
++         interface-type p2p;
++         metric 10;
++     }
+[edit protocols ldp]
++    interface ge-0/0/1.0;
++    interface ge-0/0/3.0;
+[edit protocols lldp]
+     interface ge-0/0/0 { ... }
++    interface ge-0/0/1;
++    interface ge-0/0/3;

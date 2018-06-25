@@ -1,0 +1,20 @@
+---
+- name: PLAY -- Push configuration with set syntax
+  hosts: junos
+  tags: config
+  vars:
+    vlans:
+    - { int: ge-0/0/4 , id: 100 }
+    - { int: ge-0/0/4 , id: 200 }
+    - { int: ge-0/0/5 , id: 100 }
+    - { int: ge-0/0/5 , id: 200 }
+  tasks:  
+  - name: Retrieve Running configuration
+    junos_config:
+        lines: 
+          - set interfaces {{item.int}} flexible-vlan-tagging
+          - set interfaces {{item.int}} unit {{item.id}} vlan-id {{item.id}}
+        confirm_commit: no
+    with_items: "{{vlans}}"
+    register: push_config
+

@@ -5,9 +5,7 @@
   - name: show OSPF neigbor 
     junos_command:
         commands: show ospf neighbor
-        provider:
-          port: 8002
-        transport: cli
+        #display: xml 
     register: junos_output
 
   - debug: var=junos_output

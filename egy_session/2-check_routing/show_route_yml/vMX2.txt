@@ -1,0 +1,223 @@
+### BEGIN ######
+-   rpc-reply:
+        route-information:
+            route-table:
+                active-route-count: '18'
+                destination-count: '18'
+                hidden-route-count: '0'
+                holddown-route-count: '0'
+                rt:
+                -   rt-destination: 10.100.1.1/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:36:58
+                        current-active: ''
+                        last-active: ''
+                        metric: '10'
+                        nh:
+                            selected-next-hop: ''
+                            to: 172.10.12.1
+                            via: ge-0/0/0.0
+                        preference: '10'
+                        protocol-name: OSPF
+                -   rt-destination: 10.100.2.2/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:38:17
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            selected-next-hop: ''
+                            via: lo0.0
+                        preference: '0'
+                        protocol-name: Direct
+                -   rt-destination: 10.100.3.3/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 07:25:05
+                        current-active: ''
+                        last-active: ''
+                        metric: '10'
+                        nh:
+                            selected-next-hop: ''
+                            to: 172.10.23.2
+                            via: ge-0/0/1.0
+                        preference: '10'
+                        protocol-name: OSPF
+                -   rt-destination: 172.10.12.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:37:07
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            selected-next-hop: ''
+                            via: ge-0/0/0.0
+                        preference: '0'
+                        protocol-name: Direct
+                -   rt-destination: 172.10.12.2/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:37:08
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            nh-local-interface: ge-0/0/0.0
+                        nh-type: Local
+                        preference: '0'
+                        protocol-name: Local
+                -   rt-destination: 172.10.13.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 07:25:05
+                        current-active: ''
+                        last-active: ''
+                        metric: '20'
+                        nh:
+                        -   selected-next-hop: ''
+                            to: 172.10.12.1
+                            via: ge-0/0/0.0
+                        -   to: 172.10.23.2
+                            via: ge-0/0/1.0
+                        preference: '10'
+                        protocol-name: OSPF
+                -   rt-destination: 172.10.14.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 07:26:47
+                        current-active: ''
+                        last-active: ''
+                        metric: '20'
+                        nh:
+                            selected-next-hop: ''
+                            to: 172.10.12.1
+                            via: ge-0/0/0.0
+                        preference: '10'
+                        protocol-name: OSPF
+                -   rt-destination: 172.10.15.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:36:58
+                        current-active: ''
+                        last-active: ''
+                        metric: '20'
+                        nh:
+                            selected-next-hop: ''
+                            to: 172.10.12.1
+                            via: ge-0/0/0.0
+                        preference: '10'
+                        protocol-name: OSPF
+                -   rt-destination: 172.10.16.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:36:58
+                        current-active: ''
+                        last-active: ''
+                        metric: '20'
+                        nh:
+                            selected-next-hop: ''
+                            to: 172.10.12.1
+                            via: ge-0/0/0.0
+                        preference: '10'
+                        protocol-name: OSPF
+                -   rt-destination: 172.10.23.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 07:25:08
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            selected-next-hop: ''
+                            via: ge-0/0/1.0
+                        preference: '0'
+                        protocol-name: Direct
+                -   rt-destination: 172.10.23.1/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 07:25:08
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            nh-local-interface: ge-0/0/1.0
+                        nh-type: Local
+                        preference: '0'
+                        protocol-name: Local
+                -   rt-destination: 172.10.24.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 07:25:08
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            selected-next-hop: ''
+                            via: ge-0/0/3.0
+                        preference: '0'
+                        protocol-name: Direct
+                -   rt-destination: 172.10.24.1/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 07:25:08
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            nh-local-interface: ge-0/0/3.0
+                        nh-type: Local
+                        preference: '0'
+                        protocol-name: Local
+                -   rt-destination: 192.10.0.0/24
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:38:17
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            selected-next-hop: ''
+                            via: em0.0
+                        preference: '0'
+                        protocol-name: Direct
+                -   rt-destination: 192.10.0.102/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:38:17
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            nh-local-interface: em0.0
+                        nh-type: Local
+                        preference: '0'
+                        protocol-name: Local
+                -   rt-destination: 193.20.12.0/30
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:37:07
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            selected-next-hop: ''
+                            via: ge-0/0/1.0
+                        preference: '0'
+                        protocol-name: Direct
+                -   rt-destination: 193.20.12.2/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:37:08
+                        current-active: ''
+                        last-active: ''
+                        nh:
+                            nh-local-interface: ge-0/0/1.0
+                        nh-type: Local
+                        preference: '0'
+                        protocol-name: Local
+                -   rt-destination: 224.0.0.5/32
+                    rt-entry:
+                        active-tag: '*'
+                        age: 08:38:19
+                        current-active: ''
+                        last-active: ''
+                        metric: '1'
+                        nh-type: MultiRecv
+                        preference: '10'
+                        protocol-name: OSPF
+                table-name: inet.0
+                total-route-count: '18'
+### END ######

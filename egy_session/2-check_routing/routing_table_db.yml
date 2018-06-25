@@ -1,0 +1,163 @@
+nodes_rt_table:
+    vMX2:
+        10.100.1.1/32:
+            metric: 10
+            protocol: OSPF
+        10.100.2.2/32:
+            metric: -1
+            protocol: Direct
+        10.100.3.3/32:
+            metric: 10
+            protocol: OSPF
+        172.10.12.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.12.2/32:
+            metric: -1
+            protocol: Local
+        172.10.13.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.14.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.15.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.16.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.23.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.23.1/32:
+            metric: -1
+            protocol: Local
+        172.10.24.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.24.1/32:
+            metric: -1
+            protocol: Local
+        192.10.0.0/24:
+            metric: -1
+            protocol: Direct
+        192.10.0.102/32:
+            metric: -1
+            protocol: Local
+        193.20.12.0/30:
+            metric: -1
+            protocol: Direct
+        193.20.12.2/32:
+            metric: -1
+            protocol: Local
+        224.0.0.5/32:
+            metric: 1
+            protocol: OSPF
+    vMX1:
+        10.100.1.1/32:
+            metric: -1
+            protocol: Direct
+        10.100.2.2/32:
+            metric: 10
+            protocol: OSPF
+        10.100.3.3/32:
+            metric: 10
+            protocol: OSPF
+        172.10.12.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.12.1/32:
+            metric: -1
+            protocol: Local
+        172.10.13.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.13.1/32:
+            metric: -1
+            protocol: Local
+        172.10.14.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.14.1/32:
+            metric: -1
+            protocol: Local
+        172.10.15.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.15.1/32:
+            metric: -1
+            protocol: Local
+        172.10.16.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.16.1/32:
+            metric: -1
+            protocol: Local
+        172.10.23.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.24.0/30:
+            metric: 20
+            protocol: OSPF
+        192.10.0.0/24:
+            metric: -1
+            protocol: Direct
+        192.10.0.101/32:
+            metric: -1
+            protocol: Local
+        193.20.12.0/30:
+            metric: 20
+            protocol: OSPF
+        224.0.0.5/32:
+            metric: 1
+            protocol: OSPF
+    vMX3:
+        10.100.1.1/32:
+            metric: 10
+            protocol: OSPF
+        10.100.2.2/32:
+            metric: 10
+            protocol: OSPF
+        10.100.3.3/32:
+            metric: -1
+            protocol: Direct
+        172.10.12.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.13.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.13.2/32:
+            metric: -1
+            protocol: Local
+        172.10.14.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.15.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.16.0/30:
+            metric: 20
+            protocol: OSPF
+        172.10.23.0/30:
+            metric: -1
+            protocol: Direct
+        172.10.23.2/32:
+            metric: -1
+            protocol: Local
+        172.10.24.0/30:
+            metric: 20
+            protocol: OSPF
+        192.10.0.0/24:
+            metric: -1
+            protocol: Direct
+        192.10.0.103/32:
+            metric: -1
+            protocol: Local
+        193.20.12.0/30:
+            metric: 20
+            protocol: OSPF
+        224.0.0.5/32:
+            metric: 1
+            protocol: OSPF

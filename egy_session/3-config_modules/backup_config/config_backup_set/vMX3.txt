@@ -1,0 +1,59 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+set version 14.1R4.8
+set system host-name vMX3
+set system no-redirects
+set system root-authentication encrypted-password "$1$IEubk6rr$TAjfcpG6c7h747FzGd0dF."
+set system login user kokasha uid 2000
+set system login user kokasha class super-user
+set system login user kokasha authentication encrypted-password "$1$Ct1QUeC5$tsOh2AY5IPEh0RnCriB9X1"
+set system login user lab uid 2001
+set system login user lab class super-user
+set system login user lab authentication encrypted-password "$1$5dcoGq3x$.tmzXkl4fGzTpjHkOSMIU."
+set system services ssh
+set system services telnet
+set system services netconf ssh
+set system services netconf traceoptions file nc.txt
+set system services netconf traceoptions file size 1m
+set system services netconf traceoptions file world-readable
+set system services netconf traceoptions flag incoming
+set system syslog user * any emergency
+set system syslog file messages any any
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set chassis fpc 0 pic 0 tunnel-services bandwidth 1g
+set chassis network-services enhanced-ip
+set interfaces ge-0/0/0 description vMX1
+set interfaces ge-0/0/0 unit 0 family inet address 172.10.13.2/30
+set interfaces ge-0/0/1 description vMX2
+set interfaces ge-0/0/1 disable
+set interfaces ge-0/0/1 unit 0 family inet address 172.10.23.2/30
+set interfaces em0 description "OOB to MGMT Network"
+set interfaces em0 unit 0 family inet address 192.10.0.103/24
+set interfaces lo0 unit 0 family inet address 10.100.3.3/32
+set routing-options router-id 10.100.3.3
+set routing-options autonomous-system 100
+set protocols rsvp interface ge-0/0/0.0
+set protocols rsvp interface ge-0/0/1.0
+set protocols mpls interface ge-0/0/0.0
+set protocols mpls interface ge-0/0/1.0
+set protocols bgp group Core type internal
+set protocols bgp group Core local-address 10.100.3.3
+set protocols bgp group Core family inet unicast
+set protocols bgp group Core family inet-vpn unicast
+set protocols bgp group Core export __Ansible_Core_export
+set protocols bgp group Core neighbor 10.100.1.1
+set protocols ospf area 0.0.0.0 interface ge-0/0/0.0 interface-type p2p
+set protocols ospf area 0.0.0.0 interface ge-0/0/0.0 metric 10
+set protocols ospf area 0.0.0.0 interface ge-0/0/1.0 interface-type p2p
+set protocols ospf area 0.0.0.0 interface ge-0/0/1.0 metric 10
+set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols ldp interface ge-0/0/0.0
+set protocols ldp interface ge-0/0/1.0
+set protocols ldp interface lo0.0
+set protocols lldp interface ge-0/0/0
+set protocols lldp interface ge-0/0/1
+set policy-options policy-statement __Ansible_Core_export term ebgp from protocol bgp
+set policy-options policy-statement __Ansible_Core_export term ebgp from external
+set policy-options policy-statement __Ansible_Core_export term ebgp then next-hop self
+set policy-options policy-statement __Ansible_Core_export term ebgp then accept
+# END ANSIBLE MANAGED BLOCK

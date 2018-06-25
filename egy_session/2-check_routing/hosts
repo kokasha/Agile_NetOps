@@ -1,0 +1,15 @@
+[ios]
+R4      ansible_host=192.10.0.104   dev_os=ios  mgmt_intf=FastEthernet0/0  
+
+[junos]
+vMX1	ansible_host=192.10.0.101	dev_os=junos
+vMX2	ansible_host=192.10.0.102	dev_os=junos
+vMX3	ansible_host=192.10.0.103   dev_os=junos
+
+[ios:vars]
+ansible_user=cisco
+ansible_ssh_pass=cisco
+
+[junos:vars]
+ansible_user=lab
+ansible_ssh_pass=lab123

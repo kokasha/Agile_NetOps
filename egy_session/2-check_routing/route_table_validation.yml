@@ -1,0 +1,63 @@
+---
+- name: Get Data from Live Network
+  hosts: junos
+  tags: [gather]
+  vars:
+    commands:
+      - show route table inet.0 active-path
+  tasks:
+  - name: Get show route from all routers
+    junos_command:
+      commands: "{{commands}}"
+      display: xml
+    register: route_table_dump
+    # Only for Testing
+    
+    # add new fact/variable for each host in the play
+    # route_table is a list of dictionaries
+  - set_fact: route_table={{route_table_dump.output[0]['rpc-reply']['route-information']['route-table']['rt']}}
+
+# Create DB for Routing Topololgy
+  - name: Create Routing Table DB
+    template:
+      src: ./live_route_table.j2
+      dest: live_routing_table.yml
+    run_once: true
+
+
+- name: Validation for Routing Table
+  hosts: junos
+  tags: [validate]
+  tasks:
+  # Include Data from DB (Golden Data/ Source of Truth)
+  - include_vars: ./routing_table_db.yml
+
+  # Include Data from Live network data collection
+  - include_vars: ./live_routing_table.yml
+
+# Source of Truth (our DB variable) per host in the inventory
+  - set_fact: node_rt={{nodes_rt_table[inventory_hostname]}}
+
+# live data per host in the inventory
+  - set_fact: live_node_rt={{live_nodes_rt_table[inventory_hostname]}}
+
+  # - debug:
+  #     msg: "The difference is {{node_rt.keys()|difference(live_node_rt.keys())}}"
+
+  # - debug:
+  #     msg: "The difference is {{node_rt.keys()|difference(live_node_rt.keys())|length}}"
+
+  - name: Validate All Routes are present
+    assert:
+      that: node_rt.keys()|difference(live_node_rt.keys())|length == 0
+      msg:  |
+        We have {{node_rt.keys()|difference(live_node_rt.keys())|length}} Routes not present  on {{inventory_hostname}}
+
+
+  - name: Validate Metric didn't change
+    assert:
+      that: live_node_rt[item].metric == node_rt[item].metric
+      msg:  |
+        Route {{item}} changed from {{node_rt[item].metric}} to {{live_node_rt[item].metric}} 
+    with_list: "{{node_rt.keys()}}"
+    ignore_errors: true

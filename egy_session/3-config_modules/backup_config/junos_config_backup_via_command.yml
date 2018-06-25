@@ -1,0 +1,50 @@
+---
+- name: PLAY -- Get configuration in set format
+  hosts: junos
+  tags: set
+  tasks:
+
+  - name: Retrieve Running configuration
+    junos_command:
+        commands: 
+          - show configuration
+        transport: cli
+        display: set
+    register: show_config_set
+
+  - name: create folder to create backup configuration
+    file: path=config_backup_set state=directory
+    run_once: True
+
+  - debug: var=show_config
+
+  - name: save configuration output to files
+    blockinfile:
+      block: "{{show_config_set.stdout[0]}}"
+      create: yes
+      dest: ./config_backup_set/{{inventory_hostname}}.txt
+
+
+- name: PLAY -- Get configuration in 
+  hosts: junos
+  tags: text
+  tasks:
+
+  - name: Retrieve Running configuration
+    junos_command:
+        commands: 
+          - show configuration
+    register: show_config
+
+  - name: create folder to create backup configuration
+    file: path=config_backup state=directory
+    run_once: True
+
+  - debug: var=show_config
+
+  - name: save configuration output to files
+    blockinfile:
+      block: "{{show_config.stdout[0]}}"
+      create: yes
+      dest: ./config_backup/{{inventory_hostname}}.txt
+

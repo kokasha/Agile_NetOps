@@ -5,6 +5,13 @@
   - name: show version JunOS 
     junos_facts:
 
+  - blockinfile:
+      block: "{{ vars|to_nice_yaml(indent=4)}}"
+      marker: "### {mark} ######"
+      dest: "./{{inventory_hostname}}-vars.txt"
+      create: yes
+    run_once: true
+
   - template:
       src: facts_report.j2
       dest: ./facts_report.csv

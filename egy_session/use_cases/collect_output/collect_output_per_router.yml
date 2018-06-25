@@ -1,0 +1,35 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  vars:
+    commands:
+      - show ospf neighbor
+      - show bgp summary
+      - show pim neighbors
+  tasks:
+  - name: Delete Folder for output collection
+    file: path=output_per_router state=absent
+    run_once: yes
+
+  - name: Get show printout
+    junos_command:
+      commands: 
+      - "{{item}}"
+    with_items: "{{commands}}"
+    register: show_output
+
+  - debug: var=show_output
+
+  - name: Create Folder for output collection
+    file: path=output_per_router state=directory
+    run_once: yes
+
+  - name: Create output file
+    template:
+      src: template_file_per_router.j2
+      dest: ./output_per_router/{{inventory_hostname}}.txt
+
+
+
+
+

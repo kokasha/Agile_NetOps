@@ -1,0 +1,22 @@
+$$$$$$$ Output collected from vMX2 $$$$$$$$$
+
+##### show ospf neighbor #########
+Address          Interface              State     ID               Pri  Dead
+172.10.12.1      ge-0/0/0.0             Full      10.100.1.1       128    31
+
+##### show bgp summary #########
+Groups: 2 Peers: 2 Down peers: 1
+Table          Tot Paths  Act Paths Suppressed    History Damp State    Pending
+inet.0               
+                       0          0          0          0          0          0
+bgp.l3vpn.0          
+                       0          0          0          0          0          0
+Peer                     AS      InPkt     OutPkt    OutQ   Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
+10.10.2.2             65001          0          0       0       0    10:05:01 Idle  
+10.100.1.1              100       1330       1345       0       0    10:02:46 Establ
+  inet.0: 0/0/0/0
+  bgp.l3vpn.0: 0/0/0/0
+
+##### show pim neighbors #########
+PIM instance is not running
+

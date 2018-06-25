@@ -1,0 +1,13 @@
+$$$$$$$ Output collected from vMX1 $$$$$$$$$
+
+Address          Interface              State     ID               Pri  Dead
+172.10.12.2      ge-0/0/0.0             Full      10.100.2.2       128    34
+172.10.13.2      ge-0/0/1.0             Full      10.100.3.3       128    39
+$$$$$$$ Output collected from vMX2 $$$$$$$$$
+
+Address          Interface              State     ID               Pri  Dead
+172.10.12.1      ge-0/0/0.0             Full      10.100.1.1       128    38
+$$$$$$$ Output collected from vMX3 $$$$$$$$$
+
+Address          Interface              State     ID               Pri  Dead
+172.10.13.1      ge-0/0/0.0             Full      10.100.1.1       128    38

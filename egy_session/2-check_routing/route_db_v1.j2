@@ -1,0 +1,3 @@
+{%- for route in route_table -%}
+{{inventory_hostname}},{{route['rt-destination']}},{{route['rt-entry']['metric']|default('-1')}},{{route['rt-entry']['protocol-name']}}
+{% endfor%}

@@ -1,0 +1,250 @@
+## Last changed: 2018-06-24 14:20:50 UTC
+version 14.1R4.8;
+system {
+    host-name vMX2;
+    no-redirects;
+    root-authentication {
+        encrypted-password "$1$IEubk6rr$TAjfcpG6c7h747FzGd0dF.";
+    }
+    login {
+        user kokasha {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$1$Ct1QUeC5$tsOh2AY5IPEh0RnCriB9X1";
+            }
+        }
+        user lab {
+            uid 2001;
+            class super-user;
+            authentication {
+                encrypted-password "$1$5dcoGq3x$.tmzXkl4fGzTpjHkOSMIU.";
+            }
+        }
+    }
+    services {
+        ssh;
+        telnet;
+        netconf {
+            ssh;
+            traceoptions {
+                file nc.txt size 1m world-readable;
+                flag incoming;
+                flag outgoing;
+            }
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any any;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+    ntp {
+        server 10.1.1.1;
+        server 20.1.1.1;
+    }
+}
+chassis {
+    fpc 0 {
+        pic 0 {
+            tunnel-services {
+                bandwidth 1g;
+            }
+        }
+    }
+    network-services enhanced-ip;
+}
+interfaces {
+    ge-0/0/0 {
+        description vMX1;
+        unit 0 {
+            family inet {
+                address 172.10.12.2/30;
+            }
+            family mpls;
+        }
+    }
+    ge-0/0/1 {
+        description vMX3;
+        unit 0 {
+            family inet {
+                address 193.20.12.2/30;
+                address 172.10.23.1/30;
+            }
+        }
+    }
+    ge-0/0/3 {
+        description R4;
+        unit 0 {
+            family inet {
+                address 172.10.24.1/30;
+            }
+        }
+    }
+    em0 {
+        description "OOB to MGMT Network";
+        unit 0 {
+            family inet {
+                address 192.10.0.102/24;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.100.2.2/32;
+            }
+        }
+    }
+}
+routing-options {
+    router-id 10.100.2.2;
+    autonomous-system 100;
+}
+protocols {
+    rsvp {
+        interface ge-0/0/0.0;
+        interface ge-0/0/1.0;
+        interface ge-0/0/3.0;
+    }
+    mpls {
+        interface ge-0/0/0.0;
+        interface ge-0/0/1.0;
+        interface ge-0/0/3.0;
+    }
+    bgp {
+        group Core {
+            type internal;
+            local-address 10.100.2.2;
+            family inet {
+                unicast;
+            }
+            family inet-vpn {
+                unicast;
+            }
+            export __Ansible_Core_export;
+            neighbor 10.100.1.1;
+        }
+    }
+    ospf {
+        area 0.0.0.0 {
+            interface ge-0/0/0.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface lo0.0 {
+                passive;
+            }
+            interface ge-0/0/1.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface ge-0/0/3.0 {
+                interface-type p2p;
+                metric 10;
+            }
+        }
+    }
+    ldp {
+        interface ge-0/0/0.0;
+        interface ge-0/0/1.0;
+        interface ge-0/0/3.0;
+        interface lo0.0;
+    }
+    lldp {
+        interface ge-0/0/0;
+        interface ge-0/0/1;
+        interface ge-0/0/3;
+    }
+}
+policy-options {
+    policy-statement __ANSIBLE_VPNA_CE2_export {
+        term ebgp_export {
+            from {
+                protocol bgp;
+                external;
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+    policy-statement __ANSIBLE_VPNA_CE2_import {
+        term CE2_routes {
+            from {
+                protocol bgp;
+                route-filter 192.168.2.0/24 exact;
+            }
+            then accept;
+        }
+        term reject {
+            then reject;
+        }
+    }
+    policy-statement __Ansible_Core_export {
+        term ebgp {
+            from {
+                protocol bgp;
+                external;
+            }
+            then {
+                next-hop self;
+                accept;
+            }
+        }
+    }
+    policy-statement vpna_export {
+        term test {
+            from protocol direct;
+            then {
+                community add com_vpnb;
+            }
+        }
+        term 1 {
+            then {
+                community add com_vpna;
+                accept;
+            }
+        }
+        term reject {
+            then reject;
+        }
+    }
+    community com_vpna members target:100:1;
+    community com_vpnb members target:100:2;
+}
+routing-instances {
+    VPNA {
+        instance-type vrf;
+        interface ge-0/0/4.100;
+        route-distinguisher 65000:100;
+        vrf-target target:100:1;
+        vrf-table-label;
+        protocols {
+            bgp {
+                group CE2 {
+                    import __ANSIBLE_VPNA_CE2_import;
+                    export __ANSIBLE_VPNA_CE2_export;
+                    peer-as 65001;
+                    neighbor 10.10.2.2;
+                }
+            }
+        }
+    }
+    vpnb {
+        description "VRF for VPNB";
+        instance-type vrf;
+        interface ge-0/0/3.20;
+        route-distinguisher 100:2;
+        vrf-target target:100:2;
+        vrf-table-label;
+    }
+}

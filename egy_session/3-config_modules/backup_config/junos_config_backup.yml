@@ -1,0 +1,11 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  connection: local
+  gather_facts: no
+  tasks:
+  - name: Backup_config using junos_config_module
+    junos_config:
+        backup: yes
+    register: cmd_output
+  - debug: var=cmd_output

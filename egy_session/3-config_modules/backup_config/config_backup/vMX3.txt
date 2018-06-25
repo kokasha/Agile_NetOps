@@ -1,0 +1,160 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+## Last changed: 2018-06-24 14:20:58 UTC
+version 14.1R4.8;
+system {
+    host-name vMX3;
+    no-redirects;
+    root-authentication {
+        encrypted-password "$1$IEubk6rr$TAjfcpG6c7h747FzGd0dF.";
+    }
+    login {
+        user kokasha {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$1$Ct1QUeC5$tsOh2AY5IPEh0RnCriB9X1";
+            }
+        }
+        user lab {
+            uid 2001;
+            class super-user;
+            authentication {
+                encrypted-password "$1$5dcoGq3x$.tmzXkl4fGzTpjHkOSMIU.";
+            }
+        }
+    }
+    services {
+        ssh;
+        telnet;
+        netconf {
+            ssh;
+            traceoptions {
+                file nc.txt size 1m world-readable;
+                flag incoming;
+            }
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any any;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+chassis {
+    fpc 0 {
+        pic 0 {
+            tunnel-services {
+                bandwidth 1g;
+            }
+        }
+    }
+    network-services enhanced-ip;
+}
+interfaces {
+    ge-0/0/0 {
+        description vMX1;
+        unit 0 {
+            family inet {
+                address 172.10.13.2/30;
+            }
+        }
+    }
+    ge-0/0/1 {
+        description vMX2;
+        disable;
+        unit 0 {
+            family inet {
+                address 172.10.23.2/30;
+            }
+        }
+    }
+    em0 {
+        description "OOB to MGMT Network";
+        unit 0 {
+            family inet {
+                address 192.10.0.103/24;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.100.3.3/32;
+            }
+        }
+    }
+}
+routing-options {
+    router-id 10.100.3.3;
+    autonomous-system 100;
+}
+protocols {
+    rsvp {
+        interface ge-0/0/0.0;
+        interface ge-0/0/1.0;
+    }
+    mpls {
+        interface ge-0/0/0.0;
+        interface ge-0/0/1.0;
+    }
+    bgp {
+        group Core {
+            type internal;
+            local-address 10.100.3.3;
+            family inet {
+                unicast;
+            }
+            family inet-vpn {
+                unicast;
+            }
+            export __Ansible_Core_export;
+            neighbor 10.100.1.1;
+        }
+    }
+    ospf {
+        area 0.0.0.0 {
+            interface ge-0/0/0.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface ge-0/0/1.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface lo0.0 {
+                passive;
+            }
+        }
+    }
+    ldp {
+        interface ge-0/0/0.0;
+        interface ge-0/0/1.0;
+        interface lo0.0;
+    }
+    lldp {
+        interface ge-0/0/0;
+        interface ge-0/0/1;
+    }
+}
+policy-options {
+    policy-statement __Ansible_Core_export {
+        term ebgp {
+            from {
+                protocol bgp;
+                external;
+            }
+            then {
+                next-hop self;
+                accept;
+            }
+        }
+    }
+}
+# END ANSIBLE MANAGED BLOCK

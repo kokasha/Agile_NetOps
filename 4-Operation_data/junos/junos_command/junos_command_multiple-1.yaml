@@ -8,18 +8,20 @@
   tasks:
   - name: Get OSPF neigbors
     junos_command:
-      commands: "{{commands}}"
+      commands: 
+      - "{{item}}"
+    with_items: "{{commands}}"
     register: routing_output
 
   - debug: var=routing_output
-  - blockinfile:
-      block: "{{item.0}}"
-      marker: "### {mark} {{item.1}} ######"
-      dest: "./{{inventory_hostname}}.txt"
-      create: yes
-    with_together: 
-      - "{{ routing_output.stdout }}"
-      - "{{ commands }}"
+  # - blockinfile:
+  #     block: "{{item.0}}"
+  #     marker: "### {mark} {{item.1}} ######"
+  #     dest: "./{{inventory_hostname}}.txt"
+  #     create: yes
+  #   with_together: 
+  #     - "{{ routing_output.stdout }}"
+  #     - "{{ commands }}"
 
 
 

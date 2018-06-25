@@ -1,0 +1,162 @@
+### BEGIN ######
+ansible_check_mode: false
+ansible_dev_os: junos
+ansible_diff_mode: false
+ansible_facts: {}
+ansible_forks: 5
+ansible_host: 192.10.0.101
+ansible_inventory_sources:
+- /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+ansible_limit: vMX1
+ansible_play_batch: &id003
+- vMX1
+ansible_play_hosts:
+- vMX1
+ansible_play_hosts_all:
+- vMX1
+ansible_playbook_python: /usr/bin/python
+ansible_run_tags:
+- all
+ansible_skip_tags: []
+ansible_version: &id001
+    full: 2.5.3
+    major: 2
+    minor: 5
+    revision: 3
+    string: 2.5.3
+environment: []
+group_names:
+- junos
+groups: &id002
+    all:
+    - vMX1
+    - vMX2
+    - R4
+    ios:
+    - R4
+    junos:
+    - vMX1
+    - vMX2
+    ungrouped: []
+hostname: vMX1
+hostvars:
+    R4:
+        ansible_check_mode: false
+        ansible_dev_os: ios
+        ansible_diff_mode: false
+        ansible_facts: {}
+        ansible_forks: 5
+        ansible_host: 192.10.0.104
+        ansible_inventory_sources:
+        - /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+        ansible_limit: vMX1
+        ansible_playbook_python: /usr/bin/python
+        ansible_run_tags:
+        - all
+        ansible_skip_tags: []
+        ansible_version: *id001
+        group_names:
+        - ios
+        groups: *id002
+        hostname: R4
+        inventory_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+        inventory_file: /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+        inventory_hostname: R4
+        inventory_hostname_short: R4
+        ntp_servers:
+        - 10.100.1.1
+        - 10.200.1.1
+        omit: __omit_place_holder__df6a15263a6061af712a7be53faf354edfeb76b1
+        os: ios
+        playbook_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+        users:
+        -   password: cisco
+            username: cisco
+        -   password: lab123
+            username: lab
+    vMX1:
+        ansible_check_mode: false
+        ansible_dev_os: junos
+        ansible_diff_mode: false
+        ansible_facts: {}
+        ansible_forks: 5
+        ansible_host: 192.10.0.101
+        ansible_inventory_sources:
+        - /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+        ansible_limit: vMX1
+        ansible_playbook_python: /usr/bin/python
+        ansible_run_tags:
+        - all
+        ansible_skip_tags: []
+        ansible_version: *id001
+        group_names:
+        - junos
+        groups: *id002
+        hostname: vMX1
+        inventory_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+        inventory_file: /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+        inventory_hostname: vMX1
+        inventory_hostname_short: vMX1
+        ntp_servers:
+        - 10.100.1.1
+        - 10.200.1.1
+        omit: __omit_place_holder__df6a15263a6061af712a7be53faf354edfeb76b1
+        os: junos
+        playbook_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+        users:
+        -   password: juniper
+            username: juniper
+        -   password: lab123
+            username: lab
+    vMX2:
+        ansible_check_mode: false
+        ansible_dev_os: junos
+        ansible_diff_mode: false
+        ansible_facts: {}
+        ansible_forks: 5
+        ansible_host: 192.10.0.102
+        ansible_inventory_sources:
+        - /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+        ansible_limit: vMX1
+        ansible_playbook_python: /usr/bin/python
+        ansible_run_tags:
+        - all
+        ansible_skip_tags: []
+        ansible_version: *id001
+        group_names:
+        - junos
+        groups: *id002
+        hostname: vMX2
+        inventory_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+        inventory_file: /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+        inventory_hostname: vMX2
+        inventory_hostname_short: vMX2
+        ntp_servers:
+        - 10.100.1.1
+        - 10.200.1.1
+        omit: __omit_place_holder__df6a15263a6061af712a7be53faf354edfeb76b1
+        os: junos
+        playbook_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+        users:
+        -   password: juniper
+            username: juniper
+        -   password: lab123
+            username: lab
+inventory_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+inventory_file: /vagrant/Agile_NetOps/Ansible/3-create_template-1/hosts
+inventory_hostname: vMX1
+inventory_hostname_short: vMX1
+ntp_servers:
+- 10.100.1.1
+- 10.200.1.1
+omit: __omit_place_holder__df6a15263a6061af712a7be53faf354edfeb76b1
+os: junos
+play_hosts: *id003
+playbook_dir: /vagrant/Agile_NetOps/Ansible/3-create_template-1
+role_names: []
+users:
+-   password: juniper
+    username: juniper
+-   password: lab123
+    username: lab
+### END ######

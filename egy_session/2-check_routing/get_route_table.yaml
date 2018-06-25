@@ -1,0 +1,67 @@
+---
+- name: Play to execute a command
+  hosts: junos
+  vars:
+    commands:
+      - show route table inet.0 active-path
+  tasks:
+  - set_fact: nodes={{hostvars.keys()}}
+  - debug: var=nodes
+  - name: Get show route from all routers
+    junos_command:
+      commands: "{{commands}}"
+      display: xml
+    register: route_table_dump
+    # Only for Testing
+
+# 1- get output to understand Data Structure 
+  - debug: var=route_table_dump.output
+
+# Create Folder to grap raw outupt
+  - file: path=show_route_yml state=directory
+    run_once: yes
+
+# 2- Save it in a File for further exploration
+  - blockinfile:
+      block: "{{ route_table_dump.output|to_nice_yaml(indent=4)}}"
+      marker: "### {mark} ######"
+      dest: "./show_route_yml/{{inventory_hostname}}.txt"
+      create: yes
+    run_once: true
+    
+    # add new fact/variable for each host in the play
+    # route_table is a list of dictionaries
+  - set_fact: route_table={{route_table_dump.output[0]['rpc-reply']['route-information']['route-table']['rt']}}
+
+# 2- Save it in a File for further exploration
+  - blockinfile:
+      block: "{{ hostvars|to_nice_yaml(indent=4)}}"
+      marker: "### {mark} ######"
+      dest: "./show_route_yml/{{inventory_hostname}}-hotvars.txt"
+      create: yes
+    run_once: true
+
+# Create DB for Routing Topololgy
+  - name: Create Routing Table DB
+    template:
+      src: ./route_table_db_v2.j2
+      dest: routing_table_db.yml
+    run_once: true
+
+# Create Folder to create route table snippet per node
+  - file: path=show_route state=directory
+    run_once: yes
+
+# Dump show route output to CSV file
+  - template:
+      src: ./route_db_v1.j2
+      dest: show_route/show_route-{{inventory_hostname}}.csv
+
+# Combine multiple CSV files into a single file 
+  - assemble:
+      src: show_route
+      dest: ./final_show_route.csv
+
+
+
+

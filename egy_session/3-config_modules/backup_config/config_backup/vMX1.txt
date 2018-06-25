@@ -1,0 +1,201 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+## Last changed: 2018-06-24 14:20:52 UTC
+version 14.1R4.8;
+system {
+    host-name vMX1;
+    no-redirects;
+    root-authentication {
+        encrypted-password "$1$IEubk6rr$TAjfcpG6c7h747FzGd0dF.";
+    }
+    login {
+        user kokasha {
+            uid 2000;
+            class super-user;
+            authentication {
+                encrypted-password "$1$Ct1QUeC5$tsOh2AY5IPEh0RnCriB9X1";
+            }
+        }
+        user lab {
+            uid 2001;
+            class super-user;
+            authentication {
+                encrypted-password "$1$5dcoGq3x$.tmzXkl4fGzTpjHkOSMIU.";
+            }
+        }
+    }
+    services {
+        ssh;
+        telnet;
+        netconf {
+            ssh;
+            traceoptions {
+                file nc.txt size 1m world-readable;
+                flag incoming;
+                flag outgoing;
+            }
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any any;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+chassis {
+    fpc 0 {
+        pic 0 {
+            tunnel-services {
+                bandwidth 1g;
+            }
+        }
+    }
+    network-services enhanced-ip;
+}
+interfaces {
+    ge-0/0/0 {
+        description vMX2;
+        unit 0 {
+            family inet {
+                address 172.10.12.1/30;
+            }
+            family mpls;
+        }
+    }
+    ge-0/0/1 {
+        description vMX3;
+        unit 0 {
+            family inet {
+                address 172.10.13.1/30;
+            }
+            family mpls;
+        }
+    }
+    ge-0/0/2 {
+        description R4;
+        unit 0 {
+            family inet {
+                address 172.10.16.1/30;
+                address 172.10.14.1/30;
+            }
+            family mpls;
+        }
+    }
+    ge-0/0/3 {
+        description XR5;
+        unit 0 {
+            family inet {
+                address 172.10.15.1/30;
+            }
+            family mpls;
+        }
+    }
+    em0 {
+        description "OOB to MGMT Network";
+        unit 0 {
+            family inet {
+                address 192.10.0.101/24;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                address 10.100.1.1/32;
+            }
+        }
+    }
+}
+routing-options {
+    router-id 10.100.1.1;
+    autonomous-system 100;
+}
+protocols {
+    rsvp {
+        interface ge-0/0/0.0;
+        interface ge-0/0/2.0;
+        interface ge-0/0/3.0;
+        interface ge-0/0/1.0;
+    }
+    mpls {
+        interface ge-0/0/0.0;
+        interface ge-0/0/2.0;
+        interface ge-0/0/3.0;
+        interface ge-0/0/1.0;
+    }
+    bgp {
+        group Core {
+            type internal;
+            local-address 10.100.1.1;
+            family inet {
+                unicast;
+            }
+            family inet-vpn {
+                unicast;
+            }
+            cluster 10.100.1.1;
+            neighbor 10.100.2.2;
+            neighbor 10.100.6.6;
+            neighbor 10.100.4.4;
+            neighbor 10.100.5.5;
+            neighbor 10.100.3.3;
+        }
+    }
+    ospf {
+        area 0.0.0.0 {
+            interface ge-0/0/0.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface ge-0/0/2.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface ge-0/0/3.0 {
+                interface-type p2p;
+                metric 10;
+            }
+            interface lo0.0 {
+                passive;
+            }
+            interface ge-0/0/1.0 {
+                interface-type p2p;
+                metric 10;
+            }
+        }
+    }
+    ldp {
+        interface ge-0/0/0.0;
+        interface ge-0/0/1.0;
+        interface ge-0/0/2.0;
+        interface ge-0/0/3.0;
+        interface lo0.0;
+    }
+    lldp {
+        interface ge-0/0/0;
+        interface ge-0/0/2;
+        interface ge-0/0/3;
+        interface ge-0/0/1;
+    }
+}
+firewall {
+    family inet {
+        filter test {
+            term 1 {
+                from {
+                    dscp af21;
+                }
+                then {
+                    routing-instance vpna;
+                }
+            }
+        }
+    }
+}
+# END ANSIBLE MANAGED BLOCK
