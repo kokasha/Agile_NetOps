@@ -1,0 +1,6 @@
+interface,intf_op_status,vrf,ip_address
+ge-0/0/0.0,down,default,172.10.12.2/30
+ge-0/0/1.0,up,default,172.10.23.1/30
+ge-0/0/2.500,up,VPNA,10.10.2.1/30
+ge-0/0/3.0,up,default,172.10.24.1/30
+

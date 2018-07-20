@@ -1,0 +1,36 @@
+---
+
+vpn_service:
+    vpn_id: 101
+    vpn_name: VPNA
+    vpn_service-topology: any-to-any
+    rt: '100:1'
+    rd: '65000:100'
+
+sites:
+  - pe: vMX3
+    interface: ge-0/0/2
+    vlan: 500
+    site_name: CE1
+    ip_connection:
+      ipv4:
+        prefix: 10.10.1.0/30
+    routing_protocol:
+      bgp:
+        asn: 65001
+        address-family: ipv4
+        lan_subnets:
+          - 192.168.1.0/24
+  - pe: vMX2
+    interface: ge-0/0/2
+    vlan: 500
+    site_name: CE2
+    ip_connection:
+      ipv4:
+        prefix: 10.10.2.0/30
+    routing_protocol:
+      bgp:
+        asn: 65001
+        address-family: ipv4
+        lan_subnets:
+          - 192.168.2.0/24

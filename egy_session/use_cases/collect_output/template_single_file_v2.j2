@@ -1,0 +1,10 @@
+{% for node, node_attr in hostvars.iteritems() %}
+{% if node_attr.show_output is defined %}
+
+$$$$$$$ Output collected from {{node}} $$$$$$$$$
+
+{#% for cmd_output in node_attr.show_output.stdout %#}
+{{node_attr.show_output.stdout[0]}}
+{#% endfor%#}
+{% endif%}
+{% endfor%}

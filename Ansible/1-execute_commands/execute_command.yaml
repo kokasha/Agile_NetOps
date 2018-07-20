@@ -1,24 +1,24 @@
 ---
 - name: Execute show commands on IOS
   hosts: ios
-  #connection: local
-  #gather_facts: no
-  tasks:
-  # - name: show version on IOS
-  #   ios_command:
-  #       commands:
-  #        - show version
-         
+  tasks:         
   - name: debug output
     debug: var=vars
 
 - name: Execute show commands on JunOS
   hosts: junos
-  #connection: local
-  #gather_facts: no
+
   tasks:
   - name: show version on JunOS
     junos_command:
         commands:
         - show version
+    #register: junos_output
+
+  - blockinfile:
+      block: "{{ junos_output|to_nice_yaml(indent=4)}}"
+      marker: "### {mark} ######"
+      dest: "./{{inventory_hostname}}.txt"
+      create: yes
+    run_once: true
 

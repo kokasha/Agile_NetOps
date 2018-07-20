@@ -3,19 +3,27 @@
   hosts: junos
   tasks:
 
+  - name: Delete Output file
+    file: 
+      path: ./output_collect_final_v2.txt 
+      state: absent
+    run_once: true
+
   - name: Get show printout
     junos_command:
       commands: 
       - show ospf neighbor 
     register: show_output
 
+# Used only for debugging reasons
   - debug: var=hostvars
     run_once: true
 
   - name: Create output file
     template:
-      src: template_single_file_v1.j2
-      dest: ./output_per_router_v1/{{inventory_hostname}}.txt
+      src: template_single_file_v2.j2
+      dest: ./output_collect_final_v2.txt
+    run_once: true
 
 
 

@@ -1,7 +1,6 @@
 ---
 - name: PLAY -- Get configuration in set format
   hosts: junos
-  tags: set
   tasks:
 
   - name: Retrieve Running configuration

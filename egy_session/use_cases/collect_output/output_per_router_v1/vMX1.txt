@@ -1,5 +1,0 @@
-$$$$$$$ Output collected from vMX1 $$$$$$$$$
-
-Address          Interface              State     ID               Pri  Dead
-172.10.12.2      ge-0/0/0.0             Full      10.100.2.2       128    35
-172.10.13.2      ge-0/0/1.0             Full      10.100.3.3       128    32

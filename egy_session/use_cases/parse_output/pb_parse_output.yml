@@ -1,0 +1,35 @@
+## Second Play
+- name: Retrieve Interface terse Output
+  gather_facts: no
+  connection: local
+  hosts: junos
+  tasks:
+  # First Task to collect output from Devices and save it to a
+  # varaible intf_terse
+  - name: Get OSPF neigbors
+    junos_command:
+        commands:
+         - show interfaces routing-instance all terse
+        display: xml
+    register: intf_terse
+
+  # Second Task is for debugging and exploration ONLY
+  # We dump the output of the variable into a YAML document
+  - name: save for further exploration
+    blockinfile:
+      block: "{{intf_terse.output|to_nice_yaml(indent=4)}}"
+      create: yes
+      dest: "./{{inventory_hostname}}_intf_data.yml"
+
+#  - debug: var=intf_output.output
+
+  # We dig into the Data structure to reach the required Data
+  # logical_units is a List which hold all the Data for all the
+  # Units (subinterfaces) on each device 
+  - set_fact: logical_units="{{intf_terse.output[0]['rpc-reply']['interface-information']['physical-interface']}}"
+  - debug: var=logical_units
+
+  - name: Generate Report in CSV Format
+    template:
+      src: jt_parse_junos_intf_terse.j2
+      dest: ./{{inventory_hostname}}_intf_data_report.csv

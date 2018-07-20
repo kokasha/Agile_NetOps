@@ -1,0 +1,196 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+-   rpc-reply:
+        interface-information:
+            physical-interface:
+            -   logical-interface:
+                    address-family:
+                    -   address-family-name: inet
+                        interface-address:
+                            ifa-local: 172.10.12.2/30
+                    -   address-family-name: mpls
+                    -   address-family-name: multiservice
+                    admin-status: up
+                    filter-information: ''
+                    name: ge-0/0/0.0
+                    oper-status: down
+                    vrfname: default
+            -   logical-interface:
+                    address-family:
+                        address-family-name: vpls
+                    admin-status: up
+                    filter-information: ''
+                    name: lc-0/0/0.32769
+                    oper-status: up
+                    vrfname: __juniper_private1__
+            -   logical-interface:
+                    address-family:
+                    -   address-family-name: inet
+                    -   address-family-name: inet6
+                    admin-status: up
+                    filter-information: ''
+                    name: pfe-0/0/0.16383
+                    oper-status: up
+                    vrfname: __juniper_private1__
+            -   logical-interface:
+                    address-family:
+                        address-family-name: inet
+                    admin-status: up
+                    filter-information: ''
+                    name: pfh-0/0/0.16383
+                    oper-status: up
+                    vrfname: __juniper_private1__
+            -   logical-interface:
+                    address-family:
+                    -   address-family-name: inet
+                        interface-address:
+                            ifa-local: 172.10.23.1/30
+                    -   address-family-name: mpls
+                    -   address-family-name: multiservice
+                    admin-status: up
+                    filter-information: ''
+                    name: ge-0/0/1.0
+                    oper-status: up
+                    vrfname: default
+            -   logical-interface:
+                    address-family:
+                    -   address-family-name: inet
+                        interface-address:
+                            ifa-local: 10.10.2.1/30
+                    -   address-family-name: multiservice
+                    admin-status: up
+                    description: link to VPNA_CE2
+                    filter-information: ''
+                    name: ge-0/0/2.500
+                    oper-status: up
+                    vrfname: VPNA
+            -   logical-interface:
+                    address-family:
+                    -   address-family-name: inet
+                        interface-address:
+                            ifa-local: 172.10.24.1/30
+                    -   address-family-name: multiservice
+                    admin-status: up
+                    filter-information: ''
+                    name: ge-0/0/3.0
+                    oper-status: up
+                    vrfname: default
+            -   logical-interface:
+                    address-family:
+                    -   address-family-name: inet
+                    -   address-family-name: mpls
+                    admin-status: up
+                    filter-information: ''
+                    name: vt-0/0/10.2097152
+                    oper-status: up
+                    vrfname: default
+            -   logical-interface:
+                    address-family:
+                        address-family-name: inet
+                        interface-address:
+                            ifa-local: 192.10.0.102/24
+                    admin-status: up
+                    filter-information: ''
+                    name: em0.0
+                    oper-status: up
+                    vrfname: default
+            -   logical-interface:
+                    address-family:
+                    -   address-family-name: inet
+                        interface-address:
+                            ifa-local: 172.16.0.1/16
+                    -   address-family-name: inet6
+                        interface-address:
+                            ifa-local: fe80::5200:ff:fe02:1/64
+                    admin-status: up
+                    filter-information: ''
+                    name: em1.0
+                    oper-status: up
+                    vrfname: __juniper_private1__
+            -   logical-interface:
+                -   address-family:
+                        address-family-name: inet
+                        interface-address:
+                            ifa-destination: 0/0
+                            ifa-local: 10.100.2.2
+                    admin-status: up
+                    filter-information: ''
+                    name: lo0.0
+                    oper-status: up
+                    vrfname: default
+                -   address-family:
+                        address-family-name: inet
+                        interface-address:
+                            ifa-destination: 0/0
+                            ifa-local: 127.0.0.1
+                    admin-status: up
+                    filter-information: ''
+                    name: lo0.16384
+                    oper-status: up
+                    vrfname: __juniper_private2__
+                -   address-family:
+                    -   address-family-name: inet
+                        interface-address:
+                        -   ifa-destination: 0/0
+                            ifa-local: 128.0.0.1
+                        -   ifa-destination: 0/0
+                            ifa-local: 128.0.0.4
+                    -   address-family-name: inet6
+                        interface-address:
+                            ifa-destination: ''
+                            ifa-local: fe80::200:f:fc00:0
+                    admin-status: up
+                    filter-information: ''
+                    name: lo0.16385
+                    oper-status: up
+                    vrfname: __juniper_private1__
+            -   logical-interface:
+                -   address-family:
+                    -   address-family-name: inet
+                    -   address-family-name: iso
+                    -   address-family-name: inet6
+                    admin-status: up
+                    filter-information: ''
+                    name: lsi.0
+                    oper-status: up
+                    vrfname: VPNA
+                -   address-family:
+                    -   address-family-name: inet
+                    -   address-family-name: iso
+                    -   address-family-name: inet6
+                    admin-status: up
+                    filter-information: ''
+                    name: lsi.1
+                    oper-status: up
+                    vrfname: vpnb
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+            - ''
+# END ANSIBLE MANAGED BLOCK

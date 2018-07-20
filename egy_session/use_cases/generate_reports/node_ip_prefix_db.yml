@@ -1,0 +1,29 @@
+ip_prefix_db:
+    vMX3:
+       - ip_addr: 10.100.3.3/32
+         port: lo0.0
+         network: 10.100.3.3/32
+       - ip_addr: 128.0.0.4/32
+         port: lo0.16385
+         network: 128.0.0.4/32
+       - ip_addr: 10.123.100.1/24
+         port: ge-0/0/4.100
+         network: 10.123.100.0/24
+       - ip_addr: 192.10.0.103/24
+         port: em0.0
+         network: 192.10.0.0/24
+       - ip_addr: 127.0.0.1/32
+         port: lo0.16384
+         network: 127.0.0.1/32
+       - ip_addr: 172.10.13.2/30
+         port: ge-0/0/0.0
+         network: 172.10.13.0/30
+       - ip_addr: 172.16.0.1/16
+         port: em1.0
+         network: 172.16.0.0/16
+       - ip_addr: 172.10.23.2/30
+         port: ge-0/0/1.0
+         network: 172.10.23.0/30
+       - ip_addr: 10.123.200.1/24
+         port: ge-0/0/4.200
+         network: 10.123.200.0/24

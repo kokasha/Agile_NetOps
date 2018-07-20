@@ -14,7 +14,8 @@
         lines: 
           - set interfaces {{item.int}} flexible-vlan-tagging
           - set interfaces {{item.int}} unit {{item.id}} vlan-id {{item.id}}
-        confirm_commit: no
     with_items: "{{vlans}}"
     register: push_config
+  
+  - debug: 
 

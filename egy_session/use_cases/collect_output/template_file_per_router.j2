@@ -1,7 +1,5 @@
-$$$$$$$ Output collected from {{inventory_hostname}} $$$$$$$$$
 
 {% for cmd_output in show_output.results %}
-##### {{cmd_output.item}} #########
+ karim.okasha@{{inventory_hostname}}>{{cmd_output.item}}
 {{cmd_output.stdout[0]}}
-
 {% endfor%}

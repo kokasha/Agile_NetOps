@@ -1,0 +1,7 @@
+{% for unit,unit_addr in napalm_interfaces_ip.iteritems() %}
+{#% if unit[:3] in ['ge-','lo0','xe-'] %#}
+{% set ip_addr = unit_addr.ipv4.keys()[0] %}
+{% set ip_prefix = unit_addr.ipv4.values()[0].prefix_length %}
+{{inventory_hostname}},{{unit}},{{ip_addr}}/{{ip_prefix}}
+{#% endif%#}
+{% endfor%}

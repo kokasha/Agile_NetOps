@@ -1,0 +1,24 @@
+---
+- name: GET NAPALM Facts
+  hosts: junos
+  tasks:
+  - name: GET BGP Peers
+    napalm_get_facts:
+      hostname: "{{ ansible_host }}"
+      username: "{{ ansible_user }}"
+      dev_os: "{{dev_os}}"
+      password: "{{ ansible_ssh_pass }}"
+      filter: 
+        - interfaces_ip
+
+  - debug: var=hostvars
+
+  - name: Create output file
+    template:
+      src: ip_prefix_template.j2
+      dest: ./node_ip_prefix_db.yml
+
+  # - name: validate that the route is not present
+  #   assert:
+  #     that: test_prefix not in hostvars[inventory_hostname].napalm_route_to.keys()
+  #     msg:  route {{test_prefix}} is present on {{inventory_hostname}}

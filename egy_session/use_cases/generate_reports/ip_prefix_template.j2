@@ -1,0 +1,14 @@
+ip_prefix_db:
+{% for node,node_attr in hostvars.iteritems() %}
+{%  if node_attr.napalm_interfaces_ip is defined   %}
+    {{node}}:
+{%      for unit,unit_addr in node_attr.napalm_interfaces_ip.iteritems()%}
+{% set ip_addr = unit_addr.ipv4.keys()[0] %}
+{% set ip_prefix = unit_addr.ipv4.values()[0].prefix_length|string %}
+{% set ip_subnet = ip_addr + '/' + ip_prefix %}
+       - ip_addr: {{ip_subnet}}
+         port: {{unit}}
+         network: {{ip_subnet|ipaddr('network/prefix')|default('-1')}}
+{%      endfor %}
+{%  endif %}
+{% endfor %}

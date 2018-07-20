@@ -2,9 +2,6 @@
 - name: Play to execute a command
   hosts: junos
   tasks:
-  - name: Delete Folder for output collection
-    file: path=output_per_router_v1 state=absent
-    run_once: yes
 
   - name: Get show printout
     junos_command:
@@ -26,6 +23,10 @@
   - assemble:
       src: ./output_per_router_v1
       dest: ./ospf_output_final.txt
+    run_once: yes
+
+  - name: Delete Folder for output collection
+    file: path=output_per_router_v1 state=absent
     run_once: yes
 
 

@@ -20,6 +20,7 @@
   - template:
       src: ./ospf_report.j2
       dest: ospf_output/ospf_report-{{inventory_hostname}}.csv
+      
   - assemble:
       src: ospf_output
       dest: ./ospf_output.final
