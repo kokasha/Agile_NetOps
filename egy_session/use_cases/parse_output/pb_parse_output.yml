@@ -27,7 +27,7 @@
   # logical_units is a List which hold all the Data for all the
   # Units (subinterfaces) on each device 
   - set_fact: logical_units="{{intf_terse.output[0]['rpc-reply']['interface-information']['physical-interface']}}"
-  - debug: var=logical_units
+#  - debug: var=logical_units
 
   - name: Generate Report in CSV Format
     template:

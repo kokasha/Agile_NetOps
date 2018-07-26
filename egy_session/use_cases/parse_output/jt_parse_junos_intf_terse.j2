@@ -14,9 +14,15 @@ interface,intf_op_status,vrf,ip_address
 {%              set intf_vrf = unit['logical-interface'].vrfname %}
 {%              set intf_op_status = unit['logical-interface']['oper-status'] %}
 {%              set intf_ifd = unit['logical-interface']['address-family'] %}
-{%              set intf_ip = intf_ifd|selectattr('address-family-name','equalto','inet')|map(attribute='interface-address')|first %}
+{%              if intf_ifd['address-family-name'] is defined %}
+{%                  set intf_ip = intf_ifd|selectattr('address-family-name','equalto','inet')|map(attribute='interface-address')|first %}
 {# The Line that will be written on the CSV File #}
 {{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_ip['ifa-local']}}
+{%              else%}
+{# The Line that will be written on the CSV File #}
+{# Catch Unites with no address-family-name #}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},**NO_ADDRESS_FAMILY***
+{%              endif%}
 {%          endif%}
 {# THIS COVER THE CASE WHERE WE HAVE MULTIPLE SUBINTERFACES UNDER THE SAME MAIN INTERFACE#}
 {%       else%}
@@ -26,9 +32,15 @@ interface,intf_op_status,vrf,ip_address
 {%                  set intf_vrf = subunit.vrfname %}
 {%                  set intf_op_status = subunit['oper-status'] %}
 {%                  set intf_ifd = subunit['address-family'] %}
-{%                  set intf_ip = intf_ifd|selectattr('address-family-name','equalto','inet')|map(attribute='interface-address')|first %}
+{%                  if intf_ifd['address-family-name'] is defined %}
+{%                      set intf_ip = intf_ifd|selectattr('address-family-name','equalto','inet')|map(attribute='interface-address')|first %}
 {# The Line that will be written on the CSV File #}
 {{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_ip['ifa-local']}}
+{%                  else%}
+{# The Line that will be written on the CSV File #}
+{# Catch Unites with no address-family-name #}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},**NO_ADDRESS_FAMILY***
+{%                  endif%}
 {%              endif%}
 {%          endfor%}
 {%      endif%}

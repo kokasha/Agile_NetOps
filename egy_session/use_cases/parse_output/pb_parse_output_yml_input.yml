@@ -1,0 +1,28 @@
+## Play
+- name: Retrieve Interface terse Output
+  gather_facts: no
+  connection: local
+  hosts: localhost
+  tasks:
+  # First Task to collect output from Devices and save it to a
+  # varaible intf_terse
+  - name: Read Input YAML File
+    include_vars: "zee_intf_terse.yml"
+  #- debug: var=input_data
+
+  # We dig into the Data structure to reach the required Data
+  # logical_units is a List which hold all the Data for all the
+  # Units (subinterfaces) on each device 
+  - set_fact: logical_units="{{input_data[0]['rpc-reply']['interface-information']['physical-interface']}}"
+  - debug: var=logical_units
+
+  - name: save for further exploration
+    blockinfile:
+      block: "{{logical_units|to_nice_yaml(indent=4)}}"
+      create: yes
+      dest: "./zee_intf_explore.yml"
+
+  # - name: Generate Report in CSV Format
+  #   template:
+  #     src: jt_parse_junos_intf_terse.j2
+  #     dest: ./zee_intf_data_report.csv
