@@ -14,36 +14,29 @@ interface,intf_op_status,vrf,ip_address
 {%              set intf_vrf = unit['logical-interface'].vrfname %}
 {%              set intf_op_status = unit['logical-interface']['oper-status'] %}
 {%              set intf_ifd = unit['logical-interface']['address-family'] %}
-{%              if intf_ifd['address-family-name'] is defined %}
-{%                  set intf_ip = intf_ifd|selectattr('address-family-name','equalto','inet')|map(attribute='interface-address')|first %}
-{# The Line that will be written on the CSV File #}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_ip['ifa-local']}}
+{%              if  intf_ifd is not mapping %} {# test is it is a list or not#}
+{%                  for af in intf_ifd %}
+{%                      if af['address-family-name'] == 'inet' and af['interface-address'] is defined %}
+{%                          set intf_af = af['address-family-name']%}
+{%                          set intf_ip = af['interface-address']['ifa-local'] %}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
+{%                      elif af['address-family-name'] == 'inet' %}
+{%                          set intf_af = af['address-family-name']%}
+{%                          set intf_ip = '**** IP INTERFACE WITH NO IP ****' %}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
+{%                      elif af['address-family-name'] == 'vpls' %}
+{%                          set intf_af = af['address-family-name']%}
+{%                          set intf_ip = '**** NON IP INTERFACE ****' %}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
+{%                      endif%}
+{%                  endfor%}
 {%              else%}
-{# The Line that will be written on the CSV File #}
-{# Catch Unites with no address-family-name #}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},**NO_ADDRESS_FAMILY***
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_ifd}}
 {%              endif%}
 {%          endif%}
-{# THIS COVER THE CASE WHERE WE HAVE MULTIPLE SUBINTERFACES UNDER THE SAME MAIN INTERFACE#}
-{%       else%}
-{%          for subunit in unit['logical-interface'] %}
-{%              if subunit.name[:3] in ['ge-','xe-'] %}
-{%                  set intf_name = subunit.name %}
-{%                  set intf_vrf = subunit.vrfname %}
-{%                  set intf_op_status = subunit['oper-status'] %}
-{%                  set intf_ifd = subunit['address-family'] %}
-{%                  if intf_ifd['address-family-name'] is defined %}
-{%                      set intf_ip = intf_ifd|selectattr('address-family-name','equalto','inet')|map(attribute='interface-address')|first %}
-{# The Line that will be written on the CSV File #}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_ip['ifa-local']}}
-{%                  else%}
-{# The Line that will be written on the CSV File #}
-{# Catch Unites with no address-family-name #}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},**NO_ADDRESS_FAMILY***
-{%                  endif%}
-{%              endif%}
-{%          endfor%}
 {%      endif%}
 {%  endif%}
 {% endfor%}
+
+
 
