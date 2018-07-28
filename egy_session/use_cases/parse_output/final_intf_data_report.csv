@@ -1,0 +1,1738 @@
+interface,intf_op_status,vrf,ip_address
+ge-0/0/0.0,up,default,inet,41.234.66.104/27
+ge-0/0/1.400,up,default,inet,10.40.72.1/29
+ge-0/0/1.693,up,egb,inet,172.19.19.1/30
+ge-0/0/1.695,up,vpnmonitor,inet,5.119.11.233/30
+ge-0/0/1.700,up,EGBMCDR-Branches,inet,172.30.1.50/30
+ge-0/0/1.701,up,vpnmonitor,inet,5.120.209.89/30
+ge-0/0/1.941,up,TE-MSAN,inet,10.9.154.17/29
+ge-0/0/1.942,up,TE-MNGT,inet,10.239.51.1/29
+ge-0/0/1.943,up,SIP-MSAN,inet,10.9.154.17/29
+ge-0/0/1.1105,up,vpnmonitor,inet,5.125.40.109/30
+ge-0/0/1.1107,up,tamenat,inet,10.250.0.110/30
+ge-0/0/1.1110,up,egb-cbe,inet,172.50.23.2/30
+ge-0/0/1.1111,up,vpnmonitor,inet,5.119.5.45/30
+ge-0/0/1.1112,up,egb,inet,12.0.23.2/30
+ge-0/0/1.1113,up,vpnmonitor,inet,5.125.44.41/30
+ge-0/0/1.1114,up,tanmeyah,inet,172.17.113.1/30
+ge-0/0/1.1120,up,egb,inet,12.0.92.2/30
+ge-0/0/1.1121,up,vpnmonitor,inet,5.120.141.141/30
+ge-0/0/1.1140,up,npo,inet,172.17.93.217/30
+ge-0/0/1.1141,up,vpnmonitor,inet,5.121.25.165/30
+ge-0/0/1.1151,up,default,inet,10.60.60.1/30
+ge-0/0/1.1201,up,default,inet,172.17.93.213/30
+ge-0/0/1.1202,up,vpnmonitor,inet,5.4.19.1/30
+ge-0/0/1.1257,up,vpnmonitor,inet,5.125.25.205/30
+ge-0/0/1.1270,up,egb-telePerformance,inet,172.30.1.150/30
+ge-0/0/1.1271,up,vpnmonitor,inet,5.120.215.201/30
+ge-0/0/1.1451,up,MSAN_MPLS,inet,172.27.20.137/29
+ge-0/0/1.2300,up,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/1.2550,up,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/1.2800,up,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/1.3050,up,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/1.13101,up,npc,inet,10.10.10.1/30
+ge-0/0/1.13102,up,npc,inet,10.191.52.210/30
+ge-0/0/1.13103,up,vpnmonitor,inet,5.120.47.153/30
+ge-0/0/1.13115,up,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/1.13116,up,vpnmonitor,inet,5.120.122.229/30
+ge-0/0/1.13117,up,vpnmonitor,inet,5.1.40.1/30
+ge-0/0/1.13147,up,vpnmonitor,inet,5.119.5.57/30
+ge-0/0/1.13179,up,fawry,inet,40.40.40.2/30
+ge-0/0/1.13180,up,ragab,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/1.13183,up,EGB-Swift,inet,172.30.1.114/30
+ge-0/0/1.13184,up,vpnmonitor,inet,5.120.202.249/30
+ge-0/0/1.13185,up,egp-ebc,inet,172.30.1.102/30
+ge-0/0/1.13186,up,vpnmonitor,inet,5.120.210.193/30
+ge-0/0/1.13187,up,UEEP,inet,172.16.13.1/30
+ge-0/0/1.13190,up,Giza-Cable,inet,172.16.0.1/30
+ge-0/0/1.13191,up,vpnmonitor,inet,5.120.27.209/30
+ge-0/0/1.13700,up,nbe-cbe,inet,10.16.18.1/30
+ge-0/0/2.400,down,default,inet,10.40.72.9/29
+ge-0/0/2.941,down,TE-MSAN,inet,10.9.154.25/29
+ge-0/0/2.942,down,TE-MNGT,inet,10.239.51.9/29
+ge-0/0/2.943,down,SIP-MSAN,inet,10.9.154.25/29
+ge-0/0/2.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/2.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/2.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/2.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/2.13101,down,smg,inet,172.16.182.1/30
+ge-0/0/2.13102,down,vpnmonitor,inet,5.119.99.253/30
+ge-0/0/3.400,down,default,inet,10.40.72.41/29
+ge-0/0/3.941,down,TE-MSAN,inet,10.9.154.57/29
+ge-0/0/3.942,down,TE-MNGT,inet,10.239.51.41/29
+ge-0/0/3.943,down,SIP-MSAN,inet,10.9.154.57/29
+ge-0/0/3.1101,down,unitedbank,inet,192.168.30.61/30
+ge-0/0/3.1102,down,vpnmonitor,inet,5.120.112.65/30
+ge-0/0/3.1109,down,Marseilia,inet,172.16.129.1/30
+ge-0/0/3.1111,down,vpnmonitor,inet,5.119.73.21/30
+ge-0/0/3.1115,down,EALB-EBC,inet,192.168.30.6/30
+ge-0/0/3.1116,down,vpnmonitor,inet,5.120.141.241/30
+ge-0/0/3.1119,down,vpnmonitor,inet,5.120.224.29/30
+ge-0/0/3.1120,down,Abou-Zyada,inet,172.16.14.1/30
+ge-0/0/3.1128,down,default,inet,172.16.171.1/30
+ge-0/0/3.1185,down,miraco,inet,172.16.200.1/30
+ge-0/0/3.1190,down,newprint,inet,172.17.190.77/30
+ge-0/0/3.1191,down,vpnmonitor,inet,5.119.64.157/30
+ge-0/0/3.1200,down,tadamon,inet,172.16.16.1/30
+ge-0/0/3.1201,down,vpnmonitor,inet,5.78.15.89/30
+ge-0/0/3.1210,down,shooting-club,inet,172.16.0.1/30
+ge-0/0/3.1211,down,vpnmonitor,inet,5.120.98.121/30
+ge-0/0/3.1220,down,vpnmonitor,inet,5.125.44.89/30
+ge-0/0/3.1221,down,default,inet,172.17.195.73/30
+ge-0/0/3.1231,down,Pastaweesy,inet,172.17.100.1/30
+ge-0/0/3.1232,down,miraco,inet,172.15.15.1/30
+ge-0/0/3.1233,down,aly,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/3.1264,down,miraco,inet,172.17.1.1/30
+ge-0/0/3.1266,down,vpnmonitor,inet,5.125.1.209/30
+ge-0/0/3.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/3.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/3.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/3.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/3.13101,down,newprintBorsa,inet,100.1.2.86/30
+ge-0/0/3.13102,down,vpnmonitor,inet,5.119.63.229/30
+ge-0/0/3.13103,down,newprintBorsa,inet,100.1.2.90/30
+ge-0/0/3.13104,down,vpnmonitor,inet,5.119.63.245/30
+ge-0/0/3.13105,down,newprintMakasa,inet,172.16.202.113/30
+ge-0/0/3.13106,down,vpnmonitor,inet,5.119.64.109/30
+ge-0/0/3.13107,down,newprintMakasa,inet,172.16.202.117/30
+ge-0/0/3.13108,down,vpnmonitor,inet,5.119.64.121/30
+ge-0/0/3.13109,down,newprint-MIST,inet,172.16.79.1/30
+ge-0/0/3.13110,down,vpnmonitor,inet,5.119.64.141/30
+ge-0/0/3.13111,down,newprint-MIST-EFM,inet,172.16.250.241/30
+ge-0/0/3.13112,down,vpnmonitor,inet,5.119.63.201/30
+ge-0/0/3.13113,down,newprint-MIST-EFM,inet,172.16.250.237/30
+ge-0/0/3.13114,down,vpnmonitor,inet,5.119.63.205/30
+ge-0/0/3.13150,down,TadamonBorsa,inet,100.0.1.30/30
+ge-0/0/3.13151,down,vpnmonitor,inet,5.119.2.229/30
+ge-0/0/3.13152,down,TadamonBorsa,inet,100.0.101.110/30
+ge-0/0/3.13153,down,vpnmonitor,inet,5.119.2.125/30
+ge-0/0/3.13154,down,tadamonMakasa,inet,172.16.201.53/30
+ge-0/0/3.13155,down,vpnmonitor,inet,5.119.3.13/30
+ge-0/0/3.13156,down,tadamonMakasa,inet,172.16.135.1/30
+ge-0/0/3.13157,down,vpnmonitor,inet,5.119.2.137/30
+ge-0/0/3.13158,down,default,inet,172.16.169.1/30
+ge-0/0/3.13159,down,vpnmonitor,inet,5.119.2.205/30
+ge-0/0/3.13160,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/3.13161,down,vpnmonitor,inet,5.119.3.9/30
+ge-0/0/3.13170,down,mcitoffices,inet,10.255.10.89/30
+ge-0/0/3.13171,down,vpnmonitor,inet,5.119.90.193/30
+ge-0/0/3.13173,down,npoibm,inet,172.16.38.1/30
+ge-0/0/3.13174,down,vpnmonitor,inet,5.120.179.253/30
+ge-0/0/3.13467,down,Print-MCDR,inet,172.17.50.1/30
+ge-0/0/3.13468,down,vpnmonitor,inet,5.120.21.13/30
+ge-0/0/3.13619,down,Print-MCDR,inet,172.17.180.1/30
+ge-0/0/3.13620,down,vpnmonitor,inet,5.120.84.113/30
+ge-0/0/4.400,up,default,inet,10.40.72.49/29
+ge-0/0/4.941,up,TE-MSAN,inet,10.9.154.65/29
+ge-0/0/4.942,up,TE-MNGT,inet,10.239.51.49/29
+ge-0/0/4.943,up,SIP-MSAN,inet,10.9.154.65/29
+ge-0/0/4.1110,up,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/4.1146,up,vpnmonitor,inet,5.5.40.41/30
+ge-0/0/4.1147,up,credit,inet,172.20.1.245/30
+ge-0/0/4.1238,up,vpnmonitor,inet,5.125.40.149/30
+ge-0/0/4.1239,up,arabia-brokerage,inet,172.18.19.1/30
+ge-0/0/4.1264,up,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/4.1266,up,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/4.1267,up,vpnmonitor,inet,5.125.41.85/30
+ge-0/0/4.1268,up,default,inet,172.17.192.5/30
+ge-0/0/4.1269,up,vpnmonitor,inet,5.120.239.189/30
+ge-0/0/4.1270,up,default,inet,172.17.44.221/30
+ge-0/0/4.1280,up,default,inet,172.17.130.229/30
+ge-0/0/4.1281,up,vpnmonitor,inet,5.125.7.85/30
+ge-0/0/4.1290,up,BM,inet,172.29.184.45/30
+ge-0/0/4.1291,up,vpnmonitor,inet,5.120.201.213/30
+ge-0/0/4.1309,up,default,inet,10.16.213.1/30
+ge-0/0/4.1349,up,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/4.2300,up,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/4.2550,up,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/4.2800,up,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/4.3050,up,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/4.13121,up,mist-arabia-vpn,inet,172.18.18.1/30
+ge-0/0/4.13122,up,vpnmonitor,inet,5.120.102.5/30
+ge-0/0/4.13123,up,arabiaMakasa,inet,172.18.203.1/30
+ge-0/0/4.13124,up,vpnmonitor,inet,5.120.107.21/30
+ge-0/0/4.13125,up,arabia-MIST,inet,172.16.253.5/30
+ge-0/0/4.13126,up,vpnmonitor,inet,5.120.107.25/30
+ge-0/0/4.13180,up,vpnmonitor,inet,5.120.33.137/30
+ge-0/0/4.13196,up,damas,inet,192.168.9.1/30
+ge-0/0/4.13197,up,vpnmonitor,inet,5.30.42.1/30
+ge-0/0/4.13500,up,egyarabland-cbe,inet,172.50.5.2/30
+ge-0/0/4.13501,up,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/4.13520,up,kholoud-cbe,inet,172.50.105.2/30
+ge-0/0/4.13521,up,vpnmonitor,inet,5.119.21.173/30
+ge-0/0/4.13560,up,SFD,inet,172.16.40.1/30
+ge-0/0/4.13561,up,vpnmonitor,inet,5.120.76.81/30
+ge-0/0/4.13570,up,arabiaBorsa,inet,100.1.8.34/30
+ge-0/0/4.13571,up,vpnmonitor,inet,5.120.104.213/30
+ge-0/0/4.13580,up,arabiaBorsa,inet,100.1.8.38/30
+ge-0/0/4.13581,up,vpnmonitor,inet,5.120.99.17/30
+ge-0/0/4.13590,up,arabia-MIST,inet,172.16.253.1/30
+ge-0/0/4.13591,up,vpnmonitor,inet,5.78.19.49/30
+ge-0/0/4.13600,up,arabiaMakasa,inet,172.18.203.5/30
+ge-0/0/4.13601,up,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/4.13701,up,Alwan,inet,172.17.50.1/30
+ge-0/0/4.13702,up,vpnmonitor,inet,5.120.207.29/30
+ge-0/0/5.400,up,default,inet,10.40.72.17/29
+ge-0/0/5.465,up,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/5.941,up,TE-MSAN,inet,10.9.154.33/29
+ge-0/0/5.942,up,TE-MNGT,inet,10.239.51.17/29
+ge-0/0/5.943,up,SIP-MSAN,inet,10.9.154.33/29
+ge-0/0/5.1111,up,sci,inet,172.17.90.1/30
+ge-0/0/5.1112,up,vpnmonitor,inet,5.120.165.133/30
+ge-0/0/5.1113,up,vpnmonitor,inet,5.125.42.29/30
+ge-0/0/5.1114,up,default,inet,172.17.40.165/30
+ge-0/0/5.1115,up,default,inet,172.17.193.177/30
+ge-0/0/5.1200,up,default,inet,172.17.205.149/30
+ge-0/0/5.1201,up,vpnmonitor,inet,5.125.51.117/30
+ge-0/0/5.1248,up,vpnmonitor,inet,5.125.29.181/30
+ge-0/0/5.1249,up,default,inet,172.17.172.169/30
+ge-0/0/5.2300,up,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/5.2550,up,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/5.2800,up,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/5.3050,up,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/5.13301,up,vpnmonitor,inet,5.119.56.77/30
+ge-0/0/5.13302,up,default,inet,172.17.198.1/30
+ge-0/0/5.13520,up,sci,inet,172.17.1.1/30
+ge-0/0/5.13521,up,vpnmonitor,inet,5.119.24.9/30
+ge-0/0/6.400,down,default,inet,10.40.72.25/29
+ge-0/0/6.941,down,TE-MSAN,inet,10.9.154.41/29
+ge-0/0/6.942,down,TE-MNGT,inet,10.239.51.25/29
+ge-0/0/6.943,down,SIP-MSAN,inet,10.9.154.41/29
+ge-0/0/6.1114,down,economicMakasa,inet,172.16.202.89/30
+ge-0/0/6.1115,down,takaful,inet,172.18.8.1/30
+ge-0/0/6.1132,down,Image-Furniture,inet,172.16.0.5/30
+ge-0/0/6.1133,down,vpnmonitor,inet,5.120.141.185/30
+ge-0/0/6.1251,down,ICHRD,inet,10.28.28.5/30
+ge-0/0/6.1252,down,vpnmonitor,inet,5.120.21.209/30
+ge-0/0/6.1254,down,vpnmonitor,inet,5.120.21.81/30
+ge-0/0/6.1294,down,default,inet,172.17.48.33/30
+ge-0/0/6.1392,down,default,inet,172.17.159.237/30
+ge-0/0/6.1393,down,vpnmonitor,inet,5.120.147.217/30
+ge-0/0/6.1451,down,MSAN_MPLS,inet,172.27.20.129/29
+ge-0/0/6.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/6.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/6.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/6.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/6.13202,down,vpnmonitor,inet,5.120.81.45/30
+ge-0/0/6.13204,down,Alfa-market,inet,172.16.100.5/30
+ge-0/0/6.13205,down,Alfa-market,inet,172.17.1.1/30
+ge-0/0/6.13206,down,vpnmonitor,inet,5.119.43.17/30
+ge-0/0/6.13207,down,ghabbour,inet,172.16.133.1/30
+ge-0/0/6.13208,down,vpnmonitor,inet,5.120.104.25/30
+ge-0/0/6.13209,down,Economy_MIST-EFM,inet,172.16.250.29/30
+ge-0/0/6.13210,down,vpnmonitor,inet,5.78.17.17/30
+ge-0/0/6.13211,down,Economy_MIST-EFM,inet,172.16.250.25/30
+ge-0/0/6.13212,down,vpnmonitor,inet,5.78.17.13/30
+ge-0/0/6.13214,down,magmo3a,inet,172.16.16.1/30
+ge-0/0/6.13215,down,vpnmonitor,inet,5.78.17.1/30
+ge-0/0/6.13381,down,vpnmonitor,inet,5.78.17.9/30
+ge-0/0/6.13390,down,magmo3aBorsa,inet,100.1.4.62/30
+ge-0/0/6.13391,down,vpnmonitor,inet,5.119.15.245/30
+ge-0/0/6.13610,down,economicMakasa,inet,172.16.202.85/30
+ge-0/0/6.13611,down,vpnmonitor,inet,5.78.17.5/30
+ge-0/0/6.13612,down,economic-MIST,inet,172.16.252.1/30
+ge-0/0/6.13613,down,vpnmonitor,inet,5.19.40.201/30
+ge-0/0/6.13620,down,wallBorsa,inet,100.0.102.178/30
+ge-0/0/6.13621,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/6.13641,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/6.13670,down,wallMakasa,inet,172.16.200.149/30
+ge-0/0/6.13671,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/6.13690,down,economic-MIST,inet,172.16.17.1/30
+ge-0/0/6.13691,down,vpnmonitor,inet,5.19.40.129/30
+ge-0/0/7.61,down,vpnmonitor,inet,5.3.40.1/30
+ge-0/0/7.62,down,cib,inet,10.217.5.165/30
+ge-0/0/7.63,down,vpnmonitor,inet,4.48.40.5/30
+ge-0/0/7.77,down,default,inet,196.219.29.249/30
+ge-0/0/7.100,down,L2circuit-to-103,inet,100.100.100.3/24
+ge-0/0/7.200,down,default,inet,200.200.200.3/24
+ge-0/0/7.300,down,Customer-BGP3,inet,220.220.220.10/30
+ge-0/0/7.445,down,MobileShop,inet,10.16.252.5/30
+ge-0/0/7.446,down,default,inet,196.219.219.105/30
+ge-0/0/7.447,down,MobileShop,inet,10.16.252.2/30
+ge-0/0/7.448,down,default,inet,196.219.219.109/30
+ge-0/0/7.605,down,Mobile_Distributed_Portal,inet,10.18.252.1/30
+ge-0/0/7.620,down,root,inet,196.219.0.45/30
+ge-0/0/7.657,down,EALB,inet,10.17.17.2/30
+ge-0/0/7.670,down,vpnmonitor,inet,5.119.80.157/30
+ge-0/0/7.672,down,default,inet,172.17.198.125/30
+ge-0/0/7.673,down,default,inet,172.17.198.129/30
+ge-0/0/7.679,down,default,inet,41.33.58.69/30
+ge-0/0/7.681,down,cib,inet,10.217.2.85/30
+ge-0/0/7.682,down,vpnmonitor,inet,5.3.40.9/30
+ge-0/0/7.690,down,default,inet,196.219.227.173/30
+ge-0/0/7.691,down,edbe,inet,10.61.49.5/30
+ge-0/0/7.698,down,arabland-bank,inet,172.19.10.2/30
+ge-0/0/7.750,down,IP-SRV,inet,10.4.1.65/26
+ge-0/0/7.823,down,NSGB,inet,10.54.17.5/30
+ge-0/0/7.833,down,default,inet,172.17.137.125/30
+ge-0/0/7.1141,down,HDB,inet,70.254.252.1/30
+ge-0/0/7.1301,down,vpnmonitor,inet,5.120.15.93/30
+ge-0/0/7.2112,down,default,inet,172.17.223.61/30
+ge-0/0/7.2230,down,SFD,inet,172.16.11.1/30
+ge-0/0/7.3626,down,Faisal-Bank,inet,172.18.165.129/30
+ge-0/0/8.100,down,L2circuit-to-101,inet,100.100.100.2/24
+ge-0/0/8.200,down,default,inet,200.200.200.2/24
+ge-0/0/8.300,down,Customer-BGP2,inet,220.220.220.6/30
+ge-0/0/8.400,down,default,inet,10.40.72.33/29
+ge-0/0/8.401,down,L2circuit-2,inet,221.221.221.2/30
+ge-0/0/8.941,down,TE-MSAN,inet,10.9.154.49/29
+ge-0/0/8.942,down,TE-MNGT,inet,10.239.51.33/29
+ge-0/0/8.943,down,SIP-MSAN,inet,10.9.154.49/29
+ge-0/0/8.1110,down,default,inet,172.17.203.41/30
+ge-0/0/8.1111,down,Ghorba,inet,172.17.139.181/30
+ge-0/0/8.1191,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/8.1200,down,default,inet,172.17.215.177/30
+ge-0/0/8.1201,down,vpnmonitor,inet,5.120.249.53/30
+ge-0/0/8.1238,down,vpnmonitor,inet,5.125.41.165/30
+ge-0/0/8.1239,down,sci,inet,172.17.128.5/30
+ge-0/0/8.1262,down,vpnmonitor,inet,5.125.27.53/30
+ge-0/0/8.1264,down,alsallab,inet,172.16.66.1/30
+ge-0/0/8.1265,down,sakka1,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/8.1266,down,alsallab,inet,172.16.77.1/30
+ge-0/0/8.1267,down,ragab,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/8.1311,down,default,inet,10.17.213.1/30
+ge-0/0/8.2191,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/8.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/8.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/8.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/8.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/8.13101,down,incolease-cbe,inet,172.50.222.2/30
+ge-0/0/8.13102,down,vpnmonitor,inet,5.119.0.161/30
+ge-0/0/8.13105,down,gravena,inet,172.16.130.1/30
+ge-0/0/8.13106,down,vpnmonitor,inet,5.120.144.1/30
+ge-0/0/8.13107,down,bnp,inet,172.16.2.189/30
+ge-0/0/8.13108,down,vpnmonitor,inet,5.120.127.241/30
+ge-0/0/8.13110,down,vpnmonitor,inet,5.119.97.253/30
+ge-0/0/8.13112,down,vpnmonitor,inet,5.119.97.249/30
+ge-0/0/8.13113,down,alsallab,inet,172.16.128.1/30
+ge-0/0/8.13114,down,vpnmonitor,inet,5.119.95.213/30
+ge-0/0/8.13117,down,default,inet,172.17.107.101/30
+ge-0/0/8.13118,down,vpnmonitor,inet,5.120.61.165/30
+ge-0/0/8.13150,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/8.13151,down,amr,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/8.13170,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.100,down,L2circuit-to-105,inet,100.100.100.1/24
+ge-0/0/9.200,down,default,inet,200.200.200.1/24
+ge-0/0/9.300,down,Customer-BGP,inet,220.220.220.2/30
+ge-0/0/9.400,down,L2circuit-1,inet,10.40.72.57/29
+ge-0/0/9.400,down,L2circuit-1,inet,221.221.221.1/30
+ge-0/0/9.413,down,default,inet,41.41.3.1/30
+ge-0/0/9.414,down,default,inet,44.44.44.1/30
+ge-0/0/9.754,down,vpnmonitor,inet,5.125.5.229/30
+ge-0/0/9.788,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.806,down,default,inet,172.17.235.1/30
+ge-0/0/9.861,down,default,inet,172.17.120.181/30
+ge-0/0/9.870,down,vpnmonitor,inet,5.125.3.113/30
+ge-0/0/9.941,down,TE-MSAN,inet,10.9.154.73/29
+ge-0/0/9.942,down,TE-MNGT,inet,10.237.52.113/29
+ge-0/0/9.942,down,TE-MNGT,inet,10.239.51.57/29
+ge-0/0/9.943,down,SIP-MSAN,inet,10.9.154.73/29
+ge-0/0/9.943,down,SIP-MSAN,inet,10.9.155.129/29
+ge-0/0/9.945,down,TE-VOICE,inet,10.42.227.153/29
+ge-0/0/9.1105,down,greece-cbe,inet,172.50.35.2/30
+ge-0/0/9.1107,down,unitedbank-cbe,inet,172.50.14.2/30
+ge-0/0/9.1108,down,faisal-cbe,inet,172.50.38.2/30
+ge-0/0/9.1109,down,default,inet,172.18.250.145/30
+ge-0/0/9.1110,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1111,down,vpnmonitor,inet,5.125.63.13/30
+ge-0/0/9.1112,down,RadioShack,inet,10.16.245.1/30
+ge-0/0/9.1113,down,BARAKA,inet,100.0.1.1/30
+ge-0/0/9.1114,down,vpnmonitor,inet,5.120.169.113/30
+ge-0/0/9.1115,down,DHCP,inet,172.16.1.1/30
+ge-0/0/9.1116,down,DHCP,inet,10.10.1.1/2
+ge-0/0/9.1117,down,default,inet,172.17.144.89/30
+ge-0/0/9.1118,down,default,inet,41.33.168.121/30
+ge-0/0/9.1119,down,default,inet,172.123.123.1/30
+ge-0/0/9.1120,down,faisal_MIST-EFM,inet,5.19.40.13/30
+ge-0/0/9.1124,down,vpnmonitor,inet,5.125.34.249/30
+ge-0/0/9.1125,down,CZECH,inet,194.108.140.49/30
+ge-0/0/9.1126,down,vpnmonitor,inet,5.120.162.37/30
+ge-0/0/9.1127,down,SFD,inet,172.16.102.1/30
+ge-0/0/9.1131,down,Ingredients,inet,172.16.129.1/30
+ge-0/0/9.1132,down,vpnmonitor,inet,5.125.62.73/30
+ge-0/0/9.1134,down,vpnmonitor,inet,5.125.34.245/30
+ge-0/0/9.1135,down,SFD,inet,172.16.227.1/30
+ge-0/0/9.1140,down,vpnmonitor,inet,5.125.20.69/30
+ge-0/0/9.1141,down,default,inet,172.17.154.253/30
+ge-0/0/9.1144,down,default,inet,5.125.36.1/30
+ge-0/0/9.1146,down,default,inet,172.91.91.1/30
+ge-0/0/9.1148,down,vpnmonitor,inet,5.125.42.169/30
+ge-0/0/9.1149,down,default,inet,172.17.191.13/30
+ge-0/0/9.1150,down,vpnmonitor,inet,5.120.172.105/30
+ge-0/0/9.1151,down,vpnmonitor,inet,5.125.42.173/30
+ge-0/0/9.1152,down,default,inet,172.17.191.65/30
+ge-0/0/9.1153,down,vpnmonitor,inet,5.125.32.241/30
+ge-0/0/9.1154,down,default,inet,172.17.174.81/30
+ge-0/0/9.1156,down,default,inet,172.17.186.205/30
+ge-0/0/9.1159,down,vpnmonitor,inet,5.3.40.21/30
+ge-0/0/9.1160,down,cibc,inet,172.16.6.5/30
+ge-0/0/9.1164,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1165,down,Finance-Ministry,inet,172.234.9.33/30
+ge-0/0/9.1166,down,vpnmonitor,inet,5.125.36.1/30
+ge-0/0/9.1168,down,default,inet,172.17.220.77/30
+ge-0/0/9.1169,down,vpnmonitor,inet,5.125.254.33/30
+ge-0/0/9.1171,down,vpnmonitor,inet,5.125.10.137/30
+ge-0/0/9.1172,down,default,inet,172.16.160.17/30
+ge-0/0/9.1175,down,default,inet,172.17.161.153/30
+ge-0/0/9.1177,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1178,down,OEC,inet,172.27.250.1/30
+ge-0/0/9.1179,down,vpnmonitor,inet,5.120.247.37/30
+ge-0/0/9.1198,down,vpnmonitor,inet,5.125.32.221/30
+ge-0/0/9.1199,down,default,inet,172.17.174.77/30
+ge-0/0/9.1203,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1220,down,vpnmonitor,inet,5.125.20.61/30
+ge-0/0/9.1224,down,audibank,inet,172.20.46.161/30
+ge-0/0/9.1225,down,default,inet,172.17.139.181/30
+ge-0/0/9.1237,down,vpnmonitor,inet,172.12.37.1/30
+ge-0/0/9.1242,down,vpnmonitor,inet,5.125.22.189/30
+ge-0/0/9.1243,down,default,inet,172.17.138.233/30
+ge-0/0/9.1244,down,vpnmonitor,inet,5.125.61.149/30
+ge-0/0/9.1245,down,default,inet,172.17.218.81/30
+ge-0/0/9.1246,down,vpnmonitor,inet,5.125.22.241/30
+ge-0/0/9.1247,down,default,inet,172.17.161.249/30
+ge-0/0/9.1251,down,vpnmonitor,inet,5.120.195.10/30
+ge-0/0/9.1254,down,vpnmonitor,inet,172.17.54.1/30
+ge-0/0/9.1255,down,vpnmonitor,inet,172.17.55.1/30
+ge-0/0/9.1256,down,vpnmonitor,inet,41.33.168.69/30
+ge-0/0/9.1256,down,vpnmonitor,inet,172.17.56.1/30
+ge-0/0/9.1257,down,DHCP,inet,11.11.1.1/24
+ge-0/0/9.1258,down,vpnmonitor,inet,5.125.40.161/30
+ge-0/0/9.1259,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1262,down,vpnmonitor,inet,5.125.18.217/30
+ge-0/0/9.1263,down,default,inet,172.17.151.141/30
+ge-0/0/9.1269,down,Alfa-LAB,inet,172.17.207.1/30
+ge-0/0/9.1270,down,Alfa-LAB,inet,172.50.55.1/30
+ge-0/0/9.1271,down,vpnmonitor,inet,5.125.36.245/30
+ge-0/0/9.1272,down,default,inet,172.17.183.177/30
+ge-0/0/9.1273,down,default,inet,172.17.120.229/30
+ge-0/0/9.1274,down,vpnmonitor,inet,41.33.193.65/30
+ge-0/0/9.1275,down,khaled,inet,172.17.111.1/30
+ge-0/0/9.1276,down,default,inet,172.17.125.57/30
+ge-0/0/9.1277,down,vpnmonitor,inet,5.125.34.253/30
+ge-0/0/9.1278,down,SFD,inet,172.16.103.1/30
+ge-0/0/9.1279,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1282,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1283,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1284,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.1287,down,vpnmonitor,inet,5.125.27.81/30
+ge-0/0/9.1291,down,vpnmonitor,inet,5.125.36.137/30
+ge-0/0/9.1292,down,vpnmonitor,inet,5.125.23.217/30
+ge-0/0/9.1297,down,tn,inet,172.17.50.1/30
+ge-0/0/9.1298,down,vpnmonitor,inet,5.18.17.5/30
+ge-0/0/9.1300,down,default,inet,41.33.53.161/29
+ge-0/0/9.1313,down,HIO,inet,10.10.180.1/30
+ge-0/0/9.1315,down,tamenat,inet,172.30.7.82/30
+ge-0/0/9.1324,down,tamenat,inet,172.30.7.218/30
+ge-0/0/9.1345,down,credit-cbe,inet,172.50.10.10/30
+ge-0/0/9.1347,down,tamenat,inet,172.30.7.142/30
+ge-0/0/9.1405,down,ECISP,inet,172.21.25.133/30
+ge-0/0/9.1406,down,vpnmonitor,inet,5.120.128.181/30
+ge-0/0/9.1451,down,MSAN_MPLS,inet,172.27.20.121/29
+ge-0/0/9.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/9.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/9.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/0/9.11190,down,vpnmonitor,inet,5.120.160.237/30
+ge-0/0/9.11267,down,rateb,inet,5.125.28.45/30
+ge-0/0/9.11390,down,DHCP,inet,172.18.18.1/30
+ge-0/0/9.12745,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.12901,down,vpnmonitor,inet,5.125.18.229/30
+ge-0/0/9.13129,down,Alagzakhana,inet,172.18.19.1/30
+ge-0/0/9.13130,down,vpnmonitor,inet,5.120.137.113/30
+ge-0/0/9.13147,down,medit-brok-mist,inet,172.16.0.1/30
+ge-0/0/9.13148,down,vpnmonitor,inet,5.120.141.169/30
+ge-0/0/9.13149,down,papa-jonhs,inet,10.16.30.1/30
+ge-0/0/9.13150,down,vpnmonitor,inet,5.120.142.10/30
+ge-0/0/9.13151,down,default,inet,172.17.157.221/30
+ge-0/0/9.13151,down,default,inet,196.219.216.193/30
+ge-0/0/9.13152,down,damas,inet,10.10.20.1/30
+ge-0/0/9.13301,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13311,down,egb,inet,172.21.153.2/30
+ge-0/0/9.13312,down,vpnmonitor,inet,5.120.228.9/30
+ge-0/0/9.13393,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13394,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13398,down,vpnmonitor,inet,5.120.172.189/30
+ge-0/0/9.13399,down,TAXES,inet,172.17.11.1/30
+ge-0/0/9.13400,down,vpnmonitor,inet,5.120.153.65/30
+ge-0/0/9.13402,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13425,down,fawry,inet,192.168.31.5/30
+ge-0/0/9.13426,down,vpnmonitor,inet,5.120.202.33/30
+ge-0/0/9.13444,down,papa-jonhs,inet,10.16.30.5/30
+ge-0/0/9.13456,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13459,down,mnsteel,inet,172.16.53.1/30
+ge-0/0/9.13460,down,vpnmonitor,inet,5.120.157.225/30
+ge-0/0/9.13467,down,AFHC,inet,172.17.139.5/30
+ge-0/0/9.13485,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13486,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13501,down,pioneer,inet,172.16.251.5/30
+ge-0/0/9.13502,down,vpnmonitor,inet,5.78.1.29/30
+ge-0/0/9.13503,down,pioneer,inet,172.16.147.1/30
+ge-0/0/9.13504,down,vpnmonitor,inet,5.119.32.41/30
+ge-0/0/9.13505,down,pioneer,inet,172.17.0.1/30
+ge-0/0/9.13506,down,vpnmonitor,inet,5.78.1.25/30
+ge-0/0/9.13507,down,vpnmonitor,inet,5.5.40.21/30
+ge-0/0/9.13508,down,vpnmonitor,inet,5.120.143.57/30
+ge-0/0/9.13509,down,vpnmonitor,inet,5.5.40.29/30
+ge-0/0/9.13510,down,vpnmonitor,inet,5.5.40.149/30
+ge-0/0/9.13530,down,vpnmonitor,inet,5.120.160.165/30
+ge-0/0/9.13678,down,vpnmonitor,inet,5.119.38.77/30
+ge-0/0/9.13679,down,vpnmonitor,inet,5.119.76.209/30
+ge-0/0/9.13680,down,pioneermakasa,inet,172.16.55.1/30
+ge-0/0/9.13681,down,vpnmonitor,inet,5.119.86.169/30
+ge-0/0/9.13683,down,vpnmonitor,inet,5.5.40.13/30
+ge-0/0/9.13685,down,SAIB-L3,inet,10.100.250.9/30
+ge-0/0/9.13686,down,vpnmonitor,inet,5.119.53.145/30
+ge-0/0/9.13700,down,pioneer-egid,inet,172.17.155.1/30
+ge-0/0/9.13701,down,vpnmonitor,inet,5.119.32.61/30
+ge-0/0/9.13704,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13705,down,vpnmonitor,inet,5.5.40.105/30
+ge-0/0/9.13706,down,default,inet,172.16.142.5/30
+ge-0/0/9.13707,down,vpnmonitor,inet,5.119.70.181/30
+ge-0/0/9.13708,down,allfoods,inet,172.16.100.21/30
+ge-0/0/9.13709,down,vpnmonitor,inet,5.120.240.29/30
+ge-0/0/9.13712,down,rowadBorsa,inet,100.0.102.38/30
+ge-0/0/9.13713,down,vpnmonitor,inet,5.120.67.245/30
+ge-0/0/9.13714,down,PioneerBorsa,inet,100.1.2.106/30
+ge-0/0/9.13715,down,vpnmonitor,inet,5.119.32.73/30
+ge-0/0/9.13716,down,MOI-D17,inet,10.3.0.133/30
+ge-0/0/9.13717,down,MOI,inet,10.2.0.133/30
+ge-0/0/9.13718,down,vpnmonitor,inet,5.7.40.9/30
+ge-0/0/9.13720,down,vpnmonitor,inet,5.119.38.117/30
+ge-0/0/9.13723,down,vpnmonitor,inet,5.119.78.21/30
+ge-0/0/9.13724,down,vpnmonitor,inet,5.119.75.5/30
+ge-0/0/9.13725,down,vpnmonitor,inet,5.119.75.89/30
+ge-0/0/9.13726,down,vpnmonitor,inet,5.78.1.21/30
+ge-0/0/9.13727,down,pioneer,inet,172.16.251.1/30
+ge-0/0/9.13728,down,watany-cbe,inet,172.50.20.10/30
+ge-0/0/9.13729,down,vpnmonitor,inet,5.119.83.9/30
+ge-0/0/9.13730,down,npoibm,inet,172.16.195.1/30
+ge-0/0/9.13731,down,vpnmonitor,inet,5.67.40.5/30
+ge-0/0/9.13732,down,sigma-zagazi,inet,172.16.128.2/30
+ge-0/0/9.13733,down,rowadMakasa,inet,172.16.133.1/30
+ge-0/0/9.13734,down,vpnmonitor,inet,7.7.7.9/30
+ge-0/0/9.13735,down,vpnmonitor,inet,5.119.99.41/30
+ge-0/0/9.13746,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13747,down,default,inet,172.17.42.1/30
+ge-0/0/9.13748,down,default,inet,172.17.43.1/30
+ge-0/0/9.13750,down,SAIB-L3,inet,10.100.251.9/30
+ge-0/0/9.13751,down,vpnmonitor,inet,5.119.24.101/30
+ge-0/0/9.13754,down,faisal_MIST-EFM,inet,172.16.250.149/30
+ge-0/0/9.13755,down,vpnmonitor,inet,5.19.40.9/30
+ge-0/0/9.13756,down,faisal_MIST-EFM,inet,172.18.250.145/30
+ge-0/0/9.13757,down,vpnmonitor,inet,5.19.40.13/30
+ge-0/0/9.13758,down,ali,inet,172.16.18.1/30
+ge-0/0/9.13759,down,vpnmonitor,inet,5.120.70.237/30
+ge-0/0/9.13762,down,PBDAC-CBE,inet,172.50.7.2/30
+ge-0/0/9.13763,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13767,down,nbg-ebc,inet,172.18.145.1/30
+ge-0/0/9.13768,down,vpnmonitor,inet,5.119.38.113/30
+ge-0/0/9.13800,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13803,down,vpnmonitor,inet,5.119.7.129/30
+ge-0/0/9.13804,down,rowadBorsa,inet,100.1.1.34/30
+ge-0/0/9.13805,down,vpnmonitor,inet,5.120.67.253/30
+ge-0/0/9.13806,down,sfd-cbe,inet,172.50.205.2/30
+ge-0/0/9.13807,down,vpnmonitor,inet,5.119.98.17/30
+ge-0/0/9.13850,down,RadioShack,inet,10.16.66.1/30
+ge-0/0/9.13851,down,vpnmonitor,inet,5.11.40.49/30
+ge-0/0/9.13852,down,bnp,inet,172.16.2.81/30
+ge-0/0/9.13853,down,vpnmonitor,inet,5.4.40.21/30
+ge-0/0/9.13854,down,vpnmonitor,inet,5.119.38.73/30
+ge-0/0/9.13855,down,default,inet,172.16.211.1/30
+ge-0/0/9.13856,down,samba,inet,172.16.140.1/30
+ge-0/0/9.13857,down,vpnmonitor,inet,5.119.5.201/30
+ge-0/0/9.13858,down,CIBCBorsa,inet,100.0.100.158/30
+ge-0/0/9.13859,down,vpnmonitor,inet,5.120.101.77/30
+ge-0/0/9.13951,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/0/9.13952,down,vpnmonitor,inet,5.119.38.109/30
+ge-0/0/9.13956,down,vpnmonitor,inet,5.119.38.105/30
+ge-0/0/9.13957,down,general-cbe,inet,172.50.115.2/30
+ge-0/0/9.13958,down,vpnmonitor,inet,5.119.9.125/30
+ge-0/1/0.400,down,default,inet,10.40.165.193/29
+ge-0/1/0.941,down,TE-MSAN,inet,10.9.154.1/30
+ge-0/1/0.941,down,TE-MSAN,inet,10.9.154.113/29
+ge-0/1/0.942,down,TE-MNGT,inet,10.239.51.97/29
+ge-0/1/0.943,down,SIP-MSAN,inet,10.9.154.1/30
+ge-0/1/0.943,down,SIP-MSAN,inet,10.9.154.113/29
+ge-0/1/0.1101,down,hsbc,inet,172.19.1.82/30
+ge-0/1/0.1102,down,vpnmonitor,inet,5.119.0.173/30
+ge-0/1/0.1103,down,default,inet,172.17.39.177/30
+ge-0/1/0.1104,down,vpnmonitor,inet,5.120.16.145/30
+ge-0/1/0.1111,down,vpnmonitor,inet,5.125.29.85/30
+ge-0/1/0.1112,down,default,inet,172.17.29.101/30
+ge-0/1/0.1113,down,vpnmonitor,inet,5.120.43.194/30
+ge-0/1/0.1115,down,vpnmonitor,inet,5.120.210.29/30
+ge-0/1/0.1120,down,credit,inet,172.20.2.117/30
+ge-0/1/0.1122,down,vpnmonitor,inet,5.5.40.113/30
+ge-0/1/0.1123,down,Metro-TE,inet,172.17.111.1/30
+ge-0/1/0.1125,down,default,inet,172.17.187.45/30
+ge-0/1/0.1130,down,Sigma-EGID,inet,172.17.146.1/30
+ge-0/1/0.1131,down,vpnmonitor,inet,5.48.40.1/30
+ge-0/1/0.1132,down,sigmaMakasa,inet,172.16.200.37/30
+ge-0/1/0.1134,down,SigmaBorsa,inet,100.0.102.94/30
+ge-0/1/0.1135,down,vpnmonitor,inet,5.5.40.205/30
+ge-0/1/0.1136,down,HDB,inet,70.254.92.1/30
+ge-0/1/0.1137,down,vpnmonitor,inet,5.120.34.213/30
+ge-0/1/0.1138,down,HDB,inet,70.254.84.1/30
+ge-0/1/0.1139,down,vpnmonitor,inet,5.125.21.233/30
+ge-0/1/0.1140,down,default,inet,172.17.140.189/30
+ge-0/1/0.1141,down,vpnmonitor,inet,5.125.12.129/30
+ge-0/1/0.1150,down,vpnmonitor,inet,5.125.57.17/30
+ge-0/1/0.1151,down,Shuaa-EGX,inet,100.1.9.254/30
+ge-0/1/0.1178,down,Blom-MIST-EFM,inet,172.16.253.9/30
+ge-0/1/0.1193,down,credit,inet,172.20.2.53/30
+ge-0/1/0.1195,down,vpnmonitor,inet,5.125.59.153/30
+ge-0/1/0.1200,down,vpnmonitor,inet,5.125.30.45/30
+ge-0/1/0.1202,down,Arab-African-cbe,inet,172.50.245.2/30
+ge-0/1/0.1203,down,vpnmonitor,inet,5.120.245.109/30
+ge-0/1/0.1205,down,default,inet,172.17.212.205/30
+ge-0/1/0.1206,down,kady,inet,5.125.56.133/30
+ge-0/1/0.1210,down,investBorsa,inet,100.0.101.18/30
+ge-0/1/0.1211,down,vpnmonitor,inet,5.120.186.29/30
+ge-0/1/0.1224,down,vpnmonitor,inet,5.125.18.197/30
+ge-0/1/0.1225,down,default,inet,172.17.151.193/30
+ge-0/1/0.1226,down,vpnmonitor,inet,5.125.18.201/30
+ge-0/1/0.1227,down,default,inet,172.17.151.197/30
+ge-0/1/0.1228,down,vpnmonitor,inet,5.125.19.45/30
+ge-0/1/0.1229,down,blom-MIST,inet,172.16.251.101/30
+ge-0/1/0.1230,down,vpnmonitor,inet,5.120.21.201/30
+ge-0/1/0.1231,down,default,inet,172.17.152.129/30
+ge-0/1/0.1232,down,default,inet,172.17.152.133/30
+ge-0/1/0.1235,down,default,inet,172.17.162.129/30
+ge-0/1/0.1236,down,vpnmonitor,inet,5.125.23.77/30
+ge-0/1/0.1237,down,default,inet,172.17.162.125/30
+ge-0/1/0.1238,down,vpnmonitor,inet,5.125.23.73/30
+ge-0/1/0.1239,down,SigmaBorsa,inet,100.1.6.186/30
+ge-0/1/0.1240,down,vpnmonitor,inet,5.125.30.37/30
+ge-0/1/0.1244,down,default,inet,172.17.93.113/30
+ge-0/1/0.1245,down,vpnmonitor,inet,5.125.36.49/30
+ge-0/1/0.1248,down,I-Score-Taamir,inet,192.168.152.1/30
+ge-0/1/0.1253,down,vpnmonitor,inet,5.125.254.197/30
+ge-0/1/0.1254,down,default,inet,172.17.221.53/30
+ge-0/1/0.1256,down,default,inet,172.17.213.49/30
+ge-0/1/0.1257,down,vpnmonitor,inet,5.125.43.149/30
+ge-0/1/0.1260,down,Sandah,inet,172.17.1.1/30
+ge-0/1/0.1261,down,Ghorba,inet,10.10.11.1/30
+ge-0/1/0.1267,down,Blom-MIST-EFM,inet,172.16.253.17/30
+ge-0/1/0.1268,down,vpnmonitor,inet,4.17.40.5/30
+ge-0/1/0.1272,down,vpnmonitor,inet,5.78.99.1/30
+ge-0/1/0.1274,down,blomMakasa,inet,172.16.202.125/30
+ge-0/1/0.1275,down,vpnmonitor,inet,5.19.40.65/30
+ge-0/1/0.1280,down,vpnmonitor,inet,5.120.158.1/30
+ge-0/1/0.1281,down,khaled,inet,10.10.11.1/30
+ge-0/1/0.1282,down,Mist-Shoaa,inet,172.17.1.5/30
+ge-0/1/0.1287,down,amalMIST,inet,192.168.87.21/30
+ge-0/1/0.1291,down,vpnmonitor,inet,5.125.53.33/30
+ge-0/1/0.1292,down,default,inet,172.17.206.221/30
+ge-0/1/0.1300,down,amal-MIST-EFM,inet,172.16.251.49/30
+ge-0/1/0.1303,down,vpnmonitor,inet,5.119.81.213/30
+ge-0/1/0.1304,down,amalBorsa,inet,100.1.3.250/30
+ge-0/1/0.1305,down,amalBorsa,inet,100.1.3.246/30
+ge-0/1/0.1306,down,vpnmonitor,inet,5.119.81.217/30
+ge-0/1/0.1307,down,amal-MIST-EFM,inet,172.16.251.53/30
+ge-0/1/0.1308,down,vpnmonitor,inet,5.119.81.233/30
+ge-0/1/0.1309,down,amal-EFM,inet,172.18.0.1/30
+ge-0/1/0.1310,down,vpnmonitor,inet,5.120.78.101/30
+ge-0/1/0.1311,down,Sigma-Sohag,inet,172.16.135.2/30
+ge-0/1/0.1312,down,vpnmonitor,inet,5.120.168.125/30
+ge-0/1/0.1313,down,taamirmortgage-cbe,inet,172.50.221.2/30
+ge-0/1/0.1314,down,vpnmonitor,inet,5.119.75.97/30
+ge-0/1/0.1320,down,amalMIST,inet,192.168.87.17/30
+ge-0/1/0.1321,down,vpnmonitor,inet,5.120.149.53/30
+ge-0/1/0.1350,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/0.1451,down,MSAN_MPLS,inet,172.27.20.217/29
+ge-0/1/0.1452,down,default,inet,172.17.189.81/30
+ge-0/1/0.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/0.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/0.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/0.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/0.13101,down,vpnmonitor,inet,5.119.81.225/30
+ge-0/1/0.13102,down,amalMakasa,inet,172.16.203.9/30
+ge-0/1/0.13103,down,amalMakasa,inet,172.16.203.13/30
+ge-0/1/0.13104,down,vpnmonitor,inet,5.119.81.205/30
+ge-0/1/0.13105,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/0.13106,down,Marselia,inet,172.17.2.1/30
+ge-0/1/0.13107,down,vpnmonitor,inet,5.120.170.221/30
+ge-0/1/0.13109,down,sigmaMakasa,inet,172.16.200.41/30
+ge-0/1/0.13110,down,vpnmonitor,inet,5.119.41.165/30
+ge-0/1/0.13111,down,default,inet,172.17.101.125/30
+ge-0/1/0.13112,down,vpnmonitor,inet,5.120.54.41/30
+ge-0/1/0.13143,down,Shuaa-MCDR,inet,172.16.2.1/30
+ge-0/1/0.13144,down,vpnmonitor,inet,5.120.58.185/30
+ge-0/1/0.13198,down,vpnmonitor,inet,4.17.40.1/30
+ge-0/1/0.13501,down,investBorsa,inet,100.1.8.94/30
+ge-0/1/0.13502,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/1.400,down,default,inet,10.40.72.65/29
+ge-0/1/1.601,down,IP-SRV,inet,10.4.6.1/30
+ge-0/1/1.850,down,default,inet,172.17.94.41/30
+ge-0/1/1.941,down,TE-MSAN,inet,10.9.154.81/29
+ge-0/1/1.942,down,TE-MNGT,inet,10.239.51.65/29
+ge-0/1/1.943,down,SIP-MSAN,inet,10.9.154.81/29
+ge-0/1/1.1155,down,Cairo-Scan,inet,172.16.21.1/30
+ge-0/1/1.1156,down,vpnmonitor,inet,5.125.51.37/30
+ge-0/1/1.1157,down,cib,inet,10.217.2.213/30
+ge-0/1/1.1158,down,vpnmonitor,inet,5.3.40.49/30
+ge-0/1/1.1161,down,vpnmonitor,inet,5.120.6.149/30
+ge-0/1/1.1162,down,default,inet,172.17.47.1/30
+ge-0/1/1.1163,down,salman,inet,5.120.236.113/30
+ge-0/1/1.1176,down,vpnmonitor,inet,5.125.20.109/30
+ge-0/1/1.1177,down,default,inet,172.17.155.85/30
+ge-0/1/1.1271,down,vpnmonitor,inet,5.120.42.1/30
+ge-0/1/1.1277,down,vpnmonitor,inet,5.125.21.189/30
+ge-0/1/1.1278,down,HDB,inet,70.254.253.1/30
+ge-0/1/1.1279,down,vpnmonitor,inet,5.125.35.157/30
+ge-0/1/1.1282,down,HDB,inet,70.254.73.1/30
+ge-0/1/1.1283,down,vpnmonitor,inet,5.125.35.161/30
+ge-0/1/1.1284,down,HDB,inet,70.254.74.1/30
+ge-0/1/1.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/1.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/1.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/1.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/1.13201,down,default,inet,172.17.94.145/30
+ge-0/1/1.13202,down,vpnmonitor,inet,5.120.42.149/30
+ge-0/1/2.400,down,default,inet,10.41.11.113/29
+ge-0/1/2.942,down,TE-MNGT,inet,10.237.52.25/29
+ge-0/1/2.943,down,SIP-MSAN,inet,10.9.155.41/29
+ge-0/1/2.1101,down,ComputerShop,inet,10.20.10.1/30
+ge-0/1/2.1102,down,vpnmonitor,inet,5.11.40.85/30
+ge-0/1/2.1103,down,MobileShop,inet,10.16.119.1/30
+ge-0/1/2.1104,down,vpnmonitor,inet,5.11.40.113/30
+ge-0/1/2.1105,down,abc,inet,10.40.144.1/30
+ge-0/1/2.1106,down,vpnmonitor,inet,5.125.51.85/30
+ge-0/1/2.1116,down,vpnmonitor,inet,5.119.33.201/30
+ge-0/1/2.1130,down,universal2,inet,172.16.0.5/30
+ge-0/1/2.1131,down,vpnmonitor,inet,5.120.120.33/30
+ge-0/1/2.1135,down,nasrdawleya-cbe,inet,172.50.177.2/30
+ge-0/1/2.1136,down,vpnmonitor,inet,5.119.16.145/30
+ge-0/1/2.1264,down,wasset,inet,172.17.17.1/30
+ge-0/1/2.1265,down,vpnmonitor,inet,5.125.29.125/30
+ge-0/1/2.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/2.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/2.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/2.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/2.13101,down,Alagzakhana,inet,172.16.5.1/30
+ge-0/1/2.13102,down,vpnmonitor,inet,5.120.126.129/30
+ge-0/1/2.13407,down,Alfa-LAB,inet,172.17.28.1/30
+ge-0/1/2.13408,down,Alfa-LAB,inet,172.17.233.1/30
+ge-0/1/2.13477,down,MIST-Premiere,inet,192.168.87.37/30
+ge-0/1/2.13478,down,vpnmonitor,inet,5.120.182.201/30
+ge-0/1/2.13500,down,mokhtabar,inet,172.16.55.1/30
+ge-0/1/3.400,down,default,inet,10.41.50.225/29
+ge-0/1/3.942,down,TE-MNGT,inet,10.238.51.241/29
+ge-0/1/3.943,down,SIP-MSAN,inet,10.9.155.1/29
+ge-0/1/3.1101,down,mist-themar-internet,inet,172.16.76.5/30
+ge-0/1/3.1102,down,vpnmonitor,inet,5.120.224.229/30
+ge-0/1/3.1103,down,default,inet,172.17.10.161/30
+ge-0/1/3.1104,down,vpnmonitor,inet,5.120.224.233/30
+ge-0/1/3.1107,down,mist-themar-internet,inet,172.16.76.1/30
+ge-0/1/3.1108,down,sci,inet,172.16.195.33/30
+ge-0/1/3.1109,down,default,inet,172.17.204.41/30
+ge-0/1/3.1110,down,vpnmonitor,inet,5.120.224.237/30
+ge-0/1/3.1113,down,default,inet,172.17.105.133/30
+ge-0/1/3.1114,down,vpnmonitor,inet,5.125.42.205/30
+ge-0/1/3.1115,down,mist-themar,inet,172.17.252.9/30
+ge-0/1/3.1116,down,vpnmonitor,inet,5.120.40.209/30
+ge-0/1/3.1121,down,mist-themar-makasahq,inet,172.16.135.101/30
+ge-0/1/3.1122,down,vpnmonitor,inet,5.120.40.193/30
+ge-0/1/3.1125,down,Triangle,inet,172.16.1.1/30
+ge-0/1/3.1126,down,vpnmonitor,inet,5.120.121.161/30
+ge-0/1/3.1127,down,grandMakasa,inet,172.16.179.17/30
+ge-0/1/3.1128,down,vpnmonitor,inet,5.119.7.53/30
+ge-0/1/3.1129,down,grandBorsa,inet,100.1.4.66/30
+ge-0/1/3.1130,down,vpnmonitor,inet,5.119.7.41/30
+ge-0/1/3.1131,down,ceramica,inet,172.16.108.1/30
+ge-0/1/3.1132,down,vpnmonitor,inet,5.120.85.173/30
+ge-0/1/3.1135,down,First-Arabian,inet,172.17.2.1/30
+ge-0/1/3.1136,down,vpnmonitor,inet,5.120.131.173/30
+ge-0/1/3.1138,down,vpnmonitor,inet,5.119.48.21/30
+ge-0/1/3.1150,down,default,inet,172.17.28.189/30
+ge-0/1/3.1151,down,hsbc,inet,172.19.2.146/30
+ge-0/1/3.1155,down,ceramica,inet,172.19.19.1/30
+ge-0/1/3.1156,down,vpnmonitor,inet,5.120.221.109/30
+ge-0/1/3.1170,down,default,inet,172.17.213.97/30
+ge-0/1/3.1190,down,default,inet,172.17.127.197/30
+ge-0/1/3.1191,down,vpnmonitor,inet,5.125.5.221/30
+ge-0/1/3.1192,down,vpnmonitor,inet,5.125.49.5/30
+ge-0/1/3.1193,down,default,inet,172.17.202.93/30
+ge-0/1/3.1205,down,NSGB,inet,10.54.255.9/30
+ge-0/1/3.1236,down,sci,inet,172.16.195.29/30
+ge-0/1/3.1260,down,default,inet,172.17.219.105/30
+ge-0/1/3.1261,down,vpnmonitor,inet,172.17.139.185/30
+ge-0/1/3.1279,down,EAL-TATA,inet,10.80.216.29/30
+ge-0/1/3.1280,down,vpnmonitor,inet,5.120.37.1/30
+ge-0/1/3.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/3.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/3.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/3.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/3.13161,down,vpnmonitor,inet,5.29.42.1/30
+ge-0/1/3.13163,down,default,inet,172.17.28.197/30
+ge-0/1/3.13170,down,arabbank,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/3.13171,down,vpnmonitor,inet,5.119.38.221/30
+ge-0/1/3.13173,down,mist-themar-borsahq,inet,100.1.7.102/30
+ge-0/1/3.13174,down,vpnmonitor,inet,5.120.41.137/30
+ge-0/1/6.400,down,default,inet,10.40.85.209/29
+ge-0/1/6.941,down,TE-MSAN,inet,10.9.154.97/29
+ge-0/1/6.942,down,TE-MNGT,inet,10.239.51.81/29
+ge-0/1/6.943,down,SIP-MSAN,inet,10.9.154.97/29
+ge-0/1/6.1225,down,default,inet,1.2.90.1/30
+ge-0/1/6.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/6.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/6.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/6.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/7.400,down,default,inet,10.40.85.201/29
+ge-0/1/7.941,down,TE-MSAN,inet,10.9.154.105/29
+ge-0/1/7.942,down,TE-MNGT,inet,10.239.51.89/29
+ge-0/1/7.943,down,SIP-MSAN,inet,10.9.154.105/29
+ge-0/1/7.1101,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/7.1103,down,Finance-Ministry,inet,172.50.30.1/30
+ge-0/1/7.1118,down,vpnmonitor,inet,5.125.18.193/30
+ge-0/1/7.1119,down,default,inet,172.17.151.145/30
+ge-0/1/7.1131,down,vpnmonitor,inet,5.120.250.33/30
+ge-0/1/7.1171,down,ADIBBANK,inet,192.168.250.66/30
+ge-0/1/7.1172,down,vpnmonitor,inet,5.120.122.177/30
+ge-0/1/7.1208,down,MOI,inet,10.2.0.125/30
+ge-0/1/7.1209,down,MOI-D16-new,inet,10.4.0.125/30
+ge-0/1/7.1211,down,MOI-D17,inet,10.3.0.125/30
+ge-0/1/7.1212,down,BM,inet,172.29.179.121/30
+ge-0/1/7.1258,down,vpnmonitor,inet,5.125.43.21/30
+ge-0/1/7.1259,down,Ministry-Council,inet,172.25.11.1/30
+ge-0/1/7.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/7.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/7.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/7.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/7.12100,down,MOI-D17-new,inet,10.5.0.125/30
+ge-0/1/7.13108,down,vpnmonitor,inet,5.119.50.85/30
+ge-0/1/7.13218,down,vpnmonitor,inet,5.120.92.93/30
+ge-0/1/7.13219,down,vpnmonitor,inet,5.7.40.5/30
+ge-0/1/7.13326,down,vpnmonitor,inet,5.120.39.53/30
+ge-0/1/8.400,down,default,inet,10.40.72.73/29
+ge-0/1/8.941,down,TE-MSAN,inet,10.9.154.89/29
+ge-0/1/8.942,down,TE-MNGT,inet,10.239.51.73/29
+ge-0/1/8.943,down,SIP-MSAN,inet,10.9.154.89/29
+ge-0/1/8.1101,down,default,inet,172.17.195.225/30
+ge-0/1/8.1102,down,vpnmonitor,inet,5.125.44.137/30
+ge-0/1/8.1111,down,EBI,inet,20.0.1.1/30
+ge-0/1/8.1112,down,vpnmonitor,inet,5.119.49.161/30
+ge-0/1/8.1126,down,vpnmonitor,inet,5.2.40.5/30
+ge-0/1/8.1130,down,EBI,inet,10.0.1.1/30
+ge-0/1/8.1131,down,vpnmonitor,inet,5.125.15.157/30
+ge-0/1/8.1135,down,default,inet,172.17.146.37/30
+ge-0/1/8.1136,down,vpnmonitor,inet,5.125.16.49/30
+ge-0/1/8.1160,down,GadwaBorsa,inet,100.1.8.234/30
+ge-0/1/8.1161,down,vpnmonitor,inet,5.120.146.25/30
+ge-0/1/8.1162,down,GadwaBorsa,inet,100.1.8.238/30
+ge-0/1/8.1163,down,sa,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/8.1164,down,GadwaMakasa,inet,172.16.129.5/30
+ge-0/1/8.1165,down,vpnmonitor,inet,5.120.146.229/30
+ge-0/1/8.1166,down,GadwaMakasa,inet,172.16.129.9/30
+ge-0/1/8.1167,down,vpnmonitor,inet,5.120.148.189/30
+ge-0/1/8.1201,down,vpnmonitor,inet,5.125.0.117/30
+ge-0/1/8.1202,down,sci,inet,172.17.112.9/30
+ge-0/1/8.1222,down,default,inet,172.17.139.193/30
+ge-0/1/8.1225,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/8.1236,down,vpnmonitor,inet,5.125.28.5/30
+ge-0/1/8.1237,down,default,inet,172.17.34.61/30
+ge-0/1/8.1255,down,takaful,inet,172.17.10.1/30
+ge-0/1/8.1256,down,vpnmonitor,inet,5.120.8.49/30
+ge-0/1/8.1260,down,SAIB-L3,inet,10.100.250.29/30
+ge-0/1/8.1261,down,vpnmonitor,inet,5.120.224.9/30
+ge-0/1/8.1263,down,SAIB-L3,inet,10.100.251.29/30
+ge-0/1/8.1264,down,vpnmonitor,inet,5.120.224.57/30
+ge-0/1/8.1343,down,watany-ebc,inet,172.18.156.9/30
+ge-0/1/8.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/8.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/8.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/8.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/1/8.13215,down,gadwamist_internet,inet,192.168.88.1/30
+ge-0/1/8.13216,down,vpnmonitor,inet,5.120.146.81/30
+ge-0/1/8.13217,down,gadwamist_internet,inet,192.168.88.5/30
+ge-0/1/8.13218,down,vpnmonitor,inet,5.120.146.93/30
+ge-0/1/8.13227,down,gadwamist,inet,192.168.87.5/30
+ge-0/1/8.13337,down,tawfeek-cbe,inet,172.50.228.2/30
+ge-0/1/8.13338,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/8.13505,down,default,inet,172.17.21.153/30
+ge-0/1/8.13506,down,vpnmonitor,inet,5.119.89.41/30
+ge-0/1/8.13570,down,at-cbe,inet,172.50.239.2/30
+ge-0/1/8.13665,down,EBI,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/1/8.13711,down,vpnmonitor,inet,5.120.95.25/30
+ge-0/1/8.13764,down,watany-iscore,inet,192.168.107.1/30
+ge-0/1/8.13830,down,hsbc,inet,172.19.1.194/30
+ge-0/1/8.13831,down,vpnmonitor,inet,5.120.81.197/30
+ge-0/2/0.400,down,default,inet,10.40.198.145/29
+ge-0/2/0.941,down,TE-MSAN,inet,10.9.154.121/29
+ge-0/2/0.942,down,TE-MNGT,inet,10.239.51.105/29
+ge-0/2/0.943,down,SIP-MSAN,inet,10.9.154.121/29
+ge-0/2/0.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/0.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/0.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/0.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/2.2163,down,Delta-Insurance,inet,172.30.30.1/30
+ge-0/2/2.3594,down,mo3az,inet,5.125.44.213/30
+ge-0/2/2.3618,down,default,inet,172.17.208.65/30
+ge-0/2/2.12297,down,vpnmonitor,inet,5.120.221.221/30
+ge-0/2/4.1164,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/5.710,down,default,inet,10.158.52.18/30
+ge-0/2/6.400,down,default,inet,10.41.104.185/29
+ge-0/2/6.942,down,TE-MNGT,inet,10.237.52.89/29
+ge-0/2/6.943,down,SIP-MSAN,inet,10.9.155.105/29
+ge-0/2/6.945,down,TE-VOICE,inet,10.42.230.41/29
+ge-0/2/6.1101,down,hsbc,inet,172.19.1.242/30
+ge-0/2/6.1102,down,vpnmonitor,inet,5.119.51.53/30
+ge-0/2/6.1105,down,arabbank,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/6.1106,down,vpnmonitor,inet,5.120.198.129/30
+ge-0/2/6.1107,down,vpnmonitor,inet,5.125.44.157/30
+ge-0/2/6.1109,down,gawazat,inet,10.1.1.30/30
+ge-0/2/6.1110,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/6.1111,down,citc,inet,110.1.150.9/30
+ge-0/2/6.1112,down,citcn,inet,120.1.150.9/30
+ge-0/2/6.1113,down,citc,inet,110.3.150.9/30
+ge-0/2/6.1114,down,vpnmonitor,inet,5.8.40.1/30
+ge-0/2/6.1117,down,vpnmonitor,inet,5.120.63.105/30
+ge-0/2/6.1120,down,vpnmonitor,inet,5.120.197.189/30
+ge-0/2/6.1121,down,XSCED,inet,10.200.180.1/30
+ge-0/2/6.1122,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/6.1123,down,Finance-Ministry,inet,172.234.28.97/30
+ge-0/2/6.1124,down,vpnmonitor,inet,5.121.15.149/30
+ge-0/2/6.1156,down,fawry,inet,172.16.3.5/30
+ge-0/2/6.1157,down,default,inet,172.17.211.33/30
+ge-0/2/6.1162,down,SCED,inet,172.16.15.1/30
+ge-0/2/6.1190,down,vpnmonitor,inet,5.125.55.89/30
+ge-0/2/6.1191,down,vpnmonitor,inet,5.125.55.117/30
+ge-0/2/6.1201,down,aliaa-mist,inet,192.168.87.9/30
+ge-0/2/6.1202,down,vpnmonitor,inet,5.120.148.165/30
+ge-0/2/6.1269,down,vpnmonitor,inet,5.125.41.253/30
+ge-0/2/6.1270,down,SCED,inet,172.18.32.1/30
+ge-0/2/6.1271,down,vpnmonitor,inet,5.125.43.1/30
+ge-0/2/6.1272,down,SCED,inet,172.18.33.1/30
+ge-0/2/6.1273,down,vpnmonitor,inet,5.125.43.5/30
+ge-0/2/6.1274,down,SCED,inet,172.18.34.1/30
+ge-0/2/6.1275,down,default,inet,172.17.192.221/30
+ge-0/2/6.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/6.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/6.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/6.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/7.400,down,default,inet,10.41.104.193/29
+ge-0/2/7.942,down,TE-MNGT,inet,10.237.52.97/29
+ge-0/2/7.943,down,SIP-MSAN,inet,10.9.155.113/29
+ge-0/2/7.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/7.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/7.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/7.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/8.400,down,default,inet,10.41.104.201/29
+ge-0/2/8.942,down,TE-MNGT,inet,10.237.52.105/29
+ge-0/2/8.943,down,SIP-MSAN,inet,10.9.155.121/29
+ge-0/2/8.945,down,TE-VOICE,inet,10.42.226.97/29
+ge-0/2/8.1101,down,alex-bank,inet,10.50.24.1/30
+ge-0/2/8.1102,down,vpnmonitor,inet,5.119.54.249/30
+ge-0/2/8.1103,down,default,inet,172.17.219.13/30
+ge-0/2/8.1104,down,vpnmonitor,inet,5.120.249.177/30
+ge-0/2/8.1105,down,PBDAC,inet,172.16.202.1/30
+ge-0/2/8.1106,down,vpnmonitor,inet,5.120.43.1/30
+ge-0/2/8.1107,down,default,inet,172.17.176.93/30
+ge-0/2/8.1109,down,bisco,inet,172.16.30.1/30
+ge-0/2/8.1110,down,vpnmonitor,inet,5.120.224.133/30
+ge-0/2/8.1115,down,Finance-Ministry,inet,172.234.119.161/30
+ge-0/2/8.1116,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/8.1120,down,npo,inet,173.50.110.1/30
+ge-0/2/8.1121,down,vpnmonitor,inet,5.120.241.65/30
+ge-0/2/8.1130,down,Finance-Ministry,inet,172.234.144.113/30
+ge-0/2/8.1131,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/8.1147,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/8.1148,down,vpnmonitor,inet,5.120.62.173/30
+ge-0/2/8.1150,down,Finance-Ministry,inet,172.234.102.1/30
+ge-0/2/8.1151,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/8.1155,down,Finance-Ministry,inet,172.234.141.81/30
+ge-0/2/8.1156,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/8.1180,down,Finance-Ministry,inet,173.21.40.1/30
+ge-0/2/8.1181,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/8.1185,down,Finance-Ministry,inet,172.234.152.49/30
+ge-0/2/8.1186,down,Nagy3,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/2/8.1207,down,vpnmonitor,inet,5.120.224.121/30
+ge-0/2/8.1208,down,bisco,inet,172.16.31.1/30
+ge-0/2/8.1248,down,default,inet,172.17.30.153/30
+ge-0/2/8.1249,down,vpnmonitor,inet,5.125.254.110/30
+ge-0/2/8.1250,down,default,inet,172.17.220.221/30
+ge-0/2/8.1251,down,vpnmonitor,inet,5.125.254.125/30
+ge-0/2/8.1263,down,vpnmonitor,inet,5.125.1.73/30
+ge-0/2/8.1265,down,default,inet,172.17.115.53/30
+ge-0/2/8.1273,down,mld,inet,172.20.111.1/30
+ge-0/2/8.1274,down,vpnmonitor,inet,5.120.110.45/30
+ge-0/2/8.1286,down,default,inet,172.17.199.181/30
+ge-0/2/8.1287,down,vpnmonitor,inet,5.119.62.105/30
+ge-0/2/8.1288,down,default,inet,172.17.184.33/30
+ge-0/2/8.1289,down,default,inet,172.17.185.1/30
+ge-0/2/8.1290,down,vpnmonitor,inet,5.125.37.193/30
+ge-0/2/8.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/8.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/8.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/8.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/8.11118,down,Finance-Ministry,inet,172.234.137.65/30
+ge-0/2/8.13000,down,DHCP,inet,97.0.110.1/24
+ge-0/2/8.13752,down,ens-main-vpn,inet,172.16.130.1/30
+ge-0/2/8.13753,down,vpnmonitor,inet,5.119.47.209/30
+ge-0/2/8.13765,down,ens-main-vpn,inet,172.16.110.1/30
+ge-0/2/8.13769,down,ens-main-vpn,inet,172.16.120.1/30
+ge-0/2/8.13770,down,vpnmonitor,inet,5.120.253.165/30
+ge-0/2/9.400,down,default,inet,10.42.40.97/29
+ge-0/2/9.942,down,TE-MNGT,inet,10.237.52.121/29
+ge-0/2/9.943,down,SIP-MSAN,inet,10.9.155.137/29
+ge-0/2/9.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/9.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/9.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/9.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/2/9.3300,down,YALLA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/0.400,down,default,inet,10.41.244.53/30
+ge-0/3/0.941,down,TE-MSAN,inet,10.8.202.145/29
+ge-0/3/0.942,down,TE-MNGT,inet,10.238.52.1/29
+ge-0/3/0.943,down,SIP-MSAN,inet,10.8.202.145/29
+ge-0/3/0.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/0.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/0.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/1.400,down,default,inet,10.41.11.105/29
+ge-0/3/1.942,down,TE-MNGT,inet,10.237.52.17/29
+ge-0/3/1.943,down,SIP-MSAN,inet,10.9.155.33/29
+ge-0/3/1.1101,down,barclays,inet,172.25.152.1/30
+ge-0/3/1.1102,down,vpnmonitor,inet,5.63.40.5/30
+ge-0/3/1.1103,down,Gamma,inet,172.16.200.1/30
+ge-0/3/1.1104,down,vpnmonitor,inet,5.120.221.49/30
+ge-0/3/1.1150,down,abc,inet,10.40.146.1/30
+ge-0/3/1.1151,down,vpnmonitor,inet,5.120.103.65/30
+ge-0/3/1.1166,down,Delta-Insurance,inet,172.17.151.21/30
+ge-0/3/1.1174,down,default,inet,172.17.4.97/30
+ge-0/3/1.1175,down,vpnmonitor,inet,5.125.53.145/30
+ge-0/3/1.1190,down,vpnmonitor,inet,5.125.20.253/30
+ge-0/3/1.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/1.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/1.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/1.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/2.400,down,default,inet,10.41.50.217/29
+ge-0/3/2.942,down,TE-MNGT,inet,10.238.51.233/29
+ge-0/3/2.943,down,SIP-MSAN,inet,10.9.154.249/29
+ge-0/3/2.945,down,TE-VOICE,inet,10.41.254.225/29
+ge-0/3/2.1101,down,default,inet,172.17.168.157/30
+ge-0/3/2.1102,down,vpnmonitor,inet,5.125.27.193/30
+ge-0/3/2.1103,down,Delta-Insurance,inet,172.16.151.57/30
+ge-0/3/2.1104,down,vpnmonitor,inet,5.119.22.25/30
+ge-0/3/2.1105,down,Mohandes-Insurance,inet,172.16.100.1/30
+ge-0/3/2.1106,down,vpnmonitor,inet,5.119.65.69/30
+ge-0/3/2.1107,down,sci,inet,172.16.57.1/30
+ge-0/3/2.1108,down,vpnmonitor,inet,5.120.71.241/30
+ge-0/3/2.1111,down,vpnmonitor,inet,5.120.226.41/30
+ge-0/3/2.1113,down,vpnmonitor,inet,5.120.226.45/30
+ge-0/3/2.1114,down,ceramica,inet,172.16.128.9/30
+ge-0/3/2.1115,down,tamenat,inet,172.30.7.110/30
+ge-0/3/2.1116,down,vpnmonitor,inet,5.120.124.25/30
+ge-0/3/2.1120,down,default,inet,172.17.12.149/30
+ge-0/3/2.1121,down,vpnmonitor,inet,5.125.51.169/30
+ge-0/3/2.1130,down,default,inet,172.17.131.229/30
+ge-0/3/2.1131,down,vpnmonitor,inet,5.125.7.213/30
+ge-0/3/2.1132,down,EHFC-iscore,inet,192.168.97.1/30
+ge-0/3/2.1133,down,vpnmonitor,inet,5.125.50.25/30
+ge-0/3/2.1134,down,PCCW-Qatar,inet,10.73.13.30/30
+ge-0/3/2.1150,down,Pyramids-Pyramids,inet,10.20.20.1/30
+ge-0/3/2.1151,down,vpnmonitor,inet,5.125.5.217/30
+ge-0/3/2.1161,down,ceramica-showroom,inet,172.16.1.5/30
+ge-0/3/2.1162,down,vpnmonitor,inet,5.125.54.185/30
+ge-0/3/2.1170,down,BM,inet,172.29.180.161/30
+ge-0/3/2.1171,down,BM,inet,172.29.176.57/30
+ge-0/3/2.1172,down,Alfa-LAB,inet,172.16.55.1/30
+ge-0/3/2.1173,down,Alfa-LAB,inet,172.16.82.1/30
+ge-0/3/2.1175,down,credit,inet,172.20.1.165/30
+ge-0/3/2.1176,down,audibank,inet,172.20.46.37/30
+ge-0/3/2.1177,down,vpnmonitor,inet,5.125.59.217/30
+ge-0/3/2.1178,down,vpnmonitor,inet,5.125.20.225/30
+ge-0/3/2.1179,down,HDB,inet,70.254.81.1/30
+ge-0/3/2.1207,down,vpnmonitor,inet,5.120.102.9/30
+ge-0/3/2.1231,down,vpnmonitor,inet,5.119.44.77/30
+ge-0/3/2.1232,down,default,inet,172.17.161.177/30
+ge-0/3/2.1233,down,vpnmonitor,inet,5.125.22.221/30
+ge-0/3/2.1234,down,default,inet,172.17.161.181/30
+ge-0/3/2.1283,down,Pyramids-MIST,inet,172.19.0.1/30
+ge-0/3/2.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/2.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/2.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/2.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/2.13101,down,oriflame,inet,172.16.190.1/30
+ge-0/3/2.13103,down,oriflame,inet,172.16.190.5/30
+ge-0/3/2.13104,down,vpnmonitor,inet,5.120.75.57/30
+ge-0/3/2.13105,down,vpnmonitor,inet,5.120.226.177/30
+ge-0/3/2.13110,down,seif,inet,172.19.180.1/30
+ge-0/3/2.13111,down,vpnmonitor,inet,5.120.184.237/30
+ge-0/3/2.13151,down,default,inet,172.17.34.85/30
+ge-0/3/2.13152,down,vpnmonitor,inet,5.120.24.233/30
+ge-0/3/2.13153,down,Basmatio,inet,172.16.22.1/30
+ge-0/3/2.13154,down,vpnmonitor,inet,5.120.62.9/30
+ge-0/3/2.13155,down,takivita,inet,172.16.139.17/30
+ge-0/3/2.13156,down,vpnmonitor,inet,5.119.41.113/30
+ge-0/3/2.13179,down,vpnmonitor,inet,5.120.79.249/30
+ge-0/3/2.13180,down,vpnmonitor,inet,5.5.40.1/30
+ge-0/3/2.13195,down,vpnmonitor,inet,5.120.72.17/30
+ge-0/3/2.13201,down,Pyramids-MCDR,inet,172.172.172.1/30
+ge-0/3/2.13202,down,vpnmonitor,inet,5.120.102.201/30
+ge-0/3/2.13203,down,nourmist,inet,172.16.16.1/30
+ge-0/3/2.13204,down,vpnmonitor,inet,5.120.102.217/30
+ge-0/3/2.13205,down,Pyramids-EGX,inet,100.1.8.50/30
+ge-0/3/2.13206,down,vpnmonitor,inet,5.120.102.225/30
+ge-0/3/2.13236,down,vpnmonitor,inet,5.120.146.5/30
+ge-0/3/2.13364,down,BM,inet,5.120.153.165/30
+ge-0/3/2.13369,down,ADIBBANK,inet,192.168.251.126/30
+ge-0/3/2.13370,down,vpnmonitor,inet,5.120.150.225/30
+ge-0/3/3.400,down,default,inet,10.41.9.121/29
+ge-0/3/3.942,down,TE-MNGT,inet,10.237.52.1/29
+ge-0/3/3.943,down,SIP-MSAN,inet,10.9.155.17/29
+ge-0/3/3.1170,down,Finance-Ministry,inet,172.30.30.105/30
+ge-0/3/3.1171,down,vpnmonitor,inet,5.120.253.61/30
+ge-0/3/3.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/3.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/3.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/3.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/3.13101,down,finance-atm,inet,172.30.143.113/30
+ge-0/3/3.13102,down,vpnmonitor,inet,5.100.42.1/30
+ge-0/3/3.13103,down,MOAD-ECC,inet,172.17.4.1/30
+ge-0/3/3.13104,down,vpnmonitor,inet,5.120.172.109/30
+ge-0/3/3.13105,down,jic,inet,172.16.18.1/30
+ge-0/3/3.13106,down,vpnmonitor,inet,5.119.77.225/30
+ge-0/3/4.400,down,default,inet,10.40.165.241/29
+ge-0/3/4.942,down,TE-MNGT,inet,10.238.51.193/29
+ge-0/3/4.943,down,SIP-MSAN,inet,10.9.154.209/29
+ge-0/3/4.945,down,TE-VOICE,inet,10.41.255.193/29
+ge-0/3/4.1101,down,sakka,inet,192.168.100.2/30
+ge-0/3/4.1102,down,sakka,inet,5.120.54.145/30
+ge-0/3/4.1114,down,default,inet,5.125.51.65/30
+ge-0/3/4.1120,down,Finance-Ministry,inet,172.234.161.33/30
+ge-0/3/4.1121,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/3/4.1122,down,Finance-Ministry,inet,172.234.161.49/30
+ge-0/3/4.1123,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/3/4.1132,down,vpnmonitor,inet,5.120.240.97/30
+ge-0/3/4.1133,down,default,inet,172.17.213.57/30
+ge-0/3/4.1135,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/3/4.1136,down,Finance-Ministry,inet,172.234.161.1/30
+ge-0/3/4.1137,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/3/4.1138,down,Finance-Ministry,inet,172.234.161.17/30
+ge-0/3/4.1144,down,Finance-Ministry,inet,172.234.130.193/30
+ge-0/3/4.1145,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/3/4.1150,down,default,inet,172.17.33.177/30
+ge-0/3/4.1151,down,vpnmonitor,inet,172.17.139.181/30
+ge-0/3/4.1156,down,vpnmonitor,inet,5.125.48.173/30
+ge-0/3/4.1158,down,vpnmonitor,inet,5.125.48.225/30
+ge-0/3/4.1160,down,vpnmonitor,inet,5.125.47.241/30
+ge-0/3/4.1179,down,Dawaay,inet,172.17.18.21/30
+ge-0/3/4.1202,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/3/4.1203,down,MFF,inet,172.17.10.9/30
+ge-0/3/4.1224,down,vpnmonitor,inet,5.120.165.45/30
+ge-0/3/4.1225,down,vpnmonitor,inet,5.120.40.89/30
+ge-0/3/4.1226,down,MI,inet,172.18.0.1/30
+ge-0/3/4.1227,down,default,inet,172.17.126.253/30
+ge-0/3/4.1234,down,vpnmonitor,inet,5.125.49.13/30
+ge-0/3/4.1235,down,default,inet,172.17.202.101/30
+ge-0/3/4.1236,down,vpnmonitor,inet,5.125.49.17/30
+ge-0/3/4.1237,down,default,inet,172.17.204.65/30
+ge-0/3/4.1238,down,vpnmonitor,inet,5.125.49.21/30
+ge-0/3/4.1239,down,default,inet,172.17.204.69/30
+ge-0/3/4.1240,down,default,inet,172.17.206.105/30
+ge-0/3/4.1247,down,council,inet,172.17.1.1/30
+ge-0/3/4.1248,down,Wa7sh,inet,5.125.43.137/30
+ge-0/3/4.1249,down,council,inet,172.17.10.1/30
+ge-0/3/4.1250,down,Wa7sh,inet,5.125.43.141/30
+ge-0/3/4.1260,down,Pastaweesy,inet,173.17.1.1/30
+ge-0/3/4.1261,down,sakka,inet,172.17.139.181/30
+ge-0/3/4.1270,down,default,inet,172.17.222.57/30
+ge-0/3/4.1271,down,kady,inet,172.17.139.181/30
+ge-0/3/4.1281,down,Dawaay,inet,172.16.3.1/30
+ge-0/3/4.1290,down,default,inet,172.17.209.13/30
+ge-0/3/4.1291,down,vpnmonitor,inet,5.125.54.37/30
+ge-0/3/4.1300,down,ITS-Free-Zone,inet,172.28.1.1/30
+ge-0/3/4.1743,down,vpnmonitor,inet,5.120.244.233/30
+ge-0/3/4.2205,down,vpnmonitor,inet,5.125.44.37/30
+ge-0/3/4.2206,down,vpnmonitor,inet,5.125.44.33/30
+ge-0/3/4.2207,down,default,inet,172.17.194.53/30
+ge-0/3/4.2208,down,default,inet,172.17.179.89/30
+ge-0/3/4.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/4.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/4.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/4.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/4.13101,down,Dawaay,inet,172.16.50.1/30
+ge-0/3/4.13102,down,vpnmonitor,inet,5.120.237.241/30
+ge-0/3/6.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/7.800,down,credit,inet,172.20.1.9/30
+ge-0/3/8.3701,down,N_S1_MME_Untrust,inet,10.96.0.73/30
+ge-0/3/8.3702,down,N_S1_U_Untrust,inet,10.96.16.73/30
+ge-0/3/8.3703,down,N_OAM,inet,10.96.32.73/30
+ge-0/3/8.3704,down,N_SYNC,inet,10.96.48.73/30
+ge-0/3/8.3705,down,N_X2_eNB,inet,10.96.64.73/30
+ge-0/3/9.400,down,default,inet,10.41.50.241/29
+ge-0/3/9.942,down,TE-MNGT,inet,10.238.51.249/29
+ge-0/3/9.943,down,SIP-MSAN,inet,10.9.155.9/29
+ge-0/3/9.1101,down,mcitoffices,inet,10.254.20.25/30
+ge-0/3/9.1130,down,Finance-Ministry,inet,172.234.153.209/30
+ge-0/3/9.1131,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-0/3/9.1180,down,vpnmonitor,inet,5.120.37.185/30
+ge-0/3/9.1208,down,default,inet,172.17.32.29/30
+ge-0/3/9.1209,down,vpnmonitor,inet,5.120.4.209/30
+ge-0/3/9.1289,down,Egypt-Gas,inet,172.17.3.1/30
+ge-0/3/9.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/9.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/9.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/9.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-0/3/9.13105,down,default,inet,172.17.32.25/30
+ge-0/3/9.13106,down,vpnmonitor,inet,5.120.4.213/30
+ge-1/0/0.400,down,default,inet,10.40.212.65/29
+ge-1/0/0.400,down,default,inet,40.40.40.146/29
+ge-1/0/0.942,down,TE-MNGT,inet,10.239.51.113/29
+ge-1/0/0.942,down,TE-MNGT,inet,30.30.30.74/29
+ge-1/0/0.943,down,SIP-MSAN,inet,10.9.154.129/29
+ge-1/0/0.943,down,SIP-MSAN,inet,20.20.20.217/29
+ge-1/0/0.945,down,TE-VOICE,inet,10.41.255.121/29
+ge-1/0/0.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/0.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/0.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/0.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/1.400,down,default,inet,10.40.212.73/29
+ge-1/0/1.942,down,TE-MNGT,inet,10.239.51.121/29
+ge-1/0/1.943,down,SIP-MSAN,inet,10.9.154.137/29
+ge-1/0/1.945,down,TE-VOICE,inet,10.41.255.201/29
+ge-1/0/1.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/1.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/1.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/1.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/2.400,down,default,inet,10.40.212.81/29
+ge-1/0/2.942,down,TE-MNGT,inet,10.238.51.129/29
+ge-1/0/2.943,down,SIP-MSAN,inet,10.9.154.145/29
+ge-1/0/2.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/2.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/2.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/2.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/3.400,down,default,inet,10.40.212.89/29
+ge-1/0/3.942,down,TE-MNGT,inet,10.238.51.137/29
+ge-1/0/3.943,down,SIP-MSAN,inet,10.9.154.153/29
+ge-1/0/3.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/3.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/3.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/3.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/4.400,down,default,inet,10.40.212.97/29
+ge-1/0/4.942,down,TE-MNGT,inet,10.238.51.145/29
+ge-1/0/4.943,down,SIP-MSAN,inet,10.9.154.161/29
+ge-1/0/4.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/4.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/4.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/4.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/5.400,down,default,inet,10.40.212.105/29
+ge-1/0/5.942,down,TE-MNGT,inet,10.238.51.153/29
+ge-1/0/5.943,down,SIP-MSAN,inet,10.9.154.169/29
+ge-1/0/5.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/5.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/5.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/5.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/6.400,down,default,inet,10.40.212.113/29
+ge-1/0/6.942,down,TE-MNGT,inet,10.238.51.161/29
+ge-1/0/6.943,down,SIP-MSAN,inet,10.9.154.177/29
+ge-1/0/6.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/6.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/6.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/6.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/7.400,down,default,inet,10.40.212.121/29
+ge-1/0/7.942,down,TE-MNGT,inet,10.238.51.169/29
+ge-1/0/7.943,down,SIP-MSAN,inet,10.9.154.185/29
+ge-1/0/7.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/7.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/7.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/7.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/8.400,down,default,inet,10.40.212.129/29
+ge-1/0/8.942,down,TE-MNGT,inet,10.238.51.177/29
+ge-1/0/8.943,down,SIP-MSAN,inet,10.9.154.193/29
+ge-1/0/8.945,down,TE-VOICE,inet,10.42.225.129/29
+ge-1/0/8.1101,down,ecc,inet,172.17.1.5/30
+ge-1/0/8.1102,down,ecc,inet,172.17.1.1/30
+ge-1/0/8.1103,down,vpnmonitor,inet,5.119.45.189/30
+ge-1/0/8.1104,down,ecc,inet,172.17.1.9/30
+ge-1/0/8.1105,down,ecc,inet,172.17.1.13/30
+ge-1/0/8.1106,down,vpnmonitor,inet,5.125.47.145/30
+ge-1/0/8.1106,down,vpnmonitor,inet,41.33.156.201/30
+ge-1/0/8.1107,down,default,inet,172.17.171.109/30
+ge-1/0/8.1108,down,credit,inet,172.20.2.101/30
+ge-1/0/8.1109,down,vpnmonitor,inet,5.125.18.13/30
+ge-1/0/8.1110,down,finance-atm,inet,172.30.132.101/30
+ge-1/0/8.1112,down,EALB,inet,172.17.13.1/30
+ge-1/0/8.1120,down,Nile-Scan,inet,172.17.21.1/30
+ge-1/0/8.1121,down,compume,inet,172.100.1.1/30
+ge-1/0/8.1122,down,vpnmonitor,inet,5.125.0.229/30
+ge-1/0/8.1123,down,MobileShop,inet,10.16.118.1/30
+ge-1/0/8.1124,down,vpnmonitor,inet,5.11.40.117/30
+ge-1/0/8.1125,down,Arab-Service,inet,172.16.3.1/30
+ge-1/0/8.1126,down,vpnmonitor,inet,5.120.130.137/30
+ge-1/0/8.1127,down,MobileShop,inet,10.16.1.1/30
+ge-1/0/8.1128,down,vpnmonitor,inet,5.120.33.77/30
+ge-1/0/8.1131,down,sakan,inet,172.50.235.2/30
+ge-1/0/8.1132,down,vpnmonitor,inet,5.120.145.81/30
+ge-1/0/8.1133,down,AIBbank,inet,50.50.114.2/30
+ge-1/0/8.1134,down,vpnmonitor,inet,5.120.214.225/30
+ge-1/0/8.1136,down,vpnmonitor,inet,5.125.47.217/30
+ge-1/0/8.1137,down,vpnmonitor,inet,5.125.61.221/30
+ge-1/0/8.1138,down,vpnmonitor,inet,5.119.79.9/30
+ge-1/0/8.1140,down,vpnmonitor,inet,5.125.20.45/30
+ge-1/0/8.1142,down,cib,inet,10.217.10.1/30
+ge-1/0/8.1143,down,vpnmonitor,inet,5.125.35.245/30
+ge-1/0/8.1144,down,default,inet,172.17.180.113/30
+ge-1/0/8.1146,down,tamenat,inet,172.30.7.50/30
+ge-1/0/8.1147,down,vpnmonitor,inet,5.120.248.61/30
+ge-1/0/8.1149,down,vpnmonitor,inet,5.125.14.213/30
+ge-1/0/8.1152,down,audibank,inet,172.20.46.21/30
+ge-1/0/8.1153,down,vpnmonitor,inet,5.125.20.229/30
+ge-1/0/8.1154,down,mokhtabar,inet,172.18.166.1/30
+ge-1/0/8.1155,down,GAD,inet,172.17.33.9/30
+ge-1/0/8.1157,down,vpnmonitor,inet,5.125.39.9/30
+ge-1/0/8.1163,down,vpnmonitor,inet,5.119.26.49/30
+ge-1/0/8.1165,down,egb,inet,12.0.130.2/30
+ge-1/0/8.1166,down,vpnmonitor,inet,5.120.180.57/30
+ge-1/0/8.1167,down,unitedbank,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.1172,down,vpnmonitor,inet,5.125.2.201/30
+ge-1/0/8.1173,down,default,inet,172.17.119.13/30
+ge-1/0/8.1177,down,vpnmonitor,inet,5.125.46.101/30
+ge-1/0/8.1179,down,default,inet,172.17.192.29/30
+ge-1/0/8.1180,down,vpnmonitor,inet,5.125.46.105/30
+ge-1/0/8.1181,down,vpnmonitor,inet,5.125.23.221/30
+ge-1/0/8.1182,down,audibank,inet,172.20.46.25/30
+ge-1/0/8.1184,down,default,inet,172.17.161.129/30
+ge-1/0/8.1185,down,Finance-Ministry,inet,172.29.250.89/30
+ge-1/0/8.1186,down,vpnmonitor,inet,5.121.5.222/30
+ge-1/0/8.1190,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.1193,down,sci,inet,172.16.187.10/30
+ge-1/0/8.1196,down,borglab,inet,10.50.51.254/24
+ge-1/0/8.1197,down,default,inet,5.125.14.253/30
+ge-1/0/8.1200,down,shahencafe,inet,172.16.129.1/30
+ge-1/0/8.1201,down,vpnmonitor,inet,5.119.40.65/30
+ge-1/0/8.1203,down,dareloyoun,inet,172.17.111.1/30
+ge-1/0/8.1204,down,vpnmonitor,inet,5.125.37.181/30
+ge-1/0/8.1205,down,default,inet,172.17.184.217/30
+ge-1/0/8.1210,down,MobileShop,inet,10.16.32.1/30
+ge-1/0/8.1211,down,vpnmonitor,inet,5.11.40.141/30
+ge-1/0/8.1214,down,Placo,inet,172.17.17.1/30
+ge-1/0/8.1215,down,vpnmonitor,inet,50.50.50.1/30
+ge-1/0/8.1216,down,tamenat,inet,172.30.1.66/30
+ge-1/0/8.1217,down,tamenat,inet,172.31.1.66/30
+ge-1/0/8.1218,down,vpnmonitor,inet,5.125.7.69/30
+ge-1/0/8.1219,down,vpnmonitor,inet,5.11.42.1/30
+ge-1/0/8.1220,down,RadioShack,inet,10.16.65.1/30
+ge-1/0/8.1221,down,vpnmonitor,inet,5.125.0.81/30
+ge-1/0/8.1223,down,credit-guarantee,inet,172.17.2.1/30
+ge-1/0/8.1227,down,default,inet,172.17.27.165/30
+ge-1/0/8.1230,down,ezz,inet,172.16.170.1/30
+ge-1/0/8.1231,down,vpnmonitor,inet,5.125.29.177/30
+ge-1/0/8.1233,down,vpnmonitor,inet,5.120.194.21/30
+ge-1/0/8.1234,down,Gobain,inet,172.16.1.1/30
+ge-1/0/8.1238,down,vpnmonitor,inet,5.125.46.33/30
+ge-1/0/8.1239,down,default,inet,172.21.4.1/30
+ge-1/0/8.1240,down,aast,inet,172.16.10.65/30
+ge-1/0/8.1241,down,aast,inet,172.16.10.61/30
+ge-1/0/8.1244,down,vpnmonitor,inet,5.125.34.141/30
+ge-1/0/8.1245,down,default,inet,172.17.181.181/30
+ge-1/0/8.1248,down,vpnmonitor,inet,5.125.34.85/30
+ge-1/0/8.1249,down,araborient,inet,172.16.178.1/30
+ge-1/0/8.1250,down,MBC-Amman,inet,10.110.0.42/30
+ge-1/0/8.1251,down,vpnmonitor,inet,5.120.30.125/30
+ge-1/0/8.1254,down,awqaf,inet,172.16.2.1/30
+ge-1/0/8.1255,down,vpnmonitor,inet,5.120.197.61/30
+ge-1/0/8.1256,down,avitor,inet,172.16.2.1/30
+ge-1/0/8.1260,down,mokhtabar,inet,172.16.201.1/30
+ge-1/0/8.1261,down,vpnmonitor,inet,5.125.14.25/30
+ge-1/0/8.1267,down,vpnmonitor,inet,5.120.193.209/30
+ge-1/0/8.1268,down,SAIB-L3,inet,10.100.250.229/30
+ge-1/0/8.1273,down,default,inet,172.17.203.45/30
+ge-1/0/8.1274,down,vpnmonitor,inet,5.125.48.1/30
+ge-1/0/8.1280,down,vpnmonitor,inet,5.125.36.65/30
+ge-1/0/8.1281,down,default,inet,172.17.190.73/30
+ge-1/0/8.1282,down,sci,inet,172.16.187.6/30
+ge-1/0/8.1283,down,BM,inet,172.29.185.165/30
+ge-1/0/8.1290,down,default,inet,172.17.192.129/30
+ge-1/0/8.1299,down,vpnmonitor,inet,5.120.165.33/30
+ge-1/0/8.1300,down,default,inet,172.17.170.197/30
+ge-1/0/8.1310,down,maayergy,inet,172.16.136.1/30
+ge-1/0/8.1311,down,vpnmonitor,inet,5.119.88.81/30
+ge-1/0/8.1322,down,cairowatany-MIST,inet,172.16.225.1/30
+ge-1/0/8.1323,down,vpnmonitor,inet,5.120.167.205/30
+ge-1/0/8.1329,down,vpnmonitor,inet,5.120.52.77/30
+ge-1/0/8.1330,down,default,inet,172.17.107.205/30
+ge-1/0/8.1331,down,vpnmonitor,inet,5.125.12.173/30
+ge-1/0/8.1334,down,vpnmonitor,inet,5.120.52.73/30
+ge-1/0/8.1335,down,sci-voip,inet,172.16.190.1/30
+ge-1/0/8.1336,down,BM,inet,172.29.208.217/30
+ge-1/0/8.1337,down,HDB,inet,70.254.101.1/30
+ge-1/0/8.1340,down,default,inet,172.17.164.181/30
+ge-1/0/8.1342,down,vpnmonitor,inet,5.125.24.181/30
+ge-1/0/8.1350,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/8.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/8.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/8.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/8.3555,down,default,inet,172.17.187.5/30
+ge-1/0/8.13101,down,team,inet,172.16.12.1/30
+ge-1/0/8.13102,down,vpnmonitor,inet,5.120.121.185/30
+ge-1/0/8.13103,down,team,inet,172.16.10.1/30
+ge-1/0/8.13104,down,vpnmonitor,inet,5.120.121.209/30
+ge-1/0/8.13109,down,ra-sport,inet,172.16.57.1/30
+ge-1/0/8.13110,down,vpnmonitor,inet,5.119.8.221/30
+ge-1/0/8.13111,down,SAIB-L3,inet,10.100.250.233/30
+ge-1/0/8.13114,down,vpnmonitor,inet,5.119.50.21/30
+ge-1/0/8.13117,down,mcitoffices,inet,10.255.10.225/30
+ge-1/0/8.13118,down,vpnmonitor,inet,5.119.85.185/30
+ge-1/0/8.13120,down,AUG-Pharma,inet,172.17.26.1/30
+ge-1/0/8.13121,down,vpnmonitor,inet,5.120.16.233/30
+ge-1/0/8.13122,down,vpnmonitor,inet,5.120.101.253/30
+ge-1/0/8.13125,down,dareloyoun,inet,172.17.22.1/30
+ge-1/0/8.13126,down,vpnmonitor,inet,5.2.40.29/30
+ge-1/0/8.13127,down,vpnmonitor,inet,5.120.34.113/30
+ge-1/0/8.13128,down,vpnmonitor,inet,5.120.133.1/30
+ge-1/0/8.13129,down,vpnmonitor,inet,5.125.34.33/30
+ge-1/0/8.13132,down,alfa-MIST,inet,172.18.100.1/30
+ge-1/0/8.13201,down,sci,inet,172.16.128.1/30
+ge-1/0/8.13202,down,vpnmonitor,inet,5.119.40.37/30
+ge-1/0/8.13205,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.13206,down,tawfeek-MIST,inet,172.16.133.1/30
+ge-1/0/8.13207,down,tawfeek_MIST-EFM,inet,172.16.250.113/30
+ge-1/0/8.13208,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.13220,down,NSGB,inet,10.54.61.5/30
+ge-1/0/8.13221,down,vpnmonitor,inet,5.120.120.93/30
+ge-1/0/8.13223,down,bnp,inet,172.16.2.1/30
+ge-1/0/8.13224,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.13225,down,default,inet,172.17.29.125/30
+ge-1/0/8.13226,down,vpnmonitor,inet,5.119.24.129/30
+ge-1/0/8.13227,down,Alfa-LAB,inet,172.50.33.5/30
+ge-1/0/8.13228,down,Alfa-LAB,inet,172.16.40.1/30
+ge-1/0/8.13229,down,vpnmonitor,inet,5.119.0.157/30
+ge-1/0/8.13251,down,vpnmonitor,inet,5.120.216.41/30
+ge-1/0/8.13271,down,sci,inet,172.16.251.1/30
+ge-1/0/8.13272,down,vpnmonitor,inet,5.119.3.177/30
+ge-1/0/8.13331,down,vpnmonitor,inet,5.120.34.17/30
+ge-1/0/8.13487,down,ens-main-vpn,inet,172.16.50.1/30
+ge-1/0/8.13488,down,vpnmonitor,inet,5.120.198.173/30
+ge-1/0/8.13500,down,vpnmonitor,inet,5.120.169.153/30
+ge-1/0/8.13501,down,resala,inet,172.16.170.1/30
+ge-1/0/8.13502,down,vpnmonitor,inet,5.120.82.189/30
+ge-1/0/8.13504,down,rowad,inet,172.16.36.1/30
+ge-1/0/8.13505,down,vpnmonitor,inet,5.120.130.149/30
+ge-1/0/8.13506,down,tayseer-cbe,inet,172.50.237.2/30
+ge-1/0/8.13507,down,vpnmonitor,inet,5.120.110.189/30
+ge-1/0/8.13510,down,vpnmonitor,inet,5.120.187.189/30
+ge-1/0/8.13541,down,hsbc,inet,172.19.1.26/30
+ge-1/0/8.13542,down,vpnmonitor,inet,5.119.51.45/30
+ge-1/0/8.13543,down,ADIBBANK,inet,192.168.250.86/30
+ge-1/0/8.13544,down,vpnmonitor,inet,5.120.114.77/30
+ge-1/0/8.13546,down,vpnmonitor,inet,5.119.4.41/30
+ge-1/0/8.13551,down,vpnmonitor,inet,5.120.64.233/30
+ge-1/0/8.13552,down,vpnmonitor,inet,5.120.94.161/30
+ge-1/0/8.13579,down,vpnmonitor,inet,5.119.26.97/30
+ge-1/0/8.13582,down,vpnmonitor,inet,5.120.52.37/30
+ge-1/0/8.13600,down,sci,inet,172.17.23.1/30
+ge-1/0/8.13601,down,vpnmonitor,inet,5.78.18.57/30
+ge-1/0/8.13610,down,edbe,inet,10.61.6.5/30
+ge-1/0/8.13611,down,vpnmonitor,inet,5.119.26.105/30
+ge-1/0/8.13650,down,arabbank,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.13651,down,vpnmonitor,inet,5.119.39.113/30
+ge-1/0/8.13703,down,RadioShack,inet,10.16.57.1/30
+ge-1/0/8.13704,down,vpnmonitor,inet,5.11.40.37/30
+ge-1/0/8.13705,down,alex-bank,inet,10.50.63.1/30
+ge-1/0/8.13706,down,vpnmonitor,inet,5.120.12.221/30
+ge-1/0/8.13707,down,ComputerShop,inet,10.20.65.9/30
+ge-1/0/8.13708,down,vpnmonitor,inet,5.11.40.57/30
+ge-1/0/8.13709,down,ComputerShop,inet,10.20.65.5/30
+ge-1/0/8.13710,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/0/8.13711,down,ComputerShop,inet,10.20.70.1/30
+ge-1/0/8.13712,down,ComputerShop,inet,10.20.65.1/30
+ge-1/0/8.13713,down,vpnmonitor,inet,5.11.40.81/30
+ge-1/0/8.13720,down,ComputerShop,inet,10.20.12.1/30
+ge-1/0/8.13721,down,vpnmonitor,inet,5.11.40.73/30
+ge-1/0/8.13750,down,cairowatanyBorsa,inet,100.1.9.62/30
+ge-1/0/8.13751,down,vpnmonitor,inet,5.120.167.201/30
+ge-1/0/8.13752,down,vpnmonitor,inet,5.120.167.169/30
+ge-1/0/8.13753,down,cairowatanyBorsa,inet,100.1.9.58/30
+ge-1/0/8.13754,down,cairowatanyMakasa,inet,172.16.234.1/30
+ge-1/0/8.13755,down,vpnmonitor,inet,5.120.75.106/30
+ge-1/0/8.13756,down,Cairo-Mist-EFM,inet,172.16.16.1/30
+ge-1/0/8.13757,down,vpnmonitor,inet,5.120.177.109/30
+ge-1/0/8.13761,down,vpnmonitor,inet,5.120.168.29/30
+ge-1/0/8.13762,down,cairowatanyMakasa,inet,172.16.202.145/30
+ge-1/0/8.13800,down,degla,inet,172.16.139.1/30
+ge-1/0/8.13801,down,vpnmonitor,inet,5.119.75.209/30
+ge-1/0/8.13980,down,vpnmonitor,inet,5.120.209.141/30
+ge-1/0/9.400,down,default,inet,10.41.248.9/29
+ge-1/0/9.942,down,TE-MNGT,inet,10.238.51.225/29
+ge-1/0/9.943,down,SIP-MSAN,inet,10.9.154.241/29
+ge-1/0/9.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/9.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/0/9.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/0.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/1.400,down,default,inet,10.41.11.121/29
+ge-1/1/1.942,down,TE-MNGT,inet,10.237.52.41/29
+ge-1/1/1.943,down,SIP-MSAN,inet,10.9.155.57/29
+ge-1/1/1.1101,down,EuroMed,inet,172.16.1.1/30
+ge-1/1/1.1102,down,vpnmonitor,inet,5.125.4.97/30
+ge-1/1/1.1157,down,Enmaa-cbe,inet,172.50.244.2/30
+ge-1/1/1.1255,down,vpnmonitor,inet,5.125.16.153/30
+ge-1/1/1.1256,down,default,inet,172.17.149.105/30
+ge-1/1/1.1281,down,khaled,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/1/1.1282,down,ArabCo,inet,172.18.111.1/30
+ge-1/1/1.1298,down,vpnmonitor,inet,5.125.22.213/30
+ge-1/1/1.1299,down,default,inet,172.17.161.173/30
+ge-1/1/1.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/1.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/1.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/1.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/1.13101,down,concrete,inet,172.200.2.1/30
+ge-1/1/1.13102,down,vpnmonitor,inet,5.120.38.197/30
+ge-1/1/1.13103,down,default,inet,172.17.49.97/30
+ge-1/1/1.13105,down,alex-bank,inet,10.50.25.1/30
+ge-1/1/1.13106,down,vpnmonitor,inet,5.119.20.113/30
+ge-1/1/1.13170,down,degla,inet,172.16.146.1/30
+ge-1/1/1.13171,down,vpnmonitor,inet,5.120.48.21/30
+ge-1/1/1.13174,down,default,inet,172.17.104.169/30
+ge-1/1/1.13175,down,vpnmonitor,inet,5.120.220.49/30
+ge-1/1/4.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/5.400,down,default,inet,10.40.130.233/29
+ge-1/1/5.942,down,TE-MNGT,inet,10.238.51.201/29
+ge-1/1/5.943,down,SIP-MSAN,inet,10.9.154.217/29
+ge-1/1/5.1101,down,cmart,inet,172.16.201.1/30
+ge-1/1/5.1102,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/1/5.1116,down,default,inet,172.17.98.133/30
+ge-1/1/5.1118,down,vpnmonitor,inet,5.120.49.201/30
+ge-1/1/5.1215,down,default,inet,172.17.152.81/30
+ge-1/1/5.1253,down,vpnmonitor,inet,5.125.12.201/30
+ge-1/1/5.1254,down,default,inet,172.17.177.77/30
+ge-1/1/5.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/5.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/5.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/5.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/5.13101,down,RadioShack,inet,10.16.161.1/30
+ge-1/1/5.13273,down,vpnmonitor,inet,5.120.191.153/30
+ge-1/1/6.400,down,default,inet,10.41.158.65/29
+ge-1/1/6.942,down,TE-MNGT,inet,10.238.51.209/29
+ge-1/1/6.943,down,SIP-MSAN,inet,10.9.154.225/29
+ge-1/1/6.1101,down,Mercedes,inet,172.17.19.1/30
+ge-1/1/6.1102,down,Mercedes,inet,192.168.101.10/30
+ge-1/1/6.1103,down,Mercedes,inet,172.17.20.1/30
+ge-1/1/6.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/6.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/6.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/6.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/6.13101,down,finance-atm,inet,172.30.143.165/30
+ge-1/1/6.13102,down,vpnmonitor,inet,5.119.18.237/30
+ge-1/1/7.400,down,default,inet,10.40.129.233/29
+ge-1/1/7.942,down,TE-MNGT,inet,10.238.51.217/29
+ge-1/1/7.943,down,SIP-MSAN,inet,10.9.154.233/29
+ge-1/1/7.1101,down,tamenat,inet,172.30.11.78/30
+ge-1/1/7.1102,down,vpnmonitor,inet,5.120.134.117/30
+ge-1/1/7.1103,down,tamenat,inet,172.31.11.78/30
+ge-1/1/7.1105,down,tamenat,inet,172.31.7.54/30
+ge-1/1/7.1106,down,vpnmonitor,inet,5.120.190.17/30
+ge-1/1/7.1111,down,NODCAR,inet,172.16.2.1/30
+ge-1/1/7.1112,down,vpnmonitor,inet,5.125.62.145/30
+ge-1/1/7.1134,down,tamenat,inet,172.30.7.54/30
+ge-1/1/7.1135,down,vpnmonitor,inet,5.120.221.225/30
+ge-1/1/7.1136,down,BM,inet,172.29.187.93/30
+ge-1/1/7.1137,down,vpnmonitor,inet,5.120.191.13/30
+ge-1/1/7.1137,down,vpnmonitor,inet,10.10.11.1/30
+ge-1/1/7.1145,down,Finance-Ministry,inet,172.234.130.209/30
+ge-1/1/7.1146,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/1/7.1155,down,Finance-Ministry,inet,172.234.3.17/30
+ge-1/1/7.1156,down,vpnmonitor,inet,5.121.15.65/30
+ge-1/1/7.1181,down,Finance-Ministry,inet,172.234.90.49/30
+ge-1/1/7.1182,down,Nagy,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/1/7.1183,down,Rekaba-Da5lia,inet,100.100.2.1/30
+ge-1/1/7.1184,down,Nagy2,inet,172.16.111.1/30
+ge-1/1/7.1200,down,finance-atm,inet,172.30.141.41/30
+ge-1/1/7.1201,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/1/7.1210,down,BM,inet,172.29.209.77/30
+ge-1/1/7.1211,down,vpnmonitor,inet,5.2.40.45/30
+ge-1/1/7.1238,down,vpnmonitor,inet,5.121.18.253/30
+ge-1/1/7.1239,down,MOOS,inet,10.168.169.1/30
+ge-1/1/7.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/7.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/7.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/7.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/7.13101,down,ens-main-vpn,inet,172.16.180.1/30
+ge-1/1/7.13102,down,vpnmonitor,inet,5.119.46.137/30
+ge-1/1/7.13103,down,Ministry-Council,inet,172.25.17.1/30
+ge-1/1/7.13104,down,vpnmonitor,inet,5.120.214.141/30
+ge-1/1/8.400,down,default,inet,10.41.50.129/29
+ge-1/1/8.942,down,TE-MNGT,inet,10.237.52.9/29
+ge-1/1/8.943,down,SIP-MSAN,inet,10.9.155.25/29
+ge-1/1/8.1101,down,BM,inet,172.29.113.101/30
+ge-1/1/8.1102,down,vpnmonitor,inet,5.2.40.25/30
+ge-1/1/8.1103,down,ourkids,inet,172.17.2.1/30
+ge-1/1/8.1104,down,vpnmonitor,inet,5.120.187.97/30
+ge-1/1/8.1110,down,egb,inet,172.21.143.2/30
+ge-1/1/8.1111,down,vpnmonitor,inet,5.120.239.141/30
+ge-1/1/8.1119,down,vpnmonitor,inet,5.125.44.93/30
+ge-1/1/8.1121,down,default,inet,172.17.132.165/30
+ge-1/1/8.1122,down,vpnmonitor,inet,5.125.8.41/30
+ge-1/1/8.1123,down,cib,inet,10.217.10.57/30
+ge-1/1/8.1124,down,vpnmonitor,inet,5.125.19.125/30
+ge-1/1/8.1130,down,Mohandes-Insurance,inet,172.16.90.5/30
+ge-1/1/8.1131,down,vpnmonitor,inet,5.119.65.5/30
+ge-1/1/8.1150,down,BM,inet,172.29.180.133/30
+ge-1/1/8.1160,down,default,inet,172.17.133.245/30
+ge-1/1/8.1260,down,vpnmonitor,inet,5.120.10.9/30
+ge-1/1/8.1261,down,default,inet,172.17.174.89/30
+ge-1/1/8.1265,down,default,inet,172.17.198.57/30
+ge-1/1/8.1283,down,vpnmonitor,inet,5.120.212.185/30
+ge-1/1/8.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/8.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/8.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/8.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/9.400,down,default,inet,10.40.244.129/29
+ge-1/1/9.942,down,TE-MNGT,inet,10.238.51.185/29
+ge-1/1/9.943,down,SIP-MSAN,inet,10.9.154.201/29
+ge-1/1/9.1101,down,mist-themar,inet,200.17.20.1/30
+ge-1/1/9.1102,down,vpnmonitor,inet,5.78.1.89/30
+ge-1/1/9.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/9.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/9.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/1/9.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/2/2.3701,down,N_S1_MME_Untrust,inet,10.96.1.25/30
+ge-1/2/2.3702,down,N_S1_U_Untrust,inet,10.96.17.25/30
+ge-1/2/2.3703,down,N_OAM,inet,10.96.33.25/30
+ge-1/2/2.3704,down,N_SYNC,inet,10.96.49.25/30
+ge-1/2/2.3705,down,N_X2_eNB,inet,10.96.65.25/30
+ge-1/2/2.3801,down,N_S1_MME_Untrust,inet,10.96.1.41/30
+ge-1/2/2.3802,down,N_S1_U_Untrust,inet,10.96.17.41/30
+ge-1/2/2.3803,down,N_OAM,inet,10.96.33.41/30
+ge-1/2/2.3804,down,N_SYNC,inet,10.96.49.41/30
+ge-1/2/2.3805,down,N_X2_eNB,inet,10.96.65.41/30
+ge-1/2/3.3701,down,N_S1_MME_Untrust,inet,10.96.2.77/30
+ge-1/2/3.3702,down,N_S1_U_Untrust,inet,10.96.18.77/30
+ge-1/2/3.3703,down,N_OAM,inet,10.96.34.77/30
+ge-1/2/3.3704,down,N_SYNC,inet,10.96.50.77/30
+ge-1/2/3.3705,down,N_X2_eNB,inet,10.96.66.77/30
+ge-1/2/4.3701,down,N_S1_MME_Untrust,inet,10.96.1.33/30
+ge-1/2/4.3702,down,N_S1_U_Untrust,inet,10.96.17.33/30
+ge-1/2/4.3703,down,N_OAM,inet,10.96.33.33/30
+ge-1/2/4.3704,down,N_SYNC,inet,10.96.49.33/30
+ge-1/2/4.3705,down,N_X2_eNB,inet,10.96.65.33/30
+ge-1/2/5.3701,down,N_S1_MME_Untrust,inet,10.96.4.185/30
+ge-1/2/5.3702,down,N_S1_U_Untrust,inet,10.96.20.185/30
+ge-1/2/5.3703,down,N_OAM,inet,10.96.36.185/30
+ge-1/2/5.3704,down,N_SYNC,inet,10.96.52.185/30
+ge-1/2/5.3705,down,N_X2_eNB,inet,10.96.68.185/30
+ge-1/2/5.3801,down,N_S1_MME_Untrust,inet,10.96.7.109/30
+ge-1/2/5.3802,down,N_S1_U_Untrust,inet,10.96.23.109/30
+ge-1/2/5.3803,down,N_OAM,inet,10.96.39.109/30
+ge-1/2/5.3804,down,N_SYNC,inet,10.96.55.109/30
+ge-1/2/5.3805,down,N_X2_eNB,inet,10.96.71.109/30
+ge-1/2/7.1150,down,vpnmonitor,inet,5.77.243.1/30
+ge-1/2/7.1151,down,default,inet,172.17.22.41/30
+ge-1/2/7.1153,down,vpnmonitor,inet,5.119.75.117/30
+ge-1/2/7.13205,down,BM,inet,172.29.189.197/30
+ge-1/2/7.13277,down,vpnmonitor,inet,5.121.14.157/30
+ge-1/2/8.710,down,citibank,inet,10.158.52.18/30
+ge-1/2/8.2590,down,vpnmonitor,inet,10.10.12.1/30
+ge-1/2/8.3610,down,default,inet,172.17.205.157/30
+ge-1/2/9.943,down,SIP-MSAN,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/3/4.400,down,default,inet,10.41.104.145/29
+ge-1/3/4.942,down,TE-MNGT,inet,10.237.52.49/29
+ge-1/3/4.943,down,SIP-MSAN,inet,10.9.155.65/29
+ge-1/3/4.1101,down,default,inet,41.33.28.33/28
+ge-1/3/4.1102,down,vpnmonitor,inet,5.125.15.189/30
+ge-1/3/4.1103,down,BM,inet,172.29.189.65/30
+ge-1/3/4.1104,down,vpnmonitor,inet,5.121.14.121/30
+ge-1/3/4.1110,down,default,inet,172.17.190.177/30
+ge-1/3/4.1120,down,adam,inet,172.17.21.1/30
+ge-1/3/4.1121,down,vpnmonitor,inet,5.120.132.53/30
+ge-1/3/4.1122,down,wasla,inet,172.16.24.1/30
+ge-1/3/4.1123,down,vpnmonitor,inet,5.125.61.233/30
+ge-1/3/4.1129,down,mnsteel,inet,172.17.116.221/30
+ge-1/3/4.1186,down,vpnmonitor,inet,5.125.23.149/30
+ge-1/3/4.1187,down,default,inet,172.17.162.205/30
+ge-1/3/4.1188,down,vpnmonitor,inet,5.125.23.153/30
+ge-1/3/4.1189,down,default,inet,172.17.162.209/30
+ge-1/3/4.1200,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/3/4.1202,down,ECISP,inet,172.19.25.133/30
+ge-1/3/4.1250,down,vpnmonitor,inet,5.125.7.129/30
+ge-1/3/4.1251,down,default,inet,172.17.131.57/30
+ge-1/3/4.1280,down,vpnmonitor,inet,5.125.32.189/30
+ge-1/3/4.1288,down,default,inet,172.17.214.17/30
+ge-1/3/4.1289,down,vpnmonitor,inet,5.125.58.249/30
+ge-1/3/4.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/4.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/4.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/4.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/4.13101,down,Philips,inet,172.17.209.113/30
+ge-1/3/4.13102,down,vpnmonitor,inet,5.120.172.149/30
+ge-1/3/4.13105,down,Masria-Steel,inet,172.16.1.1/30
+ge-1/3/4.13106,down,vpnmonitor,inet,5.120.234.169/30
+ge-1/3/4.13203,down,Tscan,inet,172.16.2.1/30
+ge-1/3/4.13204,down,vpnmonitor,inet,5.120.173.145/30
+ge-1/3/5.400,down,default,inet,10.41.104.153/29
+ge-1/3/5.942,down,TE-MNGT,inet,10.237.52.57/29
+ge-1/3/5.943,down,SIP-MSAN,inet,10.9.155.73/29
+ge-1/3/5.1101,down,autoeg,inet,172.17.17.9/30
+ge-1/3/5.1102,down,vpnmonitor,inet,5.119.26.225/30
+ge-1/3/5.1105,down,Dawaay,inet,172.17.40.1/30
+ge-1/3/5.1106,down,vpnmonitor,inet,5.120.239.41/30
+ge-1/3/5.1107,down,MegaInv_MIST-EFM,inet,172.16.250.1/30
+ge-1/3/5.1108,down,vpnmonitor,inet,5.120.73.25/30
+ge-1/3/5.1109,down,kaswaa,inet,172.17.20.1/30
+ge-1/3/5.1110,down,vpnmonitor,inet,5.120.224.173/30
+ge-1/3/5.1111,down,vpnmonitor,inet,5.120.190.157/30
+ge-1/3/5.1113,down,vpnmonitor,inet,5.119.34.161/30
+ge-1/3/5.1114,down,MegaInv_MIST-EFM,inet,172.16.250.5/30
+ge-1/3/5.1115,down,vpnmonitor,inet,5.19.40.5/30
+ge-1/3/5.1122,down,vpnmonitor,inet,5.120.237.189/30
+ge-1/3/5.1125,down,Mobinil-branches,inet,10.26.195.5/30
+ge-1/3/5.1152,down,vpnmonitor,inet,5.119.34.121/30
+ge-1/3/5.1200,down,seif,inet,172.16.239.1/30
+ge-1/3/5.1201,down,vpnmonitor,inet,5.120.169.169/30
+ge-1/3/5.1222,down,Raya-Branches,inet,172.17.139.185/30
+ge-1/3/5.1223,down,Raya-Branches,inet,172.170.5.9/30
+ge-1/3/5.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/5.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/5.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/5.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/6.400,down,default,inet,10.41.104.161/29
+ge-1/3/6.942,down,TE-MNGT,inet,10.237.52.65/29
+ge-1/3/6.943,down,SIP-MSAN,inet,10.9.155.81/29
+ge-1/3/6.1103,down,default,inet,172.17.162.109/30
+ge-1/3/6.1104,down,vpnmonitor,inet,5.125.23.133/30
+ge-1/3/6.1112,down,default,inet,172.17.183.89/30
+ge-1/3/6.1113,down,vpnmonitor,inet,5.125.48.185/30
+ge-1/3/6.1130,down,Finance-Ministry,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/3/6.1131,down,default,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/3/6.1181,down,Finance-Ministry,inet,172.234.111.33/30
+ge-1/3/6.1182,down,Finance-Ministry,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/3/6.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/6.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/6.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/6.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/7.400,down,default,inet,10.41.104.169/29
+ge-1/3/7.942,down,TE-MNGT,inet,10.237.52.73/29
+ge-1/3/7.943,down,SIP-MSAN,inet,10.9.155.89/29
+ge-1/3/7.1101,down,kids-hospital,inet,172.172.2.1/30
+ge-1/3/7.1102,down,vpnmonitor,inet,5.120.76.85/30
+ge-1/3/7.1103,down,kids-hospital,inet,172.17.3.1/30
+ge-1/3/7.1104,down,vpnmonitor,inet,5.120.211.177/30
+ge-1/3/7.1105,down,abramco-cbe,inet,172.50.129.2/30
+ge-1/3/7.1106,down,vpnmonitor,inet,5.119.42.185/30
+ge-1/3/7.1107,down,seif,inet,172.9.128.1/30
+ge-1/3/7.1108,down,vpnmonitor,inet,5.119.53.37/30
+ge-1/3/7.1109,down,MobileShop,inet,10.16.149.1/30
+ge-1/3/7.1110,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/3/7.1150,down,El-Tarazi,inet,172.16.2.1/30
+ge-1/3/7.1151,down,vpnmonitor,inet,**** IP INTERFACE WITH NO IP ****
+ge-1/3/7.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/7.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/7.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/7.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/8.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/9.400,down,default,inet,10.41.104.177/29
+ge-1/3/9.942,down,TE-MNGT,inet,10.237.52.81/29
+ge-1/3/9.943,down,SIP-MSAN,inet,10.9.155.97/29
+ge-1/3/9.945,down,TE-VOICE,inet,10.42.226.65/29
+ge-1/3/9.1102,down,BM,inet,172.29.179.181/30
+ge-1/3/9.1103,down,vpnmonitor,inet,5.120.102.241/30
+ge-1/3/9.1139,down,vpnmonitor,inet,5.125.44.113/30
+ge-1/3/9.2300,down,ETISALAT-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/9.2550,down,VODA-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/9.2800,down,NOOR-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/9.3050,down,ORANGE-VPLS-BITSTREAM,vpls,**** NON IP INTERFACE ****
+ge-1/3/9.13708,down,shahencafe,inet,172.16.128.1/30
+ge-1/3/9.13709,down,vpnmonitor,inet,5.119.40.77/30
+xe-2/0/0.0,down,default,inet,10.1.1.1/30
+
+
+

@@ -25,4 +25,4 @@
   - name: Generate Report in CSV Format
     template:
       src: jt_parse_junos_intf_terse.j2
-      dest: ./zee_intf_data_report.csv
+      dest: ./final_intf_data_report.csv

@@ -1,3 +1,39 @@
+{% macro get_af(intf_ifl,intf_name,intf_vrf,intf_op_status) %}
+{%                      if intf_ifl['address-family-name'] == 'inet' and intf_ifl['interface-address'] is defined %}
+{%                          set intf_af = intf_ifl['address-family-name']%}
+{%                          if intf_ifl['interface-address'] is mapping %}
+{%                              set intf_ip = intf_ifl['interface-address']['ifa-local'] %}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
+{%                          else%}
+{#
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+            -   ifa-local: 10.40.72.57/29
+            -   ifa-local: 221.221.221.1/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/9.400
+        oper-status: down
+        vrfname: L2circuit-1
+#}
+{# Multiple IP address under the same IFL#}
+{%                              for ip_addr in intf_ifl['interface-address'] %}
+{%                                  set intf_ip = ip_addr['ifa-local'] %}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
+{%                             endfor%}
+{%                         endif%}
+{%                      elif intf_ifl['address-family-name'] == 'inet' %}
+{%                          set intf_af = intf_ifl['address-family-name']%}
+{%                          set intf_ip = '**** IP INTERFACE WITH NO IP ****' %}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
+{%                      elif intf_ifl['address-family-name'] == 'vpls' %}
+{%                          set intf_af = intf_ifl['address-family-name'] %}
+{%                          set intf_ip = '**** NON IP INTERFACE ****' %}
+{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
+{%                      endif%}
+{% endmacro %}
 {# Header for the CSV File #}
 interface,intf_op_status,vrf,ip_address
 {% for unit in logical_units %}
@@ -7,33 +43,95 @@ interface,intf_op_status,vrf,ip_address
 {# IN JUNIPER DATA STRUCTURE IF THE INTERFACE HAS MULTIPLE UNITS #}
 {# THE DEVICE WILL PRODUCE AT LIST FOR ALL THE UNITS UNDER THIS INTERFACE #}
 {# THIS COVER THE CASE WHERE WE HAVE SINGLE SUBINTERFACES UNDER THE SAME MAIN INTERFACE#}
+{#
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 41.234.66.104/27
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/0.0
+        oper-status: up
+        vrfname: default
+#}
 {%      if unit['logical-interface'] is mapping %}
-{# Limit search only for 1G or 10G or Loopback Interfaces #}
-{%          if unit['logical-interface'].name[:3] in ['ge-','xe-'] %}
+{%          if unit['logical-interface'].name[:3] in ['ge-','xe-'] %}{# Limit search only for 1G or 10G or Loopback Interfaces #}
 {%              set intf_name = unit['logical-interface'].name %}
 {%              set intf_vrf = unit['logical-interface'].vrfname %}
 {%              set intf_op_status = unit['logical-interface']['oper-status'] %}
 {%              set intf_ifd = unit['logical-interface']['address-family'] %}
-{%              if  intf_ifd is not mapping %} {# test is it is a list or not#}
+{#
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 5.125.1.209/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/3.1266
+        oper-status: down
+        vrfname: vpnmonitor
+#}
+{# We have Multiple AF under the same unit #}
+{%              if  intf_ifd is not mapping %}
 {%                  for af in intf_ifd %}
-{%                      if af['address-family-name'] == 'inet' and af['interface-address'] is defined %}
-{%                          set intf_af = af['address-family-name']%}
-{%                          set intf_ip = af['interface-address']['ifa-local'] %}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
-{%                      elif af['address-family-name'] == 'inet' %}
-{%                          set intf_af = af['address-family-name']%}
-{%                          set intf_ip = '**** IP INTERFACE WITH NO IP ****' %}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
-{%                      elif af['address-family-name'] == 'vpls' %}
-{%                          set intf_af = af['address-family-name']%}
-{%                          set intf_ip = '**** NON IP INTERFACE ****' %}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_af}},{{intf_ip}}
-{%                      endif%}
-{%                  endfor%}
+{{get_af(af,intf_name,intf_vrf,intf_op_status)}}
+{%-                  endfor%}
+{# We have a single AF under the same unit #}
+{#
+    -   address-family:
+            address-family-name: vpls
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/3.2300
+        oper-status: down
+        vrfname: ETISALAT-VPLS-BITSTREAM
+#}
 {%              else%}
-{{intf_name}},{{intf_op_status}},{{intf_vrf}},{{intf_ifd}}
-{%              endif%}
+{{get_af(intf_ifd,intf_name,intf_vrf,intf_op_status)}}
+{%-              endif%}
 {%          endif%}
+{#
+-   logical-interface:
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 10.40.72.1/29
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/1.400
+        oper-status: up
+        vrfname: default
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 172.19.19.1/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/1.693
+        oper-status: up
+        vrfname: egb
+#}
+{%       else%}{# Multiple Units under the same Interface#}
+{%          for subunit in unit['logical-interface'] %}
+{%              if subunit.name[:3] in ['ge-','xe-'] %}
+{%                  set intf_name = subunit.name %}
+{%                  set intf_vrf = subunit.vrfname %}
+{%                  set intf_op_status = subunit['oper-status'] %}
+{%                  set intf_ifd = subunit['address-family'] %}
+{%                  if  intf_ifd is not mapping %}
+{%                      for af in intf_ifd %}
+{{get_af(af,intf_name,intf_vrf,intf_op_status)}}
+{%-                     endfor%}
+{%                  else%}
+{{get_af(intf_ifd,intf_name,intf_vrf,intf_op_status)}}
+{%-                 endif%}
+{%              endif%}
+{%          endfor%}
 {%      endif%}
 {%  endif%}
 {% endfor%}
