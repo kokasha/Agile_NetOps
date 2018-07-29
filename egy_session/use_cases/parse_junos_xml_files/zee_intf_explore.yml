@@ -1,0 +1,482 @@
+# BEGIN ANSIBLE MANAGED BLOCK
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 41.234.66.104/27
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/0.0
+        oper-status: up
+        vrfname: default
+-   logical-interface:
+        address-family:
+            address-family-name: inet
+            interface-address:
+                ifa-local: 2.2.2.1/30
+        admin-status: up
+        filter-information: ''
+        name: gr-0/0/0.0
+        oper-status: up
+        vrfname: default
+-   logical-interface:
+        address-family:
+            address-family-name: vpls
+        admin-status: up
+        filter-information: ''
+        name: lc-0/0/0.32769
+        oper-status: up
+        vrfname: __juniper_private1__
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+        -   address-family-name: inet6
+        admin-status: up
+        filter-information: ''
+        name: pfe-0/0/0.16383
+        oper-status: up
+        vrfname: __juniper_private1__
+-   logical-interface:
+        address-family:
+            address-family-name: inet
+        admin-status: up
+        filter-information: ''
+        name: pfh-0/0/0.16383
+        oper-status: up
+        vrfname: __juniper_private1__
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 10.60.60.1/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/1.1151
+        oper-status: up
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 192.168.150.5/30
+        -   address-family-name: mpls
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/2.0
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/5.465
+        oper-status: up
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/6.0
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 100.100.100.3/24
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/7.100
+        oper-status: down
+        vrfname: L2circuit-to-103
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 200.200.200.3/24
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/7.200
+        oper-status: down
+        vrfname: default
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 220.220.220.10/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/7.300
+        oper-status: down
+        vrfname: Customer-BGP3
+-   logical-interface:
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 100.100.100.2/24
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/8.100
+        oper-status: down
+        vrfname: L2circuit-to-101
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 200.200.200.2/24
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/8.200
+        oper-status: down
+        vrfname: default
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 220.220.220.6/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/8.300
+        oper-status: down
+        vrfname: Customer-BGP2
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 221.221.221.2/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/8.401
+        oper-status: down
+        vrfname: L2circuit-2
+-   logical-interface:
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 100.100.100.1/24
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/9.100
+        oper-status: down
+        vrfname: L2circuit-to-105
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 200.200.200.1/24
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/9.200
+        oper-status: down
+        vrfname: default
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 220.220.220.2/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/9.300
+        oper-status: down
+        vrfname: Customer-BGP
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 221.221.221.1/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/0/9.400
+        oper-status: down
+        vrfname: L2circuit-1
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 10.37.85.182/30
+        -   address-family-name: mpls
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/1/0.0
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+        address-family:
+            address-family-name: inet
+        admin-status: up
+        filter-information: ''
+        name: pd-0/1/0.32769
+        oper-status: up
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet6
+            interface-address:
+            -   ifa-local: 2001:4388:60:35::1/126
+            -   ifa-local: fe80::5e45:27ff:fe67:735a/64
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/1/1.0
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 10.30.30.1/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-0/1/2.0
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 40.40.40.146/29
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-1/0/0.400
+        oper-status: down
+        vrfname: default
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 30.30.30.74/29
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-1/0/0.942
+        oper-status: down
+        vrfname: default
+    -   address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 20.20.20.217/29
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ge-1/0/0.943
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 10.1.1.1/30
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: xe-2/0/0.0
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: ae7.370
+        oper-status: up
+        vrfname: default
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+            -   ifa-local: 10.0.0.5/8
+            -   ifa-local: 128.0.0.1/2
+            -   ifa-local: 128.0.0.5/2
+        -   address-family-name: inet6
+            interface-address:
+            -   ifa-local: fe80::201:ff:fe00:5/64
+            -   ifa-local: fec0::a:0:0:5/64
+        -   address-family-name: tnp
+            interface-address:
+                ifa-local: '0x5'
+        admin-status: up
+        filter-information: ''
+        name: em0.0
+        oper-status: up
+        vrfname: __juniper_private1__
+-   logical-interface:
+        address-family:
+        -   address-family-name: inet
+            interface-address:
+                ifa-local: 172.19.19.1/24
+        -   address-family-name: multiservice
+        admin-status: up
+        filter-information: ''
+        name: irb.0
+        oper-status: down
+        vrfname: default
+-   logical-interface:
+    -   address-family:
+            address-family-name: inet
+            interface-address:
+            -   ifa-destination: 0/0
+                ifa-local: 7.7.7.10
+            -   ifa-destination: 0/0
+                ifa-local: 10.45.2.104
+            -   ifa-destination: 0/0
+                ifa-local: 10.255.255.1
+            -   ifa-destination: 0/0
+                ifa-local: 20.20.20.1
+            -   ifa-destination: 0/0
+                ifa-local: 41.234.66.227
+        admin-status: up
+        filter-information: ''
+        name: lo0.0
+        oper-status: up
+        vrfname: default
+    -   address-family:
+            address-family-name: inet
+            interface-address:
+                ifa-destination: 0/0
+                ifa-local: 1.1.1.1
+        admin-status: up
+        filter-information: ''
+        name: lo0.1
+        oper-status: up
+        vrfname: Customer-BGP
+    -   address-family:
+            address-family-name: inet
+            interface-address:
+                ifa-destination: 0/0
+                ifa-local: 2.2.2.2
+        admin-status: up
+        filter-information: ''
+        name: lo0.2
+        oper-status: up
+        vrfname: Customer-BGP2
+    -   address-family:
+            address-family-name: inet
+            interface-address:
+                ifa-destination: 0/0
+                ifa-local: 3.3.3.3
+        admin-status: up
+        filter-information: ''
+        name: lo0.3
+        oper-status: up
+        vrfname: Customer-BGP3
+    -   address-family:
+            address-family-name: inet
+            interface-address:
+                ifa-destination: 0/0
+                ifa-local: 127.0.0.1
+        admin-status: up
+        filter-information: ''
+        name: lo0.16384
+        oper-status: up
+        vrfname: __juniper_private2__
+    -   address-family:
+            address-family-name: inet
+        admin-status: up
+        filter-information: ''
+        name: lo0.16385
+        oper-status: up
+        vrfname: __juniper_private1__
+-   logical-interface:
+    -   address-family:
+        -   address-family-name: inet
+        -   address-family-name: iso
+        -   address-family-name: inet6
+        admin-status: up
+        filter-information: ''
+        name: lsi.0
+        oper-status: up
+        vrfname: CUS-A
+    -   address-family:
+        -   address-family-name: inet
+        -   address-family-name: iso
+        -   address-family-name: inet6
+        admin-status: up
+        filter-information: ''
+        name: lsi.1
+        oper-status: up
+        vrfname: SIP-MSAN
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+- ''
+# END ANSIBLE MANAGED BLOCK

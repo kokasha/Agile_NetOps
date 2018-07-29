@@ -1,0 +1,16 @@
+
+interface,intf_op_status,vrf,ip_address
+L2circuit-to-103
+default
+Customer-BGP3
+L2circuit-to-101
+default
+Customer-BGP2
+L2circuit-2
+L2circuit-to-105
+default
+Customer-BGP
+L2circuit-1
+default
+default
+default

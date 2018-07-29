@@ -1,0 +1,31 @@
+## Play
+- name: Retrieve Interface terse Output
+  gather_facts: no
+  connection: local
+  hosts: localhost
+  # read the XML file and assign to ANSIBLE Variable
+  vars:
+    junos_xml_data: "{{ lookup('file', 'junos_intf_terse.xml') }}"
+  tasks:
+  # transform XML string to JSON object and assign it to a new
+  # Ansible Variable
+  - name: XML >> JSON Data transformation 
+    set_fact: junos_intf_data="{{junos_xml_data|parse_junos_xml}}"
+  #- debug: var=junos_intf_data
+
+  # We dig into the Data structure to reach the required Data
+  # logical_units is a List which hold all the Data for all the
+  # Units (subinterfaces) on each device 
+  - set_fact: logical_units="{{junos_intf_data['rpc-reply']['interface-information']['physical-interface']}}"
+  #- debug: var=logical_units
+
+  # - name: save for further exploration
+  #   blockinfile:
+  #     block: "{{logical_units|to_nice_yaml(indent=4)}}"
+  #     create: yes
+  #     dest: "./zee_intf_explore.yml"
+
+  - name: Generate Report in CSV Format
+    template:
+      src: jt_parse_junos_intf_terse.j2
+      dest: ./final_intf_data_report.csv

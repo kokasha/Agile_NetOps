@@ -1,0 +1,8 @@
+## Second Play
+- name: Test Custom Filters
+  hosts: localhost
+  vars:
+    test_l : [1,2,3] 
+  tasks:
+  - debug:
+      msg: "{{test_l|list_append([4,5,6])}}"

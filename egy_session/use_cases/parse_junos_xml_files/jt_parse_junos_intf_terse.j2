@@ -1,0 +1,15 @@
+
+{# Header for the CSV File #}
+interface,intf_op_status,vrf,ip_address
+{%  for unit in logical_units %}
+{%      set intf = unit|jt_parse_intf_terse %}
+{%      if intf == '-1' %}
+{%      elif intf is not mapping %}
+{%          for sub_intf in intf %}
+{{sub_intf.name}}
+{#{sub_intf.name,sub_intf.vrf,sub_intf.op_status}#}
+{%          endfor %}
+{%      else %}
+{#{intf.name,intf.vrf,intf.op_status}#}
+{%      endif %}
+{%  endfor %}
